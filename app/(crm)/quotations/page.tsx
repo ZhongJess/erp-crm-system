@@ -2,6 +2,7 @@
 
 export const dynamic = 'force-dynamic'
 
+import { Suspense } from 'react'
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -252,7 +253,7 @@ function SortIcon({ col, colSort }: { col: ColSortKey; colSort: ColSort }) {
 
 // ── Page ───────────────────────────────────────────────────────────────────────
 
-export default function QuotationsPage() {
+function QuotationsPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -955,5 +956,13 @@ export default function QuotationsPage() {
         </AlertDialogContent>
       </AlertDialog>
     </div>
+  )
+}
+
+export default function QuotationsPage() {
+  return (
+    <Suspense>
+      <QuotationsPageContent />
+    </Suspense>
   )
 }
