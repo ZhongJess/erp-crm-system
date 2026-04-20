@@ -1,0 +1,257 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "客戶概覽" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: 客戶概覽
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - button "Toggle Sidebar" [ref=e71]:
+            - img
+            - generic [ref=e72]: Toggle Sidebar
+          - navigation [ref=e73]:
+            - link "報價與合約" [ref=e75] [cursor=pointer]:
+              - /url: /quotations
+            - generic [ref=e76]:
+              - img [ref=e77]
+              - generic [ref=e79]: 新增報價
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - img [ref=e82]
+              - searchbox "搜尋客戶、報價單..." [ref=e85]
+            - button "新增" [ref=e86]
+            - button "切換深色模式" [ref=e87]:
+              - img
+            - button "2" [ref=e88]:
+              - img
+              - generic [ref=e89]: "2"
+        - main [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - heading "新增報價" [level=1] [ref=e93]
+              - paragraph [ref=e94]: 報價單號與版本將由系統自動產生
+            - generic [ref=e95]:
+              - button "取消" [ref=e96]
+              - button "另存新版" [ref=e97]:
+                - img
+                - text: 另存新版
+              - button "匯出 PDF" [ref=e98]:
+                - img
+                - text: 匯出 PDF
+              - button "儲存草稿" [ref=e99]:
+                - img
+                - text: 儲存草稿
+          - generic [ref=e100]:
+            - generic [ref=e102]: 基本資訊
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]:
+                  - generic [ref=e106]:
+                    - text: 客戶
+                    - generic [ref=e107]: "*"
+                  - combobox [ref=e108]:
+                    - generic: 請選擇客戶
+                    - img
+                - generic [ref=e110]:
+                  - generic [ref=e111]: 報價聯絡人
+                  - combobox [ref=e112]:
+                    - generic: 請選擇聯絡人
+                    - img
+              - generic [ref=e114]:
+                - generic [ref=e115]:
+                  - generic [ref=e116]:
+                    - text: 案件名稱
+                    - generic [ref=e117]: "*"
+                  - textbox "請輸入案件名稱" [ref=e118]
+                - generic [ref=e119]:
+                  - generic [ref=e120]:
+                    - generic [ref=e121]: 有效期限（天）
+                    - spinbutton [ref=e122]: "30"
+                    - paragraph [ref=e123]: 到期日：2026/05/17
+                  - generic [ref=e124]:
+                    - generic [ref=e125]: 預計時程
+                    - textbox "如：8 週" [ref=e126]
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e129]: 報價明細
+              - alert [ref=e130]:
+                - img [ref=e131]
+                - generic [ref=e133]: 拖拉項目可調整順序
+            - generic [ref=e134]:
+              - table [ref=e137]:
+                - rowgroup [ref=e138]:
+                  - row "編號 項目名稱 說明 數量 單位 單價(元) 金額(元)" [ref=e139]:
+                    - columnheader [ref=e140]
+                    - columnheader "編號" [ref=e141]
+                    - columnheader "項目名稱" [ref=e142]
+                    - columnheader "說明" [ref=e143]
+                    - columnheader "數量" [ref=e144]
+                    - columnheader "單位" [ref=e145]
+                    - columnheader "單價(元)" [ref=e146]
+                    - columnheader "金額(元)" [ref=e147]
+                    - columnheader [ref=e148]
+                - rowgroup [ref=e149]:
+                  - row "1 1 0" [ref=e150]:
+                    - cell [ref=e151]:
+                      - img [ref=e152]
+                    - cell "1" [ref=e159]
+                    - cell [ref=e160]:
+                      - textbox "項目名稱" [ref=e161]
+                    - cell [ref=e162]:
+                      - textbox "說明" [ref=e163]
+                    - cell "1" [ref=e164]:
+                      - spinbutton [ref=e165]: "1"
+                    - cell [ref=e166]:
+                      - combobox [ref=e167]:
+                        - generic: 式
+                        - img
+                    - cell [ref=e169]:
+                      - spinbutton [ref=e170]
+                    - cell "0" [ref=e171]
+                    - cell [ref=e172]:
+                      - button [disabled]:
+                        - img
+                - rowgroup [ref=e173]:
+                  - row "套用議價優惠（9 折）" [ref=e174]:
+                    - cell "套用議價優惠（9 折）" [ref=e175]:
+                      - generic [ref=e176]:
+                        - checkbox "套用議價優惠（9 折）" [ref=e177]
+                        - generic [ref=e178] [cursor=pointer]: 套用議價優惠（9 折）
+                  - row "小計 0" [ref=e179]:
+                    - cell "小計" [ref=e180]
+                    - cell "0" [ref=e181]
+                    - cell [ref=e182]
+                  - row "稅額（5%） 0" [ref=e183]:
+                    - cell "稅額（5%）" [ref=e184]
+                    - cell "0" [ref=e185]
+                    - cell [ref=e186]
+                  - row "含稅總計 NT$0" [ref=e187]:
+                    - cell "含稅總計" [ref=e188]
+                    - cell "NT$0" [ref=e189]
+                    - cell [ref=e190]
+              - button "新增項目" [ref=e192]:
+                - img
+                - text: 新增項目
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - generic [ref=e196]: 付款條件
+              - generic [ref=e198]:
+                - radiogroup [ref=e199]:
+                  - generic [ref=e200] [cursor=pointer]:
+                    - radio "兩期付款（簽約 50% + 驗收 50%）" [ref=e201]
+                    - generic [ref=e203]: 兩期付款（簽約 50% + 驗收 50%）
+                  - generic [ref=e204] [cursor=pointer]:
+                    - radio "三期付款（簽約 30% + 期中 50% + 驗收 20%）" [checked] [ref=e205]:
+                      - img [ref=e283]
+                    - generic [ref=e206]:
+                      - generic [ref=e207]: 三期付款（簽約 30% + 期中 50% + 驗收 20%）
+                      - paragraph [ref=e285]: 簽約時支付 30%，開發完成時支付 50%，驗收通過後支付餘款 20%。
+                  - generic [ref=e208] [cursor=pointer]:
+                    - radio "一次付清（驗收後 30 日內）" [ref=e209]
+                    - generic [ref=e211]: 一次付清（驗收後 30 日內）
+                  - generic [ref=e212] [cursor=pointer]:
+                    - radio "月結 30 天" [ref=e213]
+                    - generic [ref=e215]: 月結 30 天
+                  - generic [ref=e216] [cursor=pointer]:
+                    - radio "政府 / 大企業核銷流程" [ref=e217]
+                    - generic [ref=e219]: 政府 / 大企業核銷流程
+                - button "加上備註" [ref=e221]:
+                  - img
+                  - text: 加上備註
+                - generic [ref=e286]:
+                  - paragraph [ref=e287]: 輸出預覽
+                  - paragraph [ref=e288]: 簽約時支付 30%，開發完成時支付 50%，驗收通過後支付餘款 20%。
+            - generic [ref=e222]:
+              - generic [ref=e224]: 備註
+              - generic [ref=e226]:
+                - generic [ref=e227]:
+                  - generic [ref=e228] [cursor=pointer]:
+                    - checkbox "報價有效期（30 日）" [checked] [ref=e229]:
+                      - generic:
+                        - img
+                    - generic [ref=e230]:
+                      - generic [ref=e231]: 報價有效期（30 日）
+                      - paragraph [ref=e232]: 本報價單自開立日起 30 日內有效。
+                  - generic [ref=e233] [cursor=pointer]:
+                    - checkbox "未稅報價，另加 5% 營業稅" [checked] [ref=e234]:
+                      - generic:
+                        - img
+                    - generic [ref=e235]:
+                      - generic [ref=e236]: 未稅報價，另加 5% 營業稅
+                      - paragraph [ref=e237]: 本報價金額為未稅，另加 5% 營業稅。
+                  - generic [ref=e238] [cursor=pointer]:
+                    - checkbox "90 天免費保固" [checked] [active] [ref=e239]:
+                      - generic:
+                        - img
+                    - generic [ref=e240]:
+                      - generic [ref=e241]: 90 天免費保固
+                      - paragraph [ref=e289]: 本公司保證交付之成果物無重大瑕疵，驗收後提供 90 天免費修補服務。
+                  - generic [ref=e242] [cursor=pointer]:
+                    - checkbox "逾期違約金" [ref=e243]
+                    - generic [ref=e245]: 逾期違約金
+                  - generic [ref=e246] [cursor=pointer]:
+                    - checkbox "變更須書面確認" [ref=e247]
+                    - generic [ref=e249]: 變更須書面確認
+                  - generic [ref=e250] [cursor=pointer]:
+                    - checkbox "智財權驗收後歸甲方" [ref=e251]
+                    - generic [ref=e253]: 智財權驗收後歸甲方
+                  - generic [ref=e254] [cursor=pointer]:
+                    - checkbox "第三方授權費另計" [ref=e255]
+                    - generic [ref=e257]: 第三方授權費另計
+                - button "加上備註" [ref=e259]:
+                  - img
+                  - text: 加上備註
+                - generic [ref=e260]:
+                  - paragraph [ref=e261]: 輸出預覽
+                  - paragraph [ref=e262]: 本報價單自開立日起 30 日內有效。 本報價金額為未稅，另加 5% 營業稅。 本公司保證交付之成果物無重大瑕疵，驗收後提供 90 天免費修補服務。
+          - generic [ref=e264] [cursor=pointer]:
+            - generic [ref=e265]:
+              - img [ref=e266]
+              - generic [ref=e270]: 版本歷程
+            - img [ref=e271]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e278] [cursor=pointer]:
+    - img [ref=e279]
+  - alert [ref=e282]

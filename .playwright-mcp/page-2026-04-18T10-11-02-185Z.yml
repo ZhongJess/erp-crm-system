@@ -1,0 +1,1108 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "跳到主要內容" [ref=e3] [cursor=pointer]:
+      - /url: "#centerData"
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link ":::" [ref=e8] [cursor=pointer]:
+              - /url: "#U"
+          - listitem [ref=e9]:
+            - link "臺中市徽圖示" [ref=e10] [cursor=pointer]:
+              - /url: ../index.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+              - img "臺中市徽圖示" [ref=e11]
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - link "網站導覽" [ref=e14] [cursor=pointer]:
+              - /url: ../sitemap.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - listitem [ref=e15]:
+            - link "人口統計資料視覺化" [ref=e16] [cursor=pointer]:
+              - /url: https://app.powerbi.com/view?r=eyJrIjoiNTcwNDNjODUtN2RjOC00YjM2LWEwYmMtY2UzMDdlYzA0OTk5IiwidCI6ImRlMDE3NjQ2LWFkYWQtNDY0Zi1hYTYxLWFjMzBjNDVhMTExNyIsImMiOjEwfQ%3D%3D&pageName=ReportSection00d8ca0a08c10c8bd434
+          - listitem [ref=e17]:
+            - link "民政局" [ref=e18] [cursor=pointer]:
+              - /url: https://www.civil.taichung.gov.tw/
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - link ":::" [ref=e23] [cursor=pointer]:
+        - /url: "#C"
+      - link "臺中市人口統計平台圖示" [ref=e24] [cursor=pointer]:
+        - /url: ../index.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+        - img "臺中市人口統計平台圖示" [ref=e25]
+    - generic [ref=e26]:
+      - link "回首頁" [ref=e27] [cursor=pointer]:
+        - /url: ../index.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+        - generic [ref=e28]: 
+        - text: 回首頁
+      - link "區里戶數/人口統計" [ref=e29] [cursor=pointer]:
+        - /url: ../WebArea/mapTaichung.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+        - generic [ref=e30]: 
+        - text: 區里戶數/人口統計
+      - link "人口統計資料視覺化" [ref=e31] [cursor=pointer]:
+        - /url: https://app.powerbi.com/view?r=eyJrIjoiNTcwNDNjODUtN2RjOC00YjM2LWEwYmMtY2UzMDdlYzA0OTk5IiwidCI6ImRlMDE3NjQ2LWFkYWQtNDY0Zi1hYTYxLWFjMzBjNDVhMTExNyIsImMiOjEwfQ%3D%3D&pageName=ReportSection00d8ca0a08c10c8bd434
+        - generic [ref=e32]: 
+        - text: 人口統計資料視覺化
+  - generic [ref=e35]:
+    - list [ref=e38]:
+      - listitem [ref=e39]:
+        - link [ref=e40] [cursor=pointer]:
+          - /url: TCCReport01.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表01-里鄰戶數及人口數 
+      - listitem [ref=e41]:
+        - link [ref=e42] [cursor=pointer]:
+          - /url: TCCReport15.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表02-單一年齡人口數 
+      - listitem [ref=e43]:
+        - link [ref=e44] [cursor=pointer]:
+          - /url: TCCReport02.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表03-各區人口結構 
+      - listitem [ref=e45]:
+        - link [ref=e46] [cursor=pointer]:
+          - /url: TCCReport21.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表04-人口統計進階搜尋 
+      - listitem [ref=e47]:
+        - link [ref=e48] [cursor=pointer]:
+          - /url: TCCReport14.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表05-原住民單一年齡人口數 
+      - listitem [ref=e49]:
+        - link [ref=e50] [cursor=pointer]:
+          - /url: TCCReport03.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表06-原住民身分別族別統計 
+      - listitem [ref=e51]:
+        - link [ref=e52] [cursor=pointer]:
+          - /url: TCCReport22.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表07-原住民人口數進階搜尋 
+      - listitem [ref=e53]:
+        - link [ref=e54] [cursor=pointer]:
+          - /url: TCCReport04.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表08-遷入遷出統計 
+      - listitem [ref=e55]:
+        - link [ref=e56] [cursor=pointer]:
+          - /url: TCCReport07.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表09-出生死亡統計 
+      - listitem [ref=e57]:
+        - link [ref=e58] [cursor=pointer]:
+          - /url: TCCReport05.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表10-結婚離婚統計 
+      - listitem [ref=e59]:
+        - link [ref=e60] [cursor=pointer]:
+          - /url: TCCReport11.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表11-戶籍登記統計表 
+      - listitem [ref=e61]:
+        - link [ref=e62] [cursor=pointer]:
+          - /url: TCCReport13.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表12-15歲以上人口教育程度 
+      - listitem [ref=e63]:
+        - link [ref=e64] [cursor=pointer]:
+          - /url: TCCReport08.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表13-出生死亡統計率 
+      - listitem [ref=e65]:
+        - link [ref=e66] [cursor=pointer]:
+          - /url: TCCReport06.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表14-結婚離婚統計率 
+      - listitem [ref=e67]:
+        - link [ref=e68] [cursor=pointer]:
+          - /url: TCCReport16.html?s=ZGYzODViZWQtOTUzZi00MmMzLTkzZWUtOGQ2MTM0Y2M0OTU1
+          - text: 表15-人口比較表 
+    - generic [ref=e69]:
+      - heading [level=1] [ref=e70]: 臺中市人口統計 - 表03-各區人口結構
+      - generic [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: 年度：
+            - combobox [ref=e76]
+          - generic [ref=e77]:
+            - generic [ref=e78]: 月份：
+            - combobox [ref=e79]
+          - generic [ref=e80]:
+            - generic [ref=e81]: 區域別：
+            - combobox [ref=e82]
+          - generic [ref=e83]:
+            - generic [ref=e84]: 里別：
+            - combobox [ref=e85]
+          - generic [ref=e86]:
+            - generic [ref=e87]: 性別：
+            - combobox [ref=e88]
+          - button [ref=e90] [cursor=pointer]: 查詢
+        - generic [ref=e92]:
+          - button [ref=e93] [cursor=pointer]: 匯出Excel
+          - button [ref=e94] [cursor=pointer]: 匯出Ods
+          - button [ref=e95] [cursor=pointer]: 列印
+      - generic [ref=e97]:
+        - generic [ref=e101]:
+          - text: 每頁顯示
+          - combobox [ref=e102]
+          - text: 筆資料
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - grid [ref=e110]:
+              - rowgroup [ref=e111]:
+                - row [ref=e112]:
+                  - columnheader [ref=e113]: 序
+                  - columnheader [ref=e114] [cursor=pointer]:  區域別 
+                  - columnheader [ref=e115] [cursor=pointer]:  性別 
+                  - columnheader [ref=e116] [cursor=pointer]:  總計 
+                  - columnheader [ref=e117] [cursor=pointer]:  0-4歲合計 
+                  - columnheader [ref=e118] [cursor=pointer]:  5-9歲合計 
+                  - columnheader [ref=e119] [cursor=pointer]:  10-14歲合計 
+                  - columnheader [ref=e120] [cursor=pointer]:  15-19歲合計 
+                  - columnheader [ref=e121] [cursor=pointer]:  20-24歲合計 
+                  - columnheader [ref=e122] [cursor=pointer]:  25-29歲合計 
+                  - columnheader [ref=e123] [cursor=pointer]:  30-34歲合計 
+                  - columnheader [ref=e124] [cursor=pointer]:  35-39歲合計 
+                  - columnheader [ref=e125] [cursor=pointer]:  40-44歲合計 
+                  - columnheader [ref=e126] [cursor=pointer]:  45-49歲合計 
+                  - columnheader [ref=e127] [cursor=pointer]:  50-54歲合計 
+                  - columnheader [ref=e128] [cursor=pointer]:  55-59歲合計 
+                  - columnheader [ref=e129] [cursor=pointer]:  60-64歲合計 
+                  - columnheader [ref=e130] [cursor=pointer]:  65-69歲合計 
+                  - columnheader [ref=e131] [cursor=pointer]:  70-74歲合計 
+                  - columnheader [ref=e132] [cursor=pointer]:  75-79歲合計 
+                  - columnheader [ref=e133] [cursor=pointer]:  80-84歲合計 
+                  - columnheader [ref=e134] [cursor=pointer]:  85-89歲合計 
+                  - columnheader [ref=e135] [cursor=pointer]:  90-94歲合計 
+                  - columnheader [ref=e136] [cursor=pointer]:  95-99歲合計 
+                  - columnheader [ref=e137] [cursor=pointer]:  100歲以上 
+            - grid [ref=e139]:
+              - rowgroup [ref=e140]:
+                - row [ref=e141]:
+                  - columnheader [ref=e142]
+                  - columnheader [ref=e143] [cursor=pointer]
+                  - columnheader [ref=e144] [cursor=pointer]
+                  - columnheader [ref=e145] [cursor=pointer]
+                  - columnheader [ref=e146] [cursor=pointer]
+                  - columnheader [ref=e147] [cursor=pointer]
+                  - columnheader [ref=e148] [cursor=pointer]
+                  - columnheader [ref=e149] [cursor=pointer]
+                  - columnheader [ref=e150] [cursor=pointer]
+                  - columnheader [ref=e151] [cursor=pointer]
+                  - columnheader [ref=e152] [cursor=pointer]
+                  - columnheader [ref=e153] [cursor=pointer]
+                  - columnheader [ref=e154] [cursor=pointer]
+                  - columnheader [ref=e155] [cursor=pointer]
+                  - columnheader [ref=e156] [cursor=pointer]
+                  - columnheader [ref=e157] [cursor=pointer]
+                  - columnheader [ref=e158] [cursor=pointer]
+                  - columnheader [ref=e159] [cursor=pointer]
+                  - columnheader [ref=e160] [cursor=pointer]
+                  - columnheader [ref=e161] [cursor=pointer]
+                  - columnheader [ref=e162] [cursor=pointer]
+                  - columnheader [ref=e163] [cursor=pointer]
+                  - columnheader [ref=e164] [cursor=pointer]
+                  - columnheader [ref=e165] [cursor=pointer]
+                  - columnheader [ref=e166] [cursor=pointer]
+              - rowgroup [ref=e167]:
+                - row [ref=e168]:
+                  - gridcell [ref=e169]: "1"
+                  - gridcell [ref=e170]: 總計
+                  - gridcell [ref=e171]: 計
+                  - gridcell [ref=e172]: 2,869,089
+                  - gridcell [ref=e173]: 90,481
+                  - gridcell [ref=e174]: 127,742
+                  - gridcell [ref=e175]: 144,984
+                  - gridcell [ref=e176]: 128,153
+                  - gridcell [ref=e177]: 147,109
+                  - gridcell [ref=e178]: 194,754
+                  - gridcell [ref=e179]: 211,174
+                  - gridcell [ref=e180]: 208,795
+                  - gridcell [ref=e181]: 239,659
+                  - gridcell [ref=e182]: 248,475
+                  - gridcell [ref=e183]: 207,741
+                  - gridcell [ref=e184]: 209,581
+                  - gridcell [ref=e185]: 205,005
+                  - gridcell [ref=e186]: 181,186
+                  - gridcell [ref=e187]: 147,654
+                  - gridcell [ref=e188]: 86,986
+                  - gridcell [ref=e189]: 45,678
+                  - gridcell [ref=e190]: 29,137
+                  - gridcell [ref=e191]: 11,195
+                  - gridcell [ref=e192]: 3,120
+                  - gridcell [ref=e193]: "480"
+                - row [ref=e194]:
+                  - gridcell [ref=e195]: "2"
+                  - gridcell [ref=e196]: 中區
+                  - gridcell [ref=e197]: 計
+                  - gridcell [ref=e198]: 18,129
+                  - gridcell [ref=e199]: "374"
+                  - gridcell [ref=e200]: 1,084
+                  - gridcell [ref=e201]: 1,847
+                  - gridcell [ref=e202]: "662"
+                  - gridcell [ref=e203]: "683"
+                  - gridcell [ref=e204]: "847"
+                  - gridcell [ref=e205]: "855"
+                  - gridcell [ref=e206]: 1,045
+                  - gridcell [ref=e207]: 1,431
+                  - gridcell [ref=e208]: 1,503
+                  - gridcell [ref=e209]: 1,137
+                  - gridcell [ref=e210]: 1,184
+                  - gridcell [ref=e211]: 1,253
+                  - gridcell [ref=e212]: 1,310
+                  - gridcell [ref=e213]: 1,265
+                  - gridcell [ref=e214]: "827"
+                  - gridcell [ref=e215]: "423"
+                  - gridcell [ref=e216]: "253"
+                  - gridcell [ref=e217]: "115"
+                  - gridcell [ref=e218]: "23"
+                  - gridcell [ref=e219]: "8"
+                - row [ref=e220]:
+                  - gridcell [ref=e221]: "3"
+                  - gridcell [ref=e222]: 東區
+                  - gridcell [ref=e223]: 計
+                  - gridcell [ref=e224]: 77,810
+                  - gridcell [ref=e225]: 2,254
+                  - gridcell [ref=e226]: 2,870
+                  - gridcell [ref=e227]: 3,277
+                  - gridcell [ref=e228]: 3,196
+                  - gridcell [ref=e229]: 3,728
+                  - gridcell [ref=e230]: 5,035
+                  - gridcell [ref=e231]: 5,523
+                  - gridcell [ref=e232]: 5,760
+                  - gridcell [ref=e233]: 6,450
+                  - gridcell [ref=e234]: 6,806
+                  - gridcell [ref=e235]: 5,723
+                  - gridcell [ref=e236]: 5,828
+                  - gridcell [ref=e237]: 5,724
+                  - gridcell [ref=e238]: 5,316
+                  - gridcell [ref=e239]: 4,686
+                  - gridcell [ref=e240]: 2,789
+                  - gridcell [ref=e241]: 1,401
+                  - gridcell [ref=e242]: "948"
+                  - gridcell [ref=e243]: "359"
+                  - gridcell [ref=e244]: "119"
+                  - gridcell [ref=e245]: "18"
+                - row [ref=e246]:
+                  - gridcell [ref=e247]: "4"
+                  - gridcell [ref=e248]: 南區
+                  - gridcell [ref=e249]: 計
+                  - gridcell [ref=e250]: 128,308
+                  - gridcell [ref=e251]: 3,697
+                  - gridcell [ref=e252]: 5,021
+                  - gridcell [ref=e253]: 4,880
+                  - gridcell [ref=e254]: 5,917
+                  - gridcell [ref=e255]: 6,960
+                  - gridcell [ref=e256]: 9,228
+                  - gridcell [ref=e257]: 9,585
+                  - gridcell [ref=e258]: 9,132
+                  - gridcell [ref=e259]: 10,355
+                  - gridcell [ref=e260]: 11,581
+                  - gridcell [ref=e261]: 11,117
+                  - gridcell [ref=e262]: 10,685
+                  - gridcell [ref=e263]: 9,050
+                  - gridcell [ref=e264]: 7,413
+                  - gridcell [ref=e265]: 6,074
+                  - gridcell [ref=e266]: 3,783
+                  - gridcell [ref=e267]: 1,924
+                  - gridcell [ref=e268]: 1,283
+                  - gridcell [ref=e269]: "465"
+                  - gridcell [ref=e270]: "131"
+                  - gridcell [ref=e271]: "27"
+                - row [ref=e272]:
+                  - gridcell [ref=e273]: "5"
+                  - gridcell [ref=e274]: 西區
+                  - gridcell [ref=e275]: 計
+                  - gridcell [ref=e276]: 113,263
+                  - gridcell [ref=e277]: 2,748
+                  - gridcell [ref=e278]: 5,177
+                  - gridcell [ref=e279]: 7,462
+                  - gridcell [ref=e280]: 4,603
+                  - gridcell [ref=e281]: 5,161
+                  - gridcell [ref=e282]: 6,848
+                  - gridcell [ref=e283]: 7,133
+                  - gridcell [ref=e284]: 7,095
+                  - gridcell [ref=e285]: 8,786
+                  - gridcell [ref=e286]: 9,120
+                  - gridcell [ref=e287]: 8,151
+                  - gridcell [ref=e288]: 8,689
+                  - gridcell [ref=e289]: 8,303
+                  - gridcell [ref=e290]: 7,857
+                  - gridcell [ref=e291]: 6,907
+                  - gridcell [ref=e292]: 4,392
+                  - gridcell [ref=e293]: 2,350
+                  - gridcell [ref=e294]: 1,647
+                  - gridcell [ref=e295]: "615"
+                  - gridcell [ref=e296]: "178"
+                  - gridcell [ref=e297]: "41"
+                - row [ref=e298]:
+                  - gridcell [ref=e299]: "6"
+                  - gridcell [ref=e300]: 北區
+                  - gridcell [ref=e301]: 計
+                  - gridcell [ref=e302]: 143,542
+                  - gridcell [ref=e303]: 3,774
+                  - gridcell [ref=e304]: 5,332
+                  - gridcell [ref=e305]: 5,774
+                  - gridcell [ref=e306]: 5,680
+                  - gridcell [ref=e307]: 6,476
+                  - gridcell [ref=e308]: 9,083
+                  - gridcell [ref=e309]: 10,444
+                  - gridcell [ref=e310]: 10,356
+                  - gridcell [ref=e311]: 11,445
+                  - gridcell [ref=e312]: 11,835
+                  - gridcell [ref=e313]: 10,180
+                  - gridcell [ref=e314]: 10,899
+                  - gridcell [ref=e315]: 11,091
+                  - gridcell [ref=e316]: 10,545
+                  - gridcell [ref=e317]: 9,224
+                  - gridcell [ref=e318]: 5,638
+                  - gridcell [ref=e319]: 2,888
+                  - gridcell [ref=e320]: 1,834
+                  - gridcell [ref=e321]: "751"
+                  - gridcell [ref=e322]: "244"
+                  - gridcell [ref=e323]: "49"
+                - row [ref=e324]:
+                  - gridcell [ref=e325]: "7"
+                  - gridcell [ref=e326]: 西屯區
+                  - gridcell [ref=e327]: 計
+                  - gridcell [ref=e328]: 238,280
+                  - gridcell [ref=e329]: 7,621
+                  - gridcell [ref=e330]: 11,363
+                  - gridcell [ref=e331]: 13,406
+                  - gridcell [ref=e332]: 11,224
+                  - gridcell [ref=e333]: 12,056
+                  - gridcell [ref=e334]: 16,338
+                  - gridcell [ref=e335]: 17,213
+                  - gridcell [ref=e336]: 16,861
+                  - gridcell [ref=e337]: 19,449
+                  - gridcell [ref=e338]: 20,572
+                  - gridcell [ref=e339]: 18,103
+                  - gridcell [ref=e340]: 18,775
+                  - gridcell [ref=e341]: 17,404
+                  - gridcell [ref=e342]: 14,402
+                  - gridcell [ref=e343]: 10,946
+                  - gridcell [ref=e344]: 6,386
+                  - gridcell [ref=e345]: 3,134
+                  - gridcell [ref=e346]: 1,992
+                  - gridcell [ref=e347]: "736"
+                  - gridcell [ref=e348]: "251"
+                  - gridcell [ref=e349]: "48"
+                - row [ref=e350]:
+                  - gridcell [ref=e351]: "8"
+                  - gridcell [ref=e352]: 南屯區
+                  - gridcell [ref=e353]: 計
+                  - gridcell [ref=e354]: 185,964
+                  - gridcell [ref=e355]: 6,436
+                  - gridcell [ref=e356]: 9,782
+                  - gridcell [ref=e357]: 10,749
+                  - gridcell [ref=e358]: 9,014
+                  - gridcell [ref=e359]: 9,847
+                  - gridcell [ref=e360]: 13,243
+                  - gridcell [ref=e361]: 13,738
+                  - gridcell [ref=e362]: 13,324
+                  - gridcell [ref=e363]: 15,068
+                  - gridcell [ref=e364]: 15,868
+                  - gridcell [ref=e365]: 14,503
+                  - gridcell [ref=e366]: 15,087
+                  - gridcell [ref=e367]: 13,143
+                  - gridcell [ref=e368]: 9,895
+                  - gridcell [ref=e369]: 7,530
+                  - gridcell [ref=e370]: 4,379
+                  - gridcell [ref=e371]: 2,263
+                  - gridcell [ref=e372]: 1,388
+                  - gridcell [ref=e373]: "538"
+                  - gridcell [ref=e374]: "141"
+                  - gridcell [ref=e375]: "28"
+                - row [ref=e376]:
+                  - gridcell [ref=e377]: "9"
+                  - gridcell [ref=e378]: 北屯區
+                  - gridcell [ref=e379]: 計
+                  - gridcell [ref=e380]: 318,014
+                  - gridcell [ref=e381]: 11,533
+                  - gridcell [ref=e382]: 15,622
+                  - gridcell [ref=e383]: 16,809
+                  - gridcell [ref=e384]: 13,602
+                  - gridcell [ref=e385]: 14,899
+                  - gridcell [ref=e386]: 20,776
+                  - gridcell [ref=e387]: 24,913
+                  - gridcell [ref=e388]: 25,865
+                  - gridcell [ref=e389]: 28,016
+                  - gridcell [ref=e390]: 27,566
+                  - gridcell [ref=e391]: 22,870
+                  - gridcell [ref=e392]: 22,862
+                  - gridcell [ref=e393]: 21,791
+                  - gridcell [ref=e394]: 18,910
+                  - gridcell [ref=e395]: 15,032
+                  - gridcell [ref=e396]: 8,611
+                  - gridcell [ref=e397]: 4,377
+                  - gridcell [ref=e398]: 2,639
+                  - gridcell [ref=e399]: "980"
+                  - gridcell [ref=e400]: "300"
+                  - gridcell [ref=e401]: "41"
+                - row [ref=e402]:
+                  - gridcell [ref=e403]: "10"
+                  - gridcell [ref=e404]: 豐原區
+                  - gridcell [ref=e405]: 計
+                  - gridcell [ref=e406]: 161,370
+                  - gridcell [ref=e407]: 4,679
+                  - gridcell [ref=e408]: 7,427
+                  - gridcell [ref=e409]: 8,704
+                  - gridcell [ref=e410]: 7,347
+                  - gridcell [ref=e411]: 8,125
+                  - gridcell [ref=e412]: 10,550
+                  - gridcell [ref=e413]: 11,179
+                  - gridcell [ref=e414]: 10,934
+                  - gridcell [ref=e415]: 13,234
+                  - gridcell [ref=e416]: 13,773
+                  - gridcell [ref=e417]: 11,205
+                  - gridcell [ref=e418]: 11,178
+                  - gridcell [ref=e419]: 11,651
+                  - gridcell [ref=e420]: 10,758
+                  - gridcell [ref=e421]: 9,130
+                  - gridcell [ref=e422]: 5,506
+                  - gridcell [ref=e423]: 2,993
+                  - gridcell [ref=e424]: 2,031
+                  - gridcell [ref=e425]: "781"
+                  - gridcell [ref=e426]: "167"
+                  - gridcell [ref=e427]: "18"
+                - row [ref=e428]:
+                  - gridcell [ref=e429]: "11"
+                  - gridcell [ref=e430]: 東勢區
+                  - gridcell [ref=e431]: 計
+                  - gridcell [ref=e432]: 46,341
+                  - gridcell [ref=e433]: 1,066
+                  - gridcell [ref=e434]: 1,393
+                  - gridcell [ref=e435]: 1,616
+                  - gridcell [ref=e436]: 1,715
+                  - gridcell [ref=e437]: 2,338
+                  - gridcell [ref=e438]: 3,102
+                  - gridcell [ref=e439]: 2,965
+                  - gridcell [ref=e440]: 2,793
+                  - gridcell [ref=e441]: 3,358
+                  - gridcell [ref=e442]: 3,512
+                  - gridcell [ref=e443]: 3,115
+                  - gridcell [ref=e444]: 3,615
+                  - gridcell [ref=e445]: 3,842
+                  - gridcell [ref=e446]: 3,674
+                  - gridcell [ref=e447]: 3,215
+                  - gridcell [ref=e448]: 2,153
+                  - gridcell [ref=e449]: 1,395
+                  - gridcell [ref=e450]: "989"
+                  - gridcell [ref=e451]: "368"
+                  - gridcell [ref=e452]: "100"
+                  - gridcell [ref=e453]: "17"
+                - row [ref=e454]:
+                  - gridcell [ref=e455]: "12"
+                  - gridcell [ref=e456]: 大甲區
+                  - gridcell [ref=e457]: 計
+                  - gridcell [ref=e458]: 72,924
+                  - gridcell [ref=e459]: 2,260
+                  - gridcell [ref=e460]: 3,474
+                  - gridcell [ref=e461]: 4,073
+                  - gridcell [ref=e462]: 3,295
+                  - gridcell [ref=e463]: 3,973
+                  - gridcell [ref=e464]: 4,977
+                  - gridcell [ref=e465]: 5,116
+                  - gridcell [ref=e466]: 5,005
+                  - gridcell [ref=e467]: 5,718
+                  - gridcell [ref=e468]: 5,818
+                  - gridcell [ref=e469]: 4,719
+                  - gridcell [ref=e470]: 4,961
+                  - gridcell [ref=e471]: 5,274
+                  - gridcell [ref=e472]: 4,942
+                  - gridcell [ref=e473]: 4,035
+                  - gridcell [ref=e474]: 2,373
+                  - gridcell [ref=e475]: 1,489
+                  - gridcell [ref=e476]: "956"
+                  - gridcell [ref=e477]: "368"
+                  - gridcell [ref=e478]: "89"
+                  - gridcell [ref=e479]: "9"
+                - row [ref=e480]:
+                  - gridcell [ref=e481]: "13"
+                  - gridcell [ref=e482]: 清水區
+                  - gridcell [ref=e483]: 計
+                  - gridcell [ref=e484]: 90,609
+                  - gridcell [ref=e485]: 2,952
+                  - gridcell [ref=e486]: 3,787
+                  - gridcell [ref=e487]: 4,156
+                  - gridcell [ref=e488]: 3,999
+                  - gridcell [ref=e489]: 4,963
+                  - gridcell [ref=e490]: 6,057
+                  - gridcell [ref=e491]: 6,517
+                  - gridcell [ref=e492]: 6,616
+                  - gridcell [ref=e493]: 8,004
+                  - gridcell [ref=e494]: 8,084
+                  - gridcell [ref=e495]: 6,388
+                  - gridcell [ref=e496]: 6,202
+                  - gridcell [ref=e497]: 6,234
+                  - gridcell [ref=e498]: 5,478
+                  - gridcell [ref=e499]: 4,861
+                  - gridcell [ref=e500]: 2,865
+                  - gridcell [ref=e501]: 1,666
+                  - gridcell [ref=e502]: 1,163
+                  - gridcell [ref=e503]: "499"
+                  - gridcell [ref=e504]: "106"
+                  - gridcell [ref=e505]: "12"
+                - row [ref=e506]:
+                  - gridcell [ref=e507]: "14"
+                  - gridcell [ref=e508]: 沙鹿區
+                  - gridcell [ref=e509]: 計
+                  - gridcell [ref=e510]: 101,677
+                  - gridcell [ref=e511]: 3,709
+                  - gridcell [ref=e512]: 5,360
+                  - gridcell [ref=e513]: 6,509
+                  - gridcell [ref=e514]: 5,201
+                  - gridcell [ref=e515]: 5,534
+                  - gridcell [ref=e516]: 6,641
+                  - gridcell [ref=e517]: 7,416
+                  - gridcell [ref=e518]: 7,175
+                  - gridcell [ref=e519]: 9,033
+                  - gridcell [ref=e520]: 10,082
+                  - gridcell [ref=e521]: 7,790
+                  - gridcell [ref=e522]: 6,529
+                  - gridcell [ref=e523]: 5,837
+                  - gridcell [ref=e524]: 5,073
+                  - gridcell [ref=e525]: 4,434
+                  - gridcell [ref=e526]: 2,682
+                  - gridcell [ref=e527]: 1,425
+                  - gridcell [ref=e528]: "837"
+                  - gridcell [ref=e529]: "313"
+                  - gridcell [ref=e530]: "83"
+                  - gridcell [ref=e531]: "14"
+                - row [ref=e532]:
+                  - gridcell [ref=e533]: "15"
+                  - gridcell [ref=e534]: 梧棲區
+                  - gridcell [ref=e535]: 計
+                  - gridcell [ref=e536]: 66,876
+                  - gridcell [ref=e537]: 2,357
+                  - gridcell [ref=e538]: 3,300
+                  - gridcell [ref=e539]: 3,410
+                  - gridcell [ref=e540]: 3,108
+                  - gridcell [ref=e541]: 3,705
+                  - gridcell [ref=e542]: 4,694
+                  - gridcell [ref=e543]: 5,330
+                  - gridcell [ref=e544]: 5,278
+                  - gridcell [ref=e545]: 6,346
+                  - gridcell [ref=e546]: 6,400
+                  - gridcell [ref=e547]: 4,653
+                  - gridcell [ref=e548]: 4,156
+                  - gridcell [ref=e549]: 4,053
+                  - gridcell [ref=e550]: 3,671
+                  - gridcell [ref=e551]: 3,002
+                  - gridcell [ref=e552]: 1,754
+                  - gridcell [ref=e553]: "854"
+                  - gridcell [ref=e554]: "561"
+                  - gridcell [ref=e555]: "194"
+                  - gridcell [ref=e556]: "43"
+                  - gridcell [ref=e557]: "7"
+                - row [ref=e558]:
+                  - gridcell [ref=e559]: "16"
+                  - gridcell [ref=e560]: 后里區
+                  - gridcell [ref=e561]: 計
+                  - gridcell [ref=e562]: 52,694
+                  - gridcell [ref=e563]: 1,599
+                  - gridcell [ref=e564]: 2,226
+                  - gridcell [ref=e565]: 2,513
+                  - gridcell [ref=e566]: 2,477
+                  - gridcell [ref=e567]: 2,961
+                  - gridcell [ref=e568]: 3,699
+                  - gridcell [ref=e569]: 3,679
+                  - gridcell [ref=e570]: 3,441
+                  - gridcell [ref=e571]: 4,135
+                  - gridcell [ref=e572]: 4,589
+                  - gridcell [ref=e573]: 3,753
+                  - gridcell [ref=e574]: 3,831
+                  - gridcell [ref=e575]: 3,670
+                  - gridcell [ref=e576]: 3,291
+                  - gridcell [ref=e577]: 2,928
+                  - gridcell [ref=e578]: 1,838
+                  - gridcell [ref=e579]: 1,058
+                  - gridcell [ref=e580]: "665"
+                  - gridcell [ref=e581]: "254"
+                  - gridcell [ref=e582]: "78"
+                  - gridcell [ref=e583]: "9"
+                - row [ref=e584]:
+                  - gridcell [ref=e585]: "17"
+                  - gridcell [ref=e586]: 神岡區
+                  - gridcell [ref=e587]: 計
+                  - gridcell [ref=e588]: 63,154
+                  - gridcell [ref=e589]: 1,901
+                  - gridcell [ref=e590]: 2,397
+                  - gridcell [ref=e591]: 2,701
+                  - gridcell [ref=e592]: 2,931
+                  - gridcell [ref=e593]: 3,504
+                  - gridcell [ref=e594]: 4,492
+                  - gridcell [ref=e595]: 4,591
+                  - gridcell [ref=e596]: 4,373
+                  - gridcell [ref=e597]: 5,172
+                  - gridcell [ref=e598]: 5,445
+                  - gridcell [ref=e599]: 4,459
+                  - gridcell [ref=e600]: 4,491
+                  - gridcell [ref=e601]: 4,667
+                  - gridcell [ref=e602]: 4,394
+                  - gridcell [ref=e603]: 3,440
+                  - gridcell [ref=e604]: 2,016
+                  - gridcell [ref=e605]: 1,098
+                  - gridcell [ref=e606]: "740"
+                  - gridcell [ref=e607]: "275"
+                  - gridcell [ref=e608]: "58"
+                  - gridcell [ref=e609]: "9"
+                - row [ref=e610]:
+                  - gridcell [ref=e611]: "18"
+                  - gridcell [ref=e612]: 潭子區
+                  - gridcell [ref=e613]: 計
+                  - gridcell [ref=e614]: 109,277
+                  - gridcell [ref=e615]: 3,438
+                  - gridcell [ref=e616]: 4,592
+                  - gridcell [ref=e617]: 4,852
+                  - gridcell [ref=e618]: 4,927
+                  - gridcell [ref=e619]: 5,871
+                  - gridcell [ref=e620]: 7,821
+                  - gridcell [ref=e621]: 8,388
+                  - gridcell [ref=e622]: 8,018
+                  - gridcell [ref=e623]: 8,721
+                  - gridcell [ref=e624]: 9,497
+                  - gridcell [ref=e625]: 8,224
+                  - gridcell [ref=e626]: 8,471
+                  - gridcell [ref=e627]: 8,198
+                  - gridcell [ref=e628]: 6,987
+                  - gridcell [ref=e629]: 5,366
+                  - gridcell [ref=e630]: 3,050
+                  - gridcell [ref=e631]: 1,572
+                  - gridcell [ref=e632]: "847"
+                  - gridcell [ref=e633]: "312"
+                  - gridcell [ref=e634]: "114"
+                  - gridcell [ref=e635]: "11"
+                - row [ref=e636]:
+                  - gridcell [ref=e637]: "19"
+                  - gridcell [ref=e638]: 大雅區
+                  - gridcell [ref=e639]: 計
+                  - gridcell [ref=e640]: 94,561
+                  - gridcell [ref=e641]: 3,150
+                  - gridcell [ref=e642]: 4,444
+                  - gridcell [ref=e643]: 5,146
+                  - gridcell [ref=e644]: 4,546
+                  - gridcell [ref=e645]: 5,180
+                  - gridcell [ref=e646]: 6,816
+                  - gridcell [ref=e647]: 7,176
+                  - gridcell [ref=e648]: 7,057
+                  - gridcell [ref=e649]: 7,884
+                  - gridcell [ref=e650]: 8,179
+                  - gridcell [ref=e651]: 6,599
+                  - gridcell [ref=e652]: 6,865
+                  - gridcell [ref=e653]: 6,960
+                  - gridcell [ref=e654]: 5,799
+                  - gridcell [ref=e655]: 4,320
+                  - gridcell [ref=e656]: 2,250
+                  - gridcell [ref=e657]: 1,139
+                  - gridcell [ref=e658]: "688"
+                  - gridcell [ref=e659]: "277"
+                  - gridcell [ref=e660]: "77"
+                  - gridcell [ref=e661]: "9"
+                - row [ref=e662]:
+                  - gridcell [ref=e663]: "20"
+                  - gridcell [ref=e664]: 新社區
+                  - gridcell [ref=e665]: 計
+                  - gridcell [ref=e666]: 22,530
+                  - gridcell [ref=e667]: "485"
+                  - gridcell [ref=e668]: "611"
+                  - gridcell [ref=e669]: "819"
+                  - gridcell [ref=e670]: "862"
+                  - gridcell [ref=e671]: 1,307
+                  - gridcell [ref=e672]: 1,570
+                  - gridcell [ref=e673]: 1,480
+                  - gridcell [ref=e674]: 1,240
+                  - gridcell [ref=e675]: 1,547
+                  - gridcell [ref=e676]: 1,736
+                  - gridcell [ref=e677]: 1,721
+                  - gridcell [ref=e678]: 1,908
+                  - gridcell [ref=e679]: 1,811
+                  - gridcell [ref=e680]: 1,621
+                  - gridcell [ref=e681]: 1,448
+                  - gridcell [ref=e682]: "971"
+                  - gridcell [ref=e683]: "682"
+                  - gridcell [ref=e684]: "467"
+                  - gridcell [ref=e685]: "176"
+                  - gridcell [ref=e686]: "59"
+                  - gridcell [ref=e687]: "9"
+                - row [ref=e688]:
+                  - gridcell [ref=e689]: "21"
+                  - gridcell [ref=e690]: 石岡區
+                  - gridcell [ref=e691]: 計
+                  - gridcell [ref=e692]: 13,662
+                  - gridcell [ref=e693]: "332"
+                  - gridcell [ref=e694]: "352"
+                  - gridcell [ref=e695]: "502"
+                  - gridcell [ref=e696]: "519"
+                  - gridcell [ref=e697]: "730"
+                  - gridcell [ref=e698]: "970"
+                  - gridcell [ref=e699]: "872"
+                  - gridcell [ref=e700]: "807"
+                  - gridcell [ref=e701]: 1,022
+                  - gridcell [ref=e702]: 1,048
+                  - gridcell [ref=e703]: "904"
+                  - gridcell [ref=e704]: 1,055
+                  - gridcell [ref=e705]: 1,120
+                  - gridcell [ref=e706]: 1,157
+                  - gridcell [ref=e707]: "970"
+                  - gridcell [ref=e708]: "568"
+                  - gridcell [ref=e709]: "345"
+                  - gridcell [ref=e710]: "245"
+                  - gridcell [ref=e711]: "113"
+                  - gridcell [ref=e712]: "27"
+                  - gridcell [ref=e713]: "4"
+                - row [ref=e714]:
+                  - gridcell [ref=e715]: "22"
+                  - gridcell [ref=e716]: 外埔區
+                  - gridcell [ref=e717]: 計
+                  - gridcell [ref=e718]: 30,717
+                  - gridcell [ref=e719]: "899"
+                  - gridcell [ref=e720]: 1,034
+                  - gridcell [ref=e721]: 1,128
+                  - gridcell [ref=e722]: 1,369
+                  - gridcell [ref=e723]: 1,779
+                  - gridcell [ref=e724]: 2,210
+                  - gridcell [ref=e725]: 2,278
+                  - gridcell [ref=e726]: 2,197
+                  - gridcell [ref=e727]: 2,519
+                  - gridcell [ref=e728]: 2,731
+                  - gridcell [ref=e729]: 2,180
+                  - gridcell [ref=e730]: 2,277
+                  - gridcell [ref=e731]: 2,232
+                  - gridcell [ref=e732]: 2,085
+                  - gridcell [ref=e733]: 1,683
+                  - gridcell [ref=e734]: 1,024
+                  - gridcell [ref=e735]: "543"
+                  - gridcell [ref=e736]: "370"
+                  - gridcell [ref=e737]: "136"
+                  - gridcell [ref=e738]: "39"
+                  - gridcell [ref=e739]: "4"
+                - row [ref=e740]:
+                  - gridcell [ref=e741]: "23"
+                  - gridcell [ref=e742]: 大安區
+                  - gridcell [ref=e743]: 計
+                  - gridcell [ref=e744]: 17,376
+                  - gridcell [ref=e745]: "475"
+                  - gridcell [ref=e746]: "463"
+                  - gridcell [ref=e747]: "495"
+                  - gridcell [ref=e748]: "683"
+                  - gridcell [ref=e749]: "973"
+                  - gridcell [ref=e750]: 1,285
+                  - gridcell [ref=e751]: 1,285
+                  - gridcell [ref=e752]: 1,165
+                  - gridcell [ref=e753]: 1,285
+                  - gridcell [ref=e754]: 1,419
+                  - gridcell [ref=e755]: 1,268
+                  - gridcell [ref=e756]: 1,383
+                  - gridcell [ref=e757]: 1,444
+                  - gridcell [ref=e758]: 1,172
+                  - gridcell [ref=e759]: "906"
+                  - gridcell [ref=e760]: "649"
+                  - gridcell [ref=e761]: "484"
+                  - gridcell [ref=e762]: "376"
+                  - gridcell [ref=e763]: "130"
+                  - gridcell [ref=e764]: "32"
+                  - gridcell [ref=e765]: "4"
+                - row [ref=e766]:
+                  - gridcell [ref=e767]: "24"
+                  - gridcell [ref=e768]: 烏日區
+                  - gridcell [ref=e769]: 計
+                  - gridcell [ref=e770]: 82,396
+                  - gridcell [ref=e771]: 3,042
+                  - gridcell [ref=e772]: 3,745
+                  - gridcell [ref=e773]: 4,151
+                  - gridcell [ref=e774]: 3,669
+                  - gridcell [ref=e775]: 4,212
+                  - gridcell [ref=e776]: 5,560
+                  - gridcell [ref=e777]: 6,420
+                  - gridcell [ref=e778]: 6,517
+                  - gridcell [ref=e779]: 7,348
+                  - gridcell [ref=e780]: 7,370
+                  - gridcell [ref=e781]: 5,916
+                  - gridcell [ref=e782]: 5,448
+                  - gridcell [ref=e783]: 5,483
+                  - gridcell [ref=e784]: 4,865
+                  - gridcell [ref=e785]: 3,973
+                  - gridcell [ref=e786]: 2,357
+                  - gridcell [ref=e787]: 1,185
+                  - gridcell [ref=e788]: "734"
+                  - gridcell [ref=e789]: "316"
+                  - gridcell [ref=e790]: "74"
+                  - gridcell [ref=e791]: "11"
+                - row [ref=e792]:
+                  - gridcell [ref=e793]: "25"
+                  - gridcell [ref=e794]: 大肚區
+                  - gridcell [ref=e795]: 計
+                  - gridcell [ref=e796]: 55,086
+                  - gridcell [ref=e797]: 1,561
+                  - gridcell [ref=e798]: 2,034
+                  - gridcell [ref=e799]: 2,370
+                  - gridcell [ref=e800]: 2,473
+                  - gridcell [ref=e801]: 3,013
+                  - gridcell [ref=e802]: 3,862
+                  - gridcell [ref=e803]: 3,911
+                  - gridcell [ref=e804]: 3,909
+                  - gridcell [ref=e805]: 4,552
+                  - gridcell [ref=e806]: 4,912
+                  - gridcell [ref=e807]: 4,031
+                  - gridcell [ref=e808]: 3,866
+                  - gridcell [ref=e809]: 4,021
+                  - gridcell [ref=e810]: 3,746
+                  - gridcell [ref=e811]: 3,067
+                  - gridcell [ref=e812]: 1,785
+                  - gridcell [ref=e813]: "982"
+                  - gridcell [ref=e814]: "617"
+                  - gridcell [ref=e815]: "283"
+                  - gridcell [ref=e816]: "81"
+                  - gridcell [ref=e817]: "10"
+                - row [ref=e818]:
+                  - gridcell [ref=e819]: "26"
+                  - gridcell [ref=e820]: 龍井區
+                  - gridcell [ref=e821]: 計
+                  - gridcell [ref=e822]: 79,270
+                  - gridcell [ref=e823]: 2,699
+                  - gridcell [ref=e824]: 3,359
+                  - gridcell [ref=e825]: 3,631
+                  - gridcell [ref=e826]: 3,831
+                  - gridcell [ref=e827]: 4,360
+                  - gridcell [ref=e828]: 5,871
+                  - gridcell [ref=e829]: 6,437
+                  - gridcell [ref=e830]: 5,968
+                  - gridcell [ref=e831]: 6,864
+                  - gridcell [ref=e832]: 6,956
+                  - gridcell [ref=e833]: 5,632
+                  - gridcell [ref=e834]: 5,606
+                  - gridcell [ref=e835]: 5,622
+                  - gridcell [ref=e836]: 4,604
+                  - gridcell [ref=e837]: 3,465
+                  - gridcell [ref=e838]: 2,042
+                  - gridcell [ref=e839]: 1,148
+                  - gridcell [ref=e840]: "788"
+                  - gridcell [ref=e841]: "308"
+                  - gridcell [ref=e842]: "71"
+                  - gridcell [ref=e843]: "8"
+                - row [ref=e844]:
+                  - gridcell [ref=e845]: "27"
+                  - gridcell [ref=e846]: 霧峰區
+                  - gridcell [ref=e847]: 計
+                  - gridcell [ref=e848]: 62,365
+                  - gridcell [ref=e849]: 1,729
+                  - gridcell [ref=e850]: 2,286
+                  - gridcell [ref=e851]: 2,535
+                  - gridcell [ref=e852]: 2,410
+                  - gridcell [ref=e853]: 3,239
+                  - gridcell [ref=e854]: 4,248
+                  - gridcell [ref=e855]: 4,588
+                  - gridcell [ref=e856]: 4,355
+                  - gridcell [ref=e857]: 5,088
+                  - gridcell [ref=e858]: 4,925
+                  - gridcell [ref=e859]: 4,146
+                  - gridcell [ref=e860]: 4,505
+                  - gridcell [ref=e861]: 5,089
+                  - gridcell [ref=e862]: 4,698
+                  - gridcell [ref=e863]: 3,750
+                  - gridcell [ref=e864]: 2,184
+                  - gridcell [ref=e865]: 1,247
+                  - gridcell [ref=e866]: "903"
+                  - gridcell [ref=e867]: "350"
+                  - gridcell [ref=e868]: "80"
+                  - gridcell [ref=e869]: "10"
+                - row [ref=e870]:
+                  - gridcell [ref=e871]: "28"
+                  - gridcell [ref=e872]: 太平區
+                  - gridcell [ref=e873]: 計
+                  - gridcell [ref=e874]: 201,753
+                  - gridcell [ref=e875]: 6,965
+                  - gridcell [ref=e876]: 9,414
+                  - gridcell [ref=e877]: 9,535
+                  - gridcell [ref=e878]: 8,611
+                  - gridcell [ref=e879]: 9,772
+                  - gridcell [ref=e880]: 13,941
+                  - gridcell [ref=e881]: 16,091
+                  - gridcell [ref=e882]: 16,318
+                  - gridcell [ref=e883]: 17,973
+                  - gridcell [ref=e884]: 17,686
+                  - gridcell [ref=e885]: 13,749
+                  - gridcell [ref=e886]: 13,987
+                  - gridcell [ref=e887]: 13,998
+                  - gridcell [ref=e888]: 12,847
+                  - gridcell [ref=e889]: 10,221
+                  - gridcell [ref=e890]: 5,755
+                  - gridcell [ref=e891]: 2,661
+                  - gridcell [ref=e892]: 1,455
+                  - gridcell [ref=e893]: "561"
+                  - gridcell [ref=e894]: "186"
+                  - gridcell [ref=e895]: "27"
+                - row [ref=e896]:
+                  - gridcell [ref=e897]: "29"
+                  - gridcell [ref=e898]: 大里區
+                  - gridcell [ref=e899]: 計
+                  - gridcell [ref=e900]: 210,681
+                  - gridcell [ref=e901]: 6,384
+                  - gridcell [ref=e902]: 9,471
+                  - gridcell [ref=e903]: 11,603
+                  - gridcell [ref=e904]: 9,875
+                  - gridcell [ref=e905]: 11,206
+                  - gridcell [ref=e906]: 14,345
+                  - gridcell [ref=e907]: 15,365
+                  - gridcell [ref=e908]: 15,633
+                  - gridcell [ref=e909]: 18,177
+                  - gridcell [ref=e910]: 18,706
+                  - gridcell [ref=e911]: 14,755
+                  - gridcell [ref=e912]: 14,307
+                  - gridcell [ref=e913]: 15,042
+                  - gridcell [ref=e914]: 13,791
+                  - gridcell [ref=e915]: 11,050
+                  - gridcell [ref=e916]: 5,963
+                  - gridcell [ref=e917]: 2,728
+                  - gridcell [ref=e918]: 1,555
+                  - gridcell [ref=e919]: "563"
+                  - gridcell [ref=e920]: "146"
+                  - gridcell [ref=e921]: "16"
+                - row [ref=e922]:
+                  - gridcell [ref=e923]: "30"
+                  - gridcell [ref=e924]: 和平區
+                  - gridcell [ref=e925]: 計
+                  - gridcell [ref=e926]: 10,460
+                  - gridcell [ref=e927]: "362"
+                  - gridcell [ref=e928]: "322"
+                  - gridcell [ref=e929]: "331"
+                  - gridcell [ref=e930]: "407"
+                  - gridcell [ref=e931]: "554"
+                  - gridcell [ref=e932]: "645"
+                  - gridcell [ref=e933]: "686"
+                  - gridcell [ref=e934]: "558"
+                  - gridcell [ref=e935]: "679"
+                  - gridcell [ref=e936]: "756"
+                  - gridcell [ref=e937]: "750"
+                  - gridcell [ref=e938]: "931"
+                  - gridcell [ref=e939]: "998"
+                  - gridcell [ref=e940]: "885"
+                  - gridcell [ref=e941]: "726"
+                  - gridcell [ref=e942]: "396"
+                  - gridcell [ref=e943]: "224"
+                  - gridcell [ref=e944]: "166"
+                  - gridcell [ref=e945]: "59"
+                  - gridcell [ref=e946]: "23"
+                  - gridcell [ref=e947]: "2"
+          - generic [ref=e948]:
+            - grid [ref=e950]:
+              - rowgroup [ref=e951]:
+                - row [ref=e952]:
+                  - columnheader [ref=e953]: 序
+                  - columnheader [ref=e954] [cursor=pointer]:  區域別 
+            - grid [ref=e957]:
+              - rowgroup [ref=e958]:
+                - row [ref=e959]:
+                  - columnheader [ref=e960]
+                  - columnheader [ref=e961] [cursor=pointer]:  
+              - rowgroup [ref=e962]:
+                - row [ref=e963]:
+                  - gridcell [ref=e964]:
+                    - textbox [ref=e965]
+                    - text: "1"
+                  - gridcell [ref=e966]: 總計
+                - row [ref=e967]:
+                  - gridcell [ref=e968]: "2"
+                  - gridcell [ref=e969]: 中區
+                - row [ref=e970]:
+                  - gridcell [ref=e971]: "3"
+                  - gridcell [ref=e972]: 東區
+                - row [ref=e973]:
+                  - gridcell [ref=e974]: "4"
+                  - gridcell [ref=e975]: 南區
+                - row [ref=e976]:
+                  - gridcell [ref=e977]: "5"
+                  - gridcell [ref=e978]: 西區
+                - row [ref=e979]:
+                  - gridcell [ref=e980]: "6"
+                  - gridcell [ref=e981]: 北區
+                - row [ref=e982]:
+                  - gridcell [ref=e983]: "7"
+                  - gridcell [ref=e984]: 西屯區
+                - row [ref=e985]:
+                  - gridcell [ref=e986]: "8"
+                  - gridcell [ref=e987]: 南屯區
+                - row [ref=e988]:
+                  - gridcell [ref=e989]: "9"
+                  - gridcell [ref=e990]: 北屯區
+                - row [ref=e991]:
+                  - gridcell [ref=e992]: "10"
+                  - gridcell [ref=e993]: 豐原區
+                - row [ref=e994]:
+                  - gridcell [ref=e995]: "11"
+                  - gridcell [ref=e996]: 東勢區
+                - row [ref=e997]:
+                  - gridcell [ref=e998]: "12"
+                  - gridcell [ref=e999]: 大甲區
+                - row [ref=e1000]:
+                  - gridcell [ref=e1001]: "13"
+                  - gridcell [ref=e1002]: 清水區
+                - row [ref=e1003]:
+                  - gridcell [ref=e1004]: "14"
+                  - gridcell [ref=e1005]: 沙鹿區
+                - row [ref=e1006]:
+                  - gridcell [ref=e1007]: "15"
+                  - gridcell [ref=e1008]: 梧棲區
+                - row [ref=e1009]:
+                  - gridcell [ref=e1010]: "16"
+                  - gridcell [ref=e1011]: 后里區
+                - row [ref=e1012]:
+                  - gridcell [ref=e1013]: "17"
+                  - gridcell [ref=e1014]: 神岡區
+                - row [ref=e1015]:
+                  - gridcell [ref=e1016]: "18"
+                  - gridcell [ref=e1017]: 潭子區
+                - row [ref=e1018]:
+                  - gridcell [ref=e1019]: "19"
+                  - gridcell [ref=e1020]: 大雅區
+                - row [ref=e1021]:
+                  - gridcell [ref=e1022]: "20"
+                  - gridcell [ref=e1023]: 新社區
+                - row [ref=e1024]:
+                  - gridcell [ref=e1025]: "21"
+                  - gridcell [ref=e1026]: 石岡區
+                - row [ref=e1027]:
+                  - gridcell [ref=e1028]: "22"
+                  - gridcell [ref=e1029]: 外埔區
+                - row [ref=e1030]:
+                  - gridcell [ref=e1031]: "23"
+                  - gridcell [ref=e1032]: 大安區
+                - row [ref=e1033]:
+                  - gridcell [ref=e1034]: "24"
+                  - gridcell [ref=e1035]: 烏日區
+                - row [ref=e1036]:
+                  - gridcell [ref=e1037]: "25"
+                  - gridcell [ref=e1038]: 大肚區
+                - row [ref=e1039]:
+                  - gridcell [ref=e1040]: "26"
+                  - gridcell [ref=e1041]: 龍井區
+                - row [ref=e1042]:
+                  - gridcell [ref=e1043]: "27"
+                  - gridcell [ref=e1044]: 霧峰區
+                - row [ref=e1045]:
+                  - gridcell [ref=e1046]: "28"
+                  - gridcell [ref=e1047]: 太平區
+                - row [ref=e1048]:
+                  - gridcell [ref=e1049]: "29"
+                  - gridcell [ref=e1050]: 大里區
+                - row [ref=e1051]:
+                  - gridcell [ref=e1052]: "30"
+                  - gridcell [ref=e1053]: 和平區
+        - status [ref=e1056]: 目前在 第 1 頁 / 共 1 頁,共 30 筆資料
+        - list [ref=e1060]:
+          - listitem [ref=e1061]:
+            - link:
+              - /url: "#"
+              - text: 上一頁
+          - listitem [ref=e1062]:
+            - link [ref=e1063] [cursor=pointer]:
+              - /url: "#"
+              - text: "1"
+          - listitem [ref=e1064]:
+            - link:
+              - /url: "#"
+              - text: 下一頁
+  - contentinfo [ref=e1066]:
+    - generic [ref=e1068]:
+      - generic [ref=e1069]:
+        - paragraph [ref=e1070]: 407201 臺中市西屯區臺灣大道三段99號
+        - paragraph [ref=e1071]: 電話：04-22289111 傳真：04-22204414 服務時間：週一至週五 上午8點至12點 下午1點至5點
+        - paragraph [ref=e1072]: Copyright © 2020-2026 臺中市政府民政局
+        - paragraph [ref=e1073]: 瀏覽人次：2,010,364，更新日期：2026/04/18
+      - link "通過A無障礙網頁檢測" [ref=e1075] [cursor=pointer]:
+        - /url: https://accessibility.moda.gov.tw/Applications/Detail?category=20250702111140
+        - img "通過A無障礙網頁檢測" [ref=e1076]
+  - dialog "資料處理中，請稍候" [ref=e1078]:
+    - generic [ref=e1079]:
+      - text: "? ! i"
+      - heading "資料處理中，請稍候" [level=2] [ref=e1080]
+    - generic: "!"
+    - button "OK" [disabled] [ref=e1082]

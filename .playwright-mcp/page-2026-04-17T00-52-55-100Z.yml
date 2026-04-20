@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]: E
+      - heading "ERP" [level=1] [ref=e7]
+      - paragraph [ref=e8]: 企業資源規劃系統
+    - generic [ref=e9]:
+      - heading "登入帳號" [level=2] [ref=e10]
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]: 電子郵件
+          - textbox "電子郵件" [ref=e14]:
+            - /placeholder: name@company.com
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - generic [ref=e17]: 密碼
+            - link "忘記密碼？" [ref=e18] [cursor=pointer]:
+              - /url: /forgot-password
+          - generic [ref=e19]:
+            - textbox "密碼" [ref=e20]:
+              - /placeholder: 輸入密碼
+            - button [ref=e21]:
+              - img [ref=e22]
+        - generic [ref=e25]:
+          - checkbox "記住我（30 天）" [ref=e26]
+          - checkbox
+          - generic [ref=e27] [cursor=pointer]: 記住我（30 天）
+        - button "登入" [ref=e28]:
+          - img
+          - text: 登入
+    - paragraph [ref=e29]: © 2025 ERP System. All rights reserved.
+  - region "Notifications alt+T"
+  - alert [ref=e30]

@@ -1,0 +1,190 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Components
+    - generic [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]:
+        - generic [ref=e6]: 🎨
+        - text: 基礎
+      - generic [ref=e7] [cursor=pointer]: Colours
+      - generic [ref=e8] [cursor=pointer]: Typography
+      - generic [ref=e9] [cursor=pointer]: Icons
+    - generic [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 📝
+        - text: 表單
+      - generic [ref=e13] [cursor=pointer]: Buttons
+      - generic [ref=e14] [cursor=pointer]: Inputs
+      - generic [ref=e15] [cursor=pointer]: Checkboxes · Radio
+      - generic [ref=e16] [cursor=pointer]: File Upload
+      - generic [ref=e17] [cursor=pointer]: Search Bar
+      - generic [ref=e18] [cursor=pointer]: Date Picker
+    - generic [ref=e19]:
+      - generic [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]: 📊
+        - text: 數據展示
+      - generic [ref=e22] [cursor=pointer]: Badges
+      - generic [ref=e23] [cursor=pointer]: Table
+      - generic [ref=e24] [cursor=pointer]: Pagination
+      - generic [ref=e25] [cursor=pointer]: Cards
+      - generic [ref=e26] [cursor=pointer]: KPI / Stat Cards
+      - generic [ref=e27] [cursor=pointer]: Charts
+      - generic [ref=e28] [cursor=pointer]: Tree View
+    - generic [ref=e29]:
+      - generic [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: 🧭
+        - text: 導航
+      - generic [ref=e32] [cursor=pointer]: Breadcrumb
+      - generic [ref=e33] [cursor=pointer]: Tabs
+      - generic [ref=e34] [cursor=pointer]: Dropdown Menu
+      - generic [ref=e35] [cursor=pointer]: Top Nav Bar
+      - generic [ref=e36] [cursor=pointer]: Command Palette
+    - generic [ref=e37]:
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: 💬
+        - text: 反饋
+      - generic [ref=e40] [cursor=pointer]: Alerts
+      - generic [ref=e41] [cursor=pointer]: Toast / Snackbar
+      - generic [ref=e42] [cursor=pointer]: Banner
+      - generic [ref=e43] [cursor=pointer]: Tooltip
+      - generic [ref=e44] [cursor=pointer]: Modal / Dialog
+      - generic [ref=e45] [cursor=pointer]: Loading Skeleton
+    - generic [ref=e46]:
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]: 📦
+        - text: 佔位符
+      - generic [ref=e49] [cursor=pointer]: Empty State
+      - generic [ref=e50] [cursor=pointer]: Placeholder States
+    - generic [ref=e51]:
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]: 🔧
+        - text: 複雜組件
+      - generic [ref=e54] [cursor=pointer]: Image Upload
+      - generic [ref=e55] [cursor=pointer]: Data Upload
+      - generic [ref=e56] [cursor=pointer]: Detail Card
+      - generic [ref=e57] [cursor=pointer]: Content Block
+      - generic [ref=e58] [cursor=pointer]: Attachments
+      - generic [ref=e59] [cursor=pointer]: Image Gallery
+      - generic [ref=e60] [cursor=pointer]: Related Links
+      - generic [ref=e61] [cursor=pointer]: Stepper
+      - generic [ref=e62] [cursor=pointer]: Checklist
+      - generic [ref=e63] [cursor=pointer]: Avatar Group
+      - generic [ref=e64] [cursor=pointer]: Settings
+      - generic [ref=e65] [cursor=pointer]: Rich Text Editor
+      - generic [ref=e66] [cursor=pointer]: Activity Timeline
+      - generic [ref=e67] [cursor=pointer]: Pricing Cards
+      - generic [ref=e68] [cursor=pointer]: Feature Highlight
+      - generic [ref=e69] [cursor=pointer]: Star Rating
+  - complementary [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]: ERP
+      - generic [ref=e73]: 系統管理
+    - navigation [ref=e74]:
+      - generic [ref=e75]: 主選單
+      - link "儀表板" [ref=e76] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e77]
+        - text: 儀表板
+      - link "客戶管理" [ref=e82] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e83]
+        - text: 客戶管理
+      - link "報價管理" [ref=e88] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e89]
+        - text: 報價管理
+      - link "訂單管理" [ref=e92] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e93]
+        - text: 訂單管理
+      - generic [ref=e96]: 設定
+      - link "系統設定" [ref=e97] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e98]
+        - text: 系統設定
+  - generic [ref=e101]:
+    - generic [ref=e102]:
+      - img [ref=e103]
+      - generic [ref=e106] [cursor=pointer]:
+        - generic [ref=e107]: 張
+        - text: 張經理
+        - img [ref=e108]
+    - generic [ref=e110]:
+      - generic [ref=e155]:
+        - generic [ref=e157]:
+          - generic [ref=e158]: 📝 表單
+          - generic [ref=e159]: Buttons
+          - generic [ref=e160]: 包含 Primary、Secondary、Outline、Ghost、Danger 五種變體，三種尺寸，及所有互動狀態。
+        - generic [ref=e161]: Buttons
+        - generic [ref=e162]:
+          - generic [ref=e164]: Default
+          - generic [ref=e165]: Hover
+          - generic [ref=e166]: Focus
+          - generic [ref=e167]: Active
+          - generic [ref=e168]: Loading
+          - generic [ref=e169]: Disabled
+          - generic [ref=e170]: Primary
+          - button "確認送出" [ref=e172] [cursor=pointer]
+          - button "確認送出" [ref=e174] [cursor=pointer]
+          - button "確認送出" [ref=e176] [cursor=pointer]
+          - button "確認送出" [ref=e178] [cursor=pointer]
+          - button "處理中…" [disabled] [ref=e180]: 處理中…
+          - button "確認送出" [disabled] [ref=e183]
+          - generic [ref=e184]: Secondary
+          - button "返回列表" [ref=e186] [cursor=pointer]
+          - button "返回列表" [ref=e188] [cursor=pointer]
+          - button "返回列表" [ref=e190] [cursor=pointer]
+          - button "返回列表" [ref=e192] [cursor=pointer]
+          - button "處理中…" [disabled] [ref=e194]: 處理中…
+          - button "返回列表" [disabled] [ref=e197]
+          - generic [ref=e198]: Outline
+          - button "匯出 Excel" [ref=e200] [cursor=pointer]
+          - button "匯出 Excel" [ref=e202] [cursor=pointer]
+          - button "匯出 Excel" [ref=e204] [cursor=pointer]
+          - button "匯出 Excel" [ref=e206] [cursor=pointer]
+          - button "處理中…" [disabled] [ref=e208]: 處理中…
+          - button "匯出 Excel" [disabled] [ref=e211]
+          - generic [ref=e212]: Ghost
+          - button "取消" [ref=e214] [cursor=pointer]
+          - button "取消" [ref=e216] [cursor=pointer]
+          - button "取消" [ref=e218] [cursor=pointer]
+          - button "取消" [ref=e220] [cursor=pointer]
+          - button "處理中…" [disabled] [ref=e222]: 處理中…
+          - button "取消" [disabled] [ref=e225]
+          - generic [ref=e226]: Danger
+          - button "刪除" [ref=e228] [cursor=pointer]
+          - button "刪除" [ref=e230] [cursor=pointer]
+          - button "刪除" [ref=e232] [cursor=pointer]
+          - button "刪除" [ref=e234] [cursor=pointer]
+          - button "處理中…" [disabled] [ref=e236]: 處理中…
+          - button "刪除" [disabled] [ref=e239]
+        - generic [ref=e240]:
+          - generic [ref=e241]: Sizes
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - button "+ 新增" [ref=e244] [cursor=pointer]
+              - generic [ref=e245]: sm · 12px · h28
+            - generic [ref=e246]:
+              - button "確認送出" [ref=e247] [cursor=pointer]
+              - generic [ref=e248]: md · 13.5px · h36
+            - generic [ref=e249]:
+              - button "建立報價單" [ref=e250] [cursor=pointer]
+              - generic [ref=e251]: lg · 15px · h44
+        - generic [ref=e252]:
+          - generic [ref=e253]: With Icon
+          - generic [ref=e254]:
+            - button "新增報價單" [ref=e255] [cursor=pointer]:
+              - img [ref=e256]
+              - text: 新增報價單
+            - button "匯出" [ref=e257] [cursor=pointer]:
+              - img [ref=e258]
+              - text: 匯出
+            - button "搜尋" [ref=e261] [cursor=pointer]:
+              - img [ref=e262]
+              - text: 搜尋
+            - button "編輯" [ref=e265] [cursor=pointer]:
+              - img [ref=e266]
+              - text: 編輯
+            - button "刪除" [ref=e269] [cursor=pointer]:
+              - img [ref=e270]
+              - text: 刪除
+      - text: ✓ ✓ ✓ ✕ ✕ ✓ ✓ ✓ ✓ ✕ ✓ ✓ ✓ ✓ ✓ ★

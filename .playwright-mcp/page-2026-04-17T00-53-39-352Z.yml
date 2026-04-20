@@ -1,0 +1,191 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "客戶概覽" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: 客戶概覽
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - button "Toggle Sidebar" [ref=e71]:
+            - img
+            - generic [ref=e72]: Toggle Sidebar
+          - navigation [ref=e73]:
+            - link "報價與合約" [ref=e75] [cursor=pointer]:
+              - /url: /quotations
+            - generic [ref=e76]:
+              - img [ref=e77]
+              - generic [ref=e79]: QUO-2025-0045
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - img [ref=e82]
+              - searchbox "搜尋客戶、報價單..." [ref=e85]
+            - button "新增" [ref=e86]
+            - button "切換深色模式" [ref=e87]:
+              - img
+            - button "2" [ref=e88]:
+              - img
+              - generic [ref=e89]: "2"
+        - main [ref=e90]:
+          - generic [ref=e91]:
+            - img [ref=e92]
+            - generic [ref=e94]: 原型示範模式：目前以
+            - combobox [ref=e95]:
+              - img
+            - combobox [ref=e96]
+            - generic [ref=e97]: 身分查看，狀態：
+            - combobox [ref=e98]:
+              - img
+            - combobox [ref=e99]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]: QUO-2025-0045
+                - generic [ref=e104]: V2
+                - generic [ref=e105]: 草稿
+              - heading "官網改版專案" [level=1] [ref=e106]
+              - generic [ref=e107]:
+                - link "台灣數位科技" [ref=e108] [cursor=pointer]:
+                  - /url: /customers/CUS-2025-0024
+                - img [ref=e109]
+                - generic [ref=e111]: 聯絡人：陳小華
+            - generic [ref=e112]:
+              - button "送審" [ref=e113]:
+                - img
+                - text: 送審
+              - button "匯出 PDF" [ref=e114]:
+                - img
+                - text: 匯出 PDF
+              - link "編輯" [ref=e115] [cursor=pointer]:
+                - /url: /quotations/QUO-2025-0045/edit
+                - img
+                - text: 編輯
+          - generic [ref=e116]:
+            - tablist [ref=e117]:
+              - tab "報價明細" [selected] [ref=e118]
+              - tab "版本歷程" [ref=e119]
+              - tab "核准記錄" [ref=e120]
+              - tab "附件 1" [ref=e121]:
+                - img
+                - text: 附件
+                - generic [ref=e122]: "1"
+            - tabpanel "報價明細" [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e126]:
+                  - generic [ref=e127]: 報價日期
+                  - generic [ref=e128]: 2025-04-12
+                - generic [ref=e130]:
+                  - generic [ref=e131]: 有效期限
+                  - generic [ref=e132]: 2025-05-12
+                - generic [ref=e134]:
+                  - generic [ref=e135]: 預計時程
+                  - generic [ref=e136]: 預計 8 週完成
+                - generic [ref=e138]:
+                  - generic [ref=e139]: 總金額
+                  - generic [ref=e140]: NT$ 332,500
+              - generic [ref=e141]:
+                - generic [ref=e143]: 報價明細
+                - table [ref=e146]:
+                  - rowgroup [ref=e147]:
+                    - row "編號 項目名稱 說明 數量 單位 單價(元) 金額(元)" [ref=e148]:
+                      - columnheader "編號" [ref=e149]
+                      - columnheader "項目名稱" [ref=e150]
+                      - columnheader "說明" [ref=e151]
+                      - columnheader "數量" [ref=e152]
+                      - columnheader "單位" [ref=e153]
+                      - columnheader "單價(元)" [ref=e154]
+                      - columnheader "金額(元)" [ref=e155]
+                  - rowgroup [ref=e156]:
+                    - row "1 首頁設計 RWD 響應式設計，包含 Banner、服務項目、最新消息等區塊 1 式 80,000 80,000" [ref=e157]:
+                      - cell "1" [ref=e158]
+                      - cell "首頁設計" [ref=e159]
+                      - cell "RWD 響應式設計，包含 Banner、服務項目、最新消息等區塊" [ref=e160]
+                      - cell "1" [ref=e161]
+                      - cell "式" [ref=e162]
+                      - cell "80,000" [ref=e163]
+                      - cell "80,000" [ref=e164]
+                    - row "2 內頁設計 關於我們、服務介紹、聯絡我們等 5 個內頁 5 頁 20,000 100,000" [ref=e165]:
+                      - cell "2" [ref=e166]
+                      - cell "內頁設計" [ref=e167]
+                      - cell "關於我們、服務介紹、聯絡我們等 5 個內頁" [ref=e168]
+                      - cell "5" [ref=e169]
+                      - cell "頁" [ref=e170]
+                      - cell "20,000" [ref=e171]
+                      - cell "100,000" [ref=e172]
+                    - row "3 後台管理系統 內容管理、最新消息管理、聯絡表單管理 1 式 120,000 120,000" [ref=e173]:
+                      - cell "3" [ref=e174]
+                      - cell "後台管理系統" [ref=e175]
+                      - cell "內容管理、最新消息管理、聯絡表單管理" [ref=e176]
+                      - cell "1" [ref=e177]
+                      - cell "式" [ref=e178]
+                      - cell "120,000" [ref=e179]
+                      - cell "120,000" [ref=e180]
+                    - row "4 主機與網域設定 AWS 主機設定、SSL 憑證、DNS 設定 1 式 16,667 16,667" [ref=e181]:
+                      - cell "4" [ref=e182]
+                      - cell "主機與網域設定" [ref=e183]
+                      - cell "AWS 主機設定、SSL 憑證、DNS 設定" [ref=e184]
+                      - cell "1" [ref=e185]
+                      - cell "式" [ref=e186]
+                      - cell "16,667" [ref=e187]
+                      - cell "16,667" [ref=e188]
+                  - rowgroup [ref=e189]:
+                    - row "小計 316,667" [ref=e190]:
+                      - cell "小計" [ref=e191]
+                      - cell "316,667" [ref=e192]
+                    - row "稅額 (5%) 15,833" [ref=e193]:
+                      - cell "稅額 (5%)" [ref=e194]
+                      - cell "15,833" [ref=e195]
+                    - row "總金額 332,500" [ref=e196]:
+                      - cell "總金額" [ref=e197]
+                      - cell "332,500" [ref=e198]
+              - generic [ref=e199]:
+                - generic [ref=e200]:
+                  - generic [ref=e202]: 付款條件
+                  - paragraph [ref=e204]: 簽約後 30 天內支付 50%，驗收後支付餘款
+                - generic [ref=e205]:
+                  - generic [ref=e207]: 條款與備註
+                  - paragraph [ref=e209]: 含一年免費維護服務
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e215] [cursor=pointer]:
+    - img [ref=e216]

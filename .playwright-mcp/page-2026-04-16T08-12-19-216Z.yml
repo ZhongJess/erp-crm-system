@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - navigation [ref=e71]:
+            - generic [ref=e73]: 訂單管理
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - img [ref=e76]
+              - searchbox "搜尋客戶、報價單..." [ref=e79]
+            - button "新增" [ref=e80]
+            - button "切換深色模式" [ref=e81]:
+              - img
+            - button "2" [ref=e82]:
+              - img
+              - generic [ref=e83]: "2"
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - heading "訂單管理" [level=1] [ref=e87]
+              - paragraph [ref=e88]: 共 7 筆訂單
+            - button "匯出訂單" [ref=e89]:
+              - img
+              - text: 匯出訂單
+          - tablist [ref=e91]:
+            - tab "全部 7" [selected] [ref=e92]:
+              - text: 全部
+              - generic [ref=e93]: "7"
+            - tab "進行中 4" [ref=e94]:
+              - text: 進行中
+              - generic [ref=e95]: "4"
+            - tab "已交付 1" [ref=e96]:
+              - text: 已交付
+              - generic [ref=e97]: "1"
+            - tab "已完成 2" [ref=e98]:
+              - text: 已完成
+              - generic [ref=e99]: "2"
+            - tab "已取消 0" [ref=e100]:
+              - text: 已取消
+              - generic [ref=e101]: "0"
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - img [ref=e104]
+              - textbox "搜尋訂單編號、客戶、專案..." [ref=e107]
+            - combobox [ref=e108]:
+              - img
+            - combobox [ref=e109]
+            - button [ref=e110]:
+              - img
+          - table [ref=e113]:
+            - rowgroup [ref=e114]:
+              - row "訂單編號 客戶 專案名稱 金額 負責業務 成案日期 預計交付 狀態" [ref=e115]:
+                - columnheader "訂單編號" [ref=e116]
+                - columnheader "客戶" [ref=e117]
+                - columnheader "專案名稱" [ref=e118]
+                - columnheader "金額" [ref=e119]
+                - columnheader "負責業務" [ref=e120]
+                - columnheader "成案日期" [ref=e121]
+                - columnheader "預計交付" [ref=e122]
+                - columnheader "狀態" [ref=e123]
+                - columnheader [ref=e124]
+            - rowgroup [ref=e125]:
+              - row "ORD-2025-0012 來自 QUO-2025-0045 台灣數位科技股份有限公司 官網改版專案 NT$ 350,000 王小明 2025-04-10 2025-06-30 進行中" [ref=e126] [cursor=pointer]:
+                - cell "ORD-2025-0012 來自 QUO-2025-0045" [ref=e127]:
+                  - link "ORD-2025-0012" [ref=e128]:
+                    - /url: /orders/ORD-2025-0012
+                  - paragraph [ref=e129]: 來自 QUO-2025-0045
+                - cell "台灣數位科技股份有限公司" [ref=e130]
+                - cell "官網改版專案" [ref=e131]
+                - cell "NT$ 350,000" [ref=e132]
+                - cell "王小明" [ref=e133]
+                - cell "2025-04-10" [ref=e134]
+                - cell "2025-06-30" [ref=e135]
+                - cell "進行中" [ref=e136]:
+                  - generic [ref=e137]: 進行中
+                - cell [ref=e138]:
+                  - button [ref=e139]:
+                    - img
+              - row "ORD-2025-0011 來自 QUO-2025-0041 創新軟體開發有限公司 ERP 導入顧問服務 NT$ 1,200,000 李美麗 2025-04-05 2025-09-30 進行中" [ref=e140] [cursor=pointer]:
+                - cell "ORD-2025-0011 來自 QUO-2025-0041" [ref=e141]:
+                  - link "ORD-2025-0011" [ref=e142]:
+                    - /url: /orders/ORD-2025-0011
+                  - paragraph [ref=e143]: 來自 QUO-2025-0041
+                - cell "創新軟體開發有限公司" [ref=e144]
+                - cell "ERP 導入顧問服務" [ref=e145]
+                - cell "NT$ 1,200,000" [ref=e146]
+                - cell "李美麗" [ref=e147]
+                - cell "2025-04-05" [ref=e148]
+                - cell "2025-09-30" [ref=e149]
+                - cell "進行中" [ref=e150]:
+                  - generic [ref=e151]: 進行中
+                - cell [ref=e152]:
+                  - button [ref=e153]:
+                    - img
+              - row "ORD-2025-0010 來自 QUO-2025-0038 台灣大學 學生管理系統 NT$ 580,000 陳志偉 2025-03-20 2025-07-31 進行中" [ref=e154] [cursor=pointer]:
+                - cell "ORD-2025-0010 來自 QUO-2025-0038" [ref=e155]:
+                  - link "ORD-2025-0010" [ref=e156]:
+                    - /url: /orders/ORD-2025-0010
+                  - paragraph [ref=e157]: 來自 QUO-2025-0038
+                - cell "台灣大學" [ref=e158]
+                - cell "學生管理系統" [ref=e159]
+                - cell "NT$ 580,000" [ref=e160]
+                - cell "陳志偉" [ref=e161]
+                - cell "2025-03-20" [ref=e162]
+                - cell "2025-07-31" [ref=e163]
+                - cell "進行中" [ref=e164]:
+                  - generic [ref=e165]: 進行中
+                - cell [ref=e166]:
+                  - button [ref=e167]:
+                    - img
+              - row "ORD-2025-0009 來自 QUO-2025-0033 台北市政府 智慧城市平台 Phase 1 NT$ 3,500,000 張小芬 2025-03-01 2025-12-31 進行中" [ref=e168] [cursor=pointer]:
+                - cell "ORD-2025-0009 來自 QUO-2025-0033" [ref=e169]:
+                  - link "ORD-2025-0009" [ref=e170]:
+                    - /url: /orders/ORD-2025-0009
+                  - paragraph [ref=e171]: 來自 QUO-2025-0033
+                - cell "台北市政府" [ref=e172]
+                - cell "智慧城市平台 Phase 1" [ref=e173]
+                - cell "NT$ 3,500,000" [ref=e174]
+                - cell "張小芬" [ref=e175]
+                - cell "2025-03-01" [ref=e176]
+                - cell "2025-12-31" [ref=e177]
+                - cell "進行中" [ref=e178]:
+                  - generic [ref=e179]: 進行中
+                - cell [ref=e180]:
+                  - button [ref=e181]:
+                    - img
+              - row "ORD-2025-0008 來自 QUO-2025-0029 全球運籌有限公司 倉儲管理系統 NT$ 420,000 王小明 2025-02-15 2025-05-15 已交付" [ref=e182] [cursor=pointer]:
+                - cell "ORD-2025-0008 來自 QUO-2025-0029" [ref=e183]:
+                  - link "ORD-2025-0008" [ref=e184]:
+                    - /url: /orders/ORD-2025-0008
+                  - paragraph [ref=e185]: 來自 QUO-2025-0029
+                - cell "全球運籌有限公司" [ref=e186]
+                - cell "倉儲管理系統" [ref=e187]
+                - cell "NT$ 420,000" [ref=e188]
+                - cell "王小明" [ref=e189]
+                - cell "2025-02-15" [ref=e190]
+                - cell "2025-05-15" [ref=e191]
+                - cell "已交付" [ref=e192]:
+                  - generic [ref=e193]: 已交付
+                - cell [ref=e194]:
+                  - button [ref=e195]:
+                    - img
+              - row "ORD-2025-0007 來自 QUO-2025-0025 美好生活股份有限公司 CRM 系統導入 NT$ 230,000 李美麗 2025-02-01 2025-04-30 已完成" [ref=e196] [cursor=pointer]:
+                - cell "ORD-2025-0007 來自 QUO-2025-0025" [ref=e197]:
+                  - link "ORD-2025-0007" [ref=e198]:
+                    - /url: /orders/ORD-2025-0007
+                  - paragraph [ref=e199]: 來自 QUO-2025-0025
+                - cell "美好生活股份有限公司" [ref=e200]
+                - cell "CRM 系統導入" [ref=e201]
+                - cell "NT$ 230,000" [ref=e202]
+                - cell "李美麗" [ref=e203]
+                - cell "2025-02-01" [ref=e204]
+                - cell "2025-04-30" [ref=e205]
+                - cell "已完成" [ref=e206]:
+                  - generic [ref=e207]: 已完成
+                - cell [ref=e208]:
+                  - button [ref=e209]:
+                    - img
+              - row "ORD-2025-0006 來自 QUO-2025-0021 安心保險代理有限公司 核保系統維護 NT$ 150,000 陳志偉 2025-01-20 2025-04-20 已完成" [ref=e210] [cursor=pointer]:
+                - cell "ORD-2025-0006 來自 QUO-2025-0021" [ref=e211]:
+                  - link "ORD-2025-0006" [ref=e212]:
+                    - /url: /orders/ORD-2025-0006
+                  - paragraph [ref=e213]: 來自 QUO-2025-0021
+                - cell "安心保險代理有限公司" [ref=e214]
+                - cell "核保系統維護" [ref=e215]
+                - cell "NT$ 150,000" [ref=e216]
+                - cell "陳志偉" [ref=e217]
+                - cell "2025-01-20" [ref=e218]
+                - cell "2025-04-20" [ref=e219]
+                - cell "已完成" [ref=e220]:
+                  - generic [ref=e221]: 已完成
+                - cell [ref=e222]:
+                  - button [ref=e223]:
+                    - img
+          - generic [ref=e224]:
+            - paragraph [ref=e225]: 顯示 7 / 7 筆
+            - navigation "pagination" [ref=e226]:
+              - list [ref=e227]:
+                - listitem [ref=e228]:
+                  - link "Go to previous page" [ref=e229] [cursor=pointer]:
+                    - /url: "#"
+                    - img
+                    - generic [ref=e230]: Previous
+                - listitem [ref=e231]:
+                  - link "1" [ref=e232] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=e233]:
+                  - link "2" [ref=e234] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=e235]:
+                  - link "Go to next page" [ref=e236] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e237]: Next
+                    - img
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e243] [cursor=pointer]:
+    - img [ref=e244]

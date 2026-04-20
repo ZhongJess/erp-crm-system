@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — B2B CRM System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:      #1B2A4A;
+      --navy-mid:  #243660;
+      --navy-lite: #2F4275;
+      --accent:    #3D7BF5;
+      --accent2:   #5B9BFF;
+      --teal:      #38BFA8;
+      --warn:      #F59E3D;
+      --success:   #34C98A;
+      --danger:    #F24E4E;
+      --draft:     #9CA3AF;
+      --white:     #FFFFFF;
+      --off-white: #F5F7FA;
+      --gray-100:  #EEF1F6;
+      --gray-200:  #DDE2EC;
+      --gray-400:  #94A3B8;
+      --gray-600:  #64748B;
+      --gray-800:  #1E293B;
+      --text:      #1E293B;
+      --text-lite: #64748B;
+      --font-sans: 'Inter', 'Noto Sans TC', sans-serif;
+      --radius-sm: 6px;
+      --radius:    12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06);
+      --shadow:    0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.14);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 48px;
+      display: flex; align-items: center; gap: 32px;
+      height: 56px;
+    }
+    .nav-logo {
+      font-weight: 700; font-size: 15px; color: var(--navy);
+      margin-right: auto; letter-spacing: .02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    nav a {
+      font-size: 13px; font-weight: 500; color: var(--gray-600);
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── Layout util ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .container--wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
+    section + section { border-top: 1px solid var(--gray-100); }
+
+    /* ── Section label ── */
+    .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 12px;
+    }
+    h2.section-title {
+      font-size: clamp(26px, 4vw, 36px); font-weight: 700;
+      color: var(--navy); line-height: 1.25; margin-bottom: 20px;
+    }
+    .section-lead {
+      font-size: 17px; color: var(--gray-600); max-width: 640px; line-height: 1.75;
+    }
+
+    /* ══════════════════════════════════════════
+       01 HERO
+    ══════════════════════════════════════════ */
+    #hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #1e3a6e 100%);
+      padding: 100px 0 80px; border-top: none;
+    }
+    #hero .container { position: relative; }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px; padding: 5px 14px;
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,.75);
+      letter-spacing: .08em; text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero-kicker .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--teal);
+    }
+    h1.hero-title {
+      font-size: clamp(32px, 5vw, 52px); font-weight: 700;
+      color: var(--white); line-height: 1.15; margin-bottom: 20px;
+    }
+    h1.hero-title em { color: var(--accent2); font-style: normal; }
+    .hero-desc {
+      font-size: 17px; color: rgba(255,255,255,.65); max-width: 560px;
+      line-height: 1.75; margin-bottom: 48px;
+    }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 32px;
+    }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label {
+      font-size: 11px; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.4);
+    }
+    .meta-value {
+      font-size: 15px; font-weight: 500; color: rgba(255,255,255,.9);
+    }
+    .hero-tags {
+      margin-top: 40px; display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .tag {
+      display: inline-block; padding: 4px 12px;
+      background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px; font-size: 12px; color: rgba(255,255,255,.7);
+    }
+
+    /* ══════════════════════════════════════════
+       02 PROBLEM
+    ══════════════════════════════════════════ */
+    .pain-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px; margin-top: 40px;
+    }
+    .pain-card {
+      background: var(--off-white); border-radius: var(--radius);
+      padding: 28px 24px; border: 1px solid var(--gray-200);
+      transition: box-shadow .2s;
+    }
+    .pain-card:hover { box-shadow: var(--shadow); }
+    .pain-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 16px;
+    }
+    .pain-icon.red   { background: #FEE2E2; }
+    .pain-icon.amber { background: #FEF3C7; }
+    .pain-icon.blue  { background: #DBEAFE; }
+    .pain-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .pain-card p  { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+
+    /* ══════════════════════════════════════════
+       03 ROLE & PROCESS
+    ══════════════════════════════════════════ */
+    .role-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+      align-items: start; margin-top: 40px;
+    }
+    .role-desc p { font-size: 15px; color: var(--gray-600); line-height: 1.75; margin-bottom: 16px; }
+    .role-desc strong { color: var(--navy); }
+    .process-steps { display: flex; flex-direction: column; gap: 0; }
+    .step {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 16px 0; position: relative;
+    }
+    .step:not(:last-child)::after {
+      content: ''; position: absolute; left: 19px; top: 48px;
+      width: 2px; height: calc(100% - 12px); background: var(--gray-200);
+    }
+    .step-num {
+      flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 1;
+    }
+    .step-content h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .step-content p  { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ══════════════════════════════════════════
+       04 SYSTEM DESIGN
+    ══════════════════════════════════════════ */
+    #system { background: var(--off-white); }
+
+    .roles-table {
+      width: 100%; border-collapse: separate; border-spacing: 0;
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-sm); margin-top: 40px;
+      font-size: 14px;
+    }
+    .roles-table thead tr { background: var(--navy); }
+    .roles-table thead th {
+      padding: 14px 18px; text-align: left;
+      color: rgba(255,255,255,.8); font-weight: 600; font-size: 12px;
+      letter-spacing: .05em; text-transform: uppercase;
+    }
+    .roles-table tbody tr { background: var(--white); border-bottom: 1px solid var(--gray-100); }
+    .roles-table tbody tr:hover { background: #F0F4FF; }
+    .roles-table tbody td { padding: 14px 18px; color: var(--gray-800); vertical-align: top; }
+    .roles-table tbody td:first-child { font-weight: 600; color: var(--navy); }
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 999px;
+      font-size: 11px; font-weight: 600; margin: 2px 2px 2px 0;
+    }
+    .badge-green  { background: #D1FAE5; color: #065F46; }
+    .badge-blue   { background: #DBEAFE; color: #1D4ED8; }
+    .badge-gray   { background: var(--gray-100); color: var(--gray-600); }
+    .badge-amber  { background: #FEF3C7; color: #92400E; }
+
+    .flow-wrap {
+      margin-top: 48px;
+    }
+    .flow-label {
+      font-size: 13px; font-weight: 700; color: var(--navy);
+      margin-bottom: 20px; letter-spacing: .03em;
+    }
+    .flow-steps {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0;
+    }
+    .flow-step {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 8px; min-width: 100px;
+    }
+    .flow-bubble {
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; border: 2px solid transparent;
+    }
+    .flow-bubble.navy   { background: var(--navy); border-color: var(--navy-lite); color: white; font-size: 16px; font-weight: 700; }
+    .flow-bubble.accent { background: #EFF4FF; border-color: var(--accent); }
+    .flow-bubble.teal   { background: #ECFDF5; border-color: var(--teal); }
+    .flow-bubble.amber  { background: #FFFBEB; border-color: var(--warn); }
+    .flow-step p { font-size: 11px; font-weight: 600; color: var(--gray-600); line-height: 1.4; max-width: 90px; }
+    .flow-arrow {
+      font-size: 20px; color: var(--gray-400); padding: 0 4px; margin-top: -18px;
+    }
+
+    /* ══════════════════════════════════════════
+       05 DESIGN HIGHLIGHTS
+    ══════════════════════════════════════════ */
+    .highlight-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px;
+    }
+    .highlight-card {
+      border: 1px solid var(--gray-200); border-radius: var(--radius-lg);
+      overflow: hidden; background: var(--white); box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s;
+    }
+    .highlight-card:hover { box-shadow: var(--shadow); }
+    .highlight-visual {
+      background: var(--off-white); padding: 32px 24px;
+      border-bottom: 1px solid var(--gray-100);
+      min-height: 220px; display: flex; flex-direction: column;
+      align-items: flex-start; justify-content: center; gap: 10px;
+    }
+    .highlight-body { padding: 24px; }
+    .highlight-body h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .highlight-body p  { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+
+    /* ─ status pill mockup ─ */
+    .status-row {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--white); border-radius: var(--radius-sm);
+      padding: 10px 16px; box-shadow: var(--shadow-sm);
+      font-size: 13px; width: 100%;
+    }
+    .status-row .quote-id { font-weight: 600; color: var(--gray-800); flex: 1; }
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    }
+    .status-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; }
+    .status-pill.draft   { background: #F3F4F6; color: #6B7280; }
+    .status-pill.draft::before   { background: #9CA3AF; }
+    .status-pill.review  { background: #FEF9C3; color: #854D0E; }
+    .status-pill.review::before  { background: #F59E0B; }
+    .status-pill.approved{ background: #DCFCE7; color: #166534; }
+    .status-pill.approved::before{ background: #22C55E; }
+    .status-pill.sent    { background: #DBEAFE; color: #1E40AF; }
+    .status-pill.sent::before    { background: #3B82F6; }
+    .status-pill.closed  { background: #F3E8FF; color: #6B21A8; }
+    .status-pill.closed::before  { background: #A855F7; }
+
+    /* ─ edit history mockup ─ */
+    .log-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: var(--white); border-radius: var(--radius-sm);
+      padding: 10px 14px; box-shadow: var(--shadow-sm); font-size: 12px;
+      width: 100%;
+    }
+    .log-avatar {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--navy); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700;
+    }
+    .log-content { flex: 1; }
+    .log-who { font-weight: 600; color: var(--navy); }
+    .log-action { color: var(--gray-600); }
+    .log-diff {
+      margin-top: 4px; display: flex; gap: 6px; align-items: center;
+      font-size: 11px;
+    }
+    .log-old { background: #FEE2E2; color: #991B1B; padding: 1px 6px; border-radius: 4px; }
+    .log-new { background: #D1FAE5; color: #065F46; padding: 1px 6px; border-radius: 4px; }
+    .log-arrow { color: var(--gray-400); }
+    .log-time { font-size: 10px; color: var(--gray-400); margin-top: 4px; }
+
+    /* ══════════════════════════════════════════
+       06 KEY SCREENS
+    ══════════════════════════════════════════ */
+    #screens { background: var(--gray-800); padding: 80px 0; }
+    #screens .eyebrow { color: var(--accent2); }
+    #screens h2.section-title { color: var(--white); }
+    #screens .section-lead { color: rgba(255,255,255,.55); }
+
+    .screen-tabs {
+      display: flex; gap: 4px; margin-top: 40px; margin-bottom: 24px;
+      background: rgba(255,255,255,.06); border-radius: var(--radius-sm);
+      padding: 4px; width: fit-content;
+    }
+    .screen-tab {
+      padding: 8px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;
+      cursor: pointer; color: rgba(255,255,255,.45); transition: all .2s;
+      border: none; background: transparent;
+    }
+    .screen-tab.active {
+      background: var(--accent); color: white;
+    }
+    .screen-panels > div { display: none; }
+    .screen-panels > div.active { display: block; }
+
+    .screen-mockup {
+      background: var(--navy-mid); border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .screen-bar {
+      background: var(--navy); padding: 10px 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .screen-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-r { background: #FF5F56; }
+    .dot-y { background: #FFBD2E; }
+    .dot-g { background: #27C93F; }
+    .screen-url {
+      margin-left: 12px; background: rgba(255,255,255,.08); border-radius: 4px;
+      padding: 3px 12px; font-size: 11px; color: rgba(255,255,255,.4); flex: 1;
+    }
+    .screen-inner {
+      display: flex; height: 400px; overflow: hidden;
+    }
+
+    /* ─ App sidebar ─ */
+    .app-sidebar {
+      width: 200px; flex-shrink: 0;
+      background: var(--navy); padding: 16px 0;
+      display: flex; flex-direction: column;
+    }
+    .sidebar-logo {
+      padding: 0 20px 20px; font-weight: 700; font-size: 16px;
+      color: var(--white); letter-spacing: .04em;
+      border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 12px;
+    }
+    .sidebar-logo span { color: var(--accent2); }
+    .sidebar-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 20px; font-size: 13px; color: rgba(255,255,255,.55);
+      cursor: pointer; transition: all .15s; border-left: 3px solid transparent;
+    }
+    .sidebar-item:hover { color: rgba(255,255,255,.85); background: rgba(255,255,255,.04); }
+    .sidebar-item.active {
+      color: white; background: rgba(255,255,255,.08);
+      border-left-color: var(--accent2);
+    }
+    .sidebar-item .si { font-size: 15px; }
+
+    /* ─ App main area ─ */
+    .app-main { flex: 1; background: var(--off-white); overflow-y: auto; padding: 20px 24px; }
+    .app-topbar {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .app-topbar h3 { font-size: 17px; font-weight: 700; color: var(--navy); flex: 1; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600;
+      cursor: pointer; border: none; transition: opacity .15s;
+    }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-ghost   { background: white; color: var(--navy); border: 1px solid var(--gray-200); }
+    .btn:hover { opacity: .85; }
+
+    /* ─ Stat cards ─ */
+    .stat-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px;
+    }
+    .stat-card {
+      background: white; border-radius: var(--radius-sm); padding: 14px 16px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100);
+    }
+    .stat-card .s-label { font-size: 10px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .05em; }
+    .stat-card .s-value { font-size: 22px; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; line-height: 1.2; margin: 4px 0 2px; }
+    .stat-card .s-trend { font-size: 11px; color: var(--teal); font-weight: 600; }
+    .stat-card .s-trend.down { color: var(--danger); }
+
+    /* ─ Table ─ */
+    .mini-table {
+      background: white; border-radius: var(--radius-sm); overflow: hidden;
+      box-shadow: var(--shadow-sm); font-size: 12px;
+    }
+    .mini-table-head {
+      background: var(--gray-100); display: grid;
+      padding: 8px 14px; font-weight: 600; color: var(--gray-600);
+      font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+    }
+    .mini-table-row {
+      display: grid; padding: 10px 14px;
+      border-bottom: 1px solid var(--gray-100);
+      align-items: center;
+    }
+    .mini-table-row:last-child { border-bottom: none; }
+    .mini-table-row:hover { background: var(--off-white); }
+    .col-name { font-weight: 600; color: var(--navy); }
+    .col-muted { color: var(--gray-600); }
+
+    /* 4-col dashboard table */
+    .cols-4 { grid-template-columns: 2fr 1fr 1fr 1fr; }
+
+    /* 5-col customer table */
+    .cols-5 { grid-template-columns: 2fr 1fr 1.2fr 1fr 1fr; }
+
+    /* 4-col quote table */
+    .cols-q { grid-template-columns: 1.5fr 1fr 1.2fr 1fr; }
+
+    .monofont { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+    /* ── Screen caption ── */
+    .screen-caption {
+      background: rgba(255,255,255,.04); border-top: 1px solid rgba(255,255,255,.06);
+      padding: 16px 24px; font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.6;
+    }
+    .screen-caption strong { color: rgba(255,255,255,.75); }
+
+    /* ══════════════════════════════════════════
+       07 RESULTS
+    ══════════════════════════════════════════ */
+    .results-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;
+    }
+    .result-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg); padding: 28px 24px;
+      box-shadow: var(--shadow-sm); text-align: center;
+    }
+    .result-card .r-num {
+      font-size: 40px; font-weight: 800; color: var(--navy); line-height: 1;
+      margin-bottom: 8px; font-variant-numeric: tabular-nums;
+    }
+    .result-card .r-label { font-size: 14px; color: var(--gray-600); font-weight: 500; }
+    .reflection {
+      margin-top: 48px; background: linear-gradient(135deg, #EFF4FF, #F5F3FF);
+      border-radius: var(--radius-lg); padding: 32px 36px;
+      border: 1px solid #C7D7FD;
+    }
+    .reflection h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+    .reflection ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .reflection li {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 14px; color: var(--gray-700); line-height: 1.65;
+    }
+    .reflection li::before {
+      content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ══════════════════════════════════════════
+       Footer
+    ══════════════════════════════════════════ */
+    footer {
+      background: var(--navy); padding: 40px 0; text-align: center;
+    }
+    footer p { font-size: 13px; color: rgba(255,255,255,.35); }
+    footer a { color: rgba(255,255,255,.55); font-weight: 600; }
+    footer a:hover { color: var(--accent2); }
+
+    /* ── Dashboard v2 ── */
+    .dash-grid-2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
+    }
+    .chart-card {
+      background: white; border-radius: var(--radius-sm); padding: 14px 16px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100);
+    }
+    .chart-card-title {
+      font-size: 11px; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px;
+    }
+    .trend-legend {
+      display: flex; gap: 16px; margin-bottom: 8px;
+    }
+    .trend-legend-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 10px; color: var(--gray-600); font-weight: 500;
+    }
+    .trend-legend-dot {
+      width: 8px; height: 3px; border-radius: 2px;
+    }
+    /* Funnel v2 */
+    .funnel-row {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+    }
+    .funnel-label { font-size: 11px; color: var(--gray-600); width: 44px; flex-shrink: 0; }
+    .funnel-bar-wrap { flex: 1; background: var(--gray-100); border-radius: 3px; height: 14px; overflow: hidden; }
+    .funnel-bar { height: 100%; border-radius: 3px; display: flex; align-items: center; justify-content: flex-end; padding-right: 5px; }
+    .funnel-count { font-size: 10px; font-weight: 700; color: white; }
+    .funnel-meta { font-size: 10px; color: var(--gray-400); width: 54px; flex-shrink: 0; text-align: right; }
+    /* Perf bars */
+    .perf-row {
+      display: grid; grid-template-columns: 36px 1fr 1fr 44px;
+      align-items: center; gap: 8px; margin-bottom: 10px;
+    }
+    .perf-name { font-size: 11px; font-weight: 700; color: var(--navy); }
+    .perf-bar-wrap { background: var(--gray-100); border-radius: 3px; height: 12px; overflow: hidden; }
+    .perf-bar { height: 100%; border-radius: 3px; transition: width .3s; }
+    .perf-rate { font-size: 10px; font-weight: 700; color: var(--navy); text-align: right; font-variant-numeric: tabular-nums; }
+    .perf-sub  { font-size: 9px; color: var(--gray-400); text-align: right; }
+    .perf-header { display: grid; grid-template-columns: 36px 1fr 1fr 44px; gap: 8px; margin-bottom: 6px; }
+    .perf-header span { font-size: 9px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .05em; }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      nav { padding: 0 20px; gap: 20px; }
+      nav a.hide-mobile { display: none; }
+      section { padding: 60px 0; }
+      .role-layout { grid-template-columns: 1fr; gap: 32px; }
+      .highlight-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr 1fr; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .screen-inner { height: auto; flex-direction: column; }
+      .app-sidebar { width: 100%; flex-direction: row; overflow-x: auto; padding: 8px 0; }
+      .sidebar-logo { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─────────────────────────────────────── NAV ─── -->
+<nav>
+  <div class="nav-logo">Jess <span>Chung</span> — Portfolio</div>
+  <a href="#problem" class="hide-mobile">Problem</a>
+  <a href="#system" class="hide-mobile">System</a>
+  <a href="#highlights" class="hide-mobile">Design</a>
+  <a href="#screens" class="hide-mobile">Screens</a>
+  <a href="#results" class="hide-mobile">Results</a>
+</nav>
+
+
+<!-- ─────────────────────────────────────── 01 HERO ─── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-kicker">
+      <span class="dot"></span>
+      UX/UI Case Study · B2B Internal Tool
+    </div>
+    <h1 class="hero-title">
+      B2B CRM System<br/>
+      <em>客戶資產管理平台</em>
+    </h1>
+    <p class="hero-desc">
+      為一間中小型 B2B 科技公司設計的內部 CRM 系統，涵蓋客戶資料管理、聯絡紀錄、報價單審核流程與角色權限管控。以「減少人工傳遞、讓每一步有跡可循」為核心設計目標。
+    </p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">角色</span>
+        <span class="meta-value">唯一設計師 (UX + UI)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">時程</span>
+        <span class="meta-value">約 1–3 個月</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">工具</span>
+        <span class="meta-value">Figma</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">類型</span>
+        <span class="meta-value">B2B / 內部工具</span>
+      </div>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">UX Research</span>
+      <span class="tag">Wireframe</span>
+      <span class="tag">UI Design</span>
+      <span class="tag">Design System</span>
+      <span class="tag">Flow Design</span>
+      <span class="tag">Permission Matrix</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── 02 PROBLEM ─── -->
+<section id="problem">
+  <div class="container">
+    <p class="eyebrow">01 — Problem</p>
+    <h2 class="section-title">一間成長中的公司，<br/>卻靠 LINE 和 Excel 撐起業務流程</h2>
+    <p class="section-lead">
+      隨著公司專案規模擴大、客戶數量成長，原本土法煉鋼的工作方式開始出現裂縫——資料散落各處、流程全靠口頭、誰能看什麼也說不清楚。
+    </p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon red">🔓</div>
+        <h3>權限邊界模糊</h3>
+        <p>誰能看客戶資料、誰能修改報價，沒有系統管控。敏感資料曾因操作失誤而對錯人顯示，造成內部困擾。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon amber">📋</div>
+        <h3>報價流程靠口傳</h3>
+        <p>報價草稿用 Word 製作、LINE 傳給主管確認、再由不同人發出。沒有狀態追蹤，版本容易混亂。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon blue">📂</div>
+        <h3>客戶資料無法統一管理</h3>
+        <p>客戶資料分散在各人電腦，聯絡紀錄無從追溯，專案資產也無法與客戶資料整合。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── 03 ROLE ─── -->
+<section id="role">
+  <div class="container">
+    <p class="eyebrow">02 — My Role & Process</p>
+    <h2 class="section-title">從 0 到 1 的唯一設計師</h2>
+    <div class="role-layout">
+      <div class="role-desc">
+        <p>這個專案由我<strong>獨立完成所有 UX/UI 設計</strong>，從需求訪談到 Figma 完稿。我直接與業務團隊成員溝通，理解他們的實際工作流程，並根據公司的角色分工設計對應的權限邏輯。</p>
+        <p>由於使用者人數少（5 人）、但角色職責差異大，我將重點放在<strong>讓「對的人看對的東西」</strong>，以及讓每個操作都有紀錄、有狀態。</p>
+        <p>設計期間，我同時負責釐清不明確的需求邊界，例如：哪些欄位可被哪些角色編輯、報價單由誰發出、紀錄應記錄到什麼粒度。</p>
+      </div>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>需求訪談 & 流程拆解</h4>
+            <p>與業務人員釐清實際工作流，整理出角色職責與痛點清單</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>User Flow & 權限矩陣</h4>
+            <p>建立角色 × 功能的權限矩陣，確保設計不超出業務邏輯</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Wireframe 低保真稿</h4>
+            <p>快速驗證資訊架構與頁面流程，與使用者確認操作路徑</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>UI 高保真設計</h4>
+            <p>完成 Figma 設計稿，包含 Design System 色彩、元件庫、互動標註</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h4>Design Review & Handoff</h4>
+            <p>內部走查設計稿，確保功能覆蓋完整，準備開發交付</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── 04 SYSTEM ─── -->
+<section id="system">
+  <div class="container">
+    <p class="eyebrow">03 — System Design</p>
+    <h2 class="section-title">5 個角色，明確的邊界</h2>
+    <p class="section-lead">
+      系統使用者雖然只有 5 人，但職責差距懸殊。我設計了一套角色 × 功能權限矩陣，確保每個角色只看到並操作自己該負責的事。
+    </p>
+
+    <table class="roles-table">
+      <thead>
+        <tr>
+          <th>角色</th>
+          <th>人數</th>
+          <th>可存取功能</th>
+          <th>特殊限制</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>經理</td>
+          <td>×1</td>
+          <td>
+            <span class="badge badge-green">審核報價單</span>
+            <span class="badge badge-blue">查看 Dashboard</span>
+            <span class="badge badge-blue">查看客戶資料</span>
+          </td>
+          <td><span class="badge badge-gray">不可開立報價</span></td>
+        </tr>
+        <tr>
+          <td>業務 AM/PM</td>
+          <td>×3</td>
+          <td>
+            <span class="badge badge-blue">查看全公司 Dashboard</span>
+            <span class="badge badge-green">編輯所有客戶資料</span>
+            <span class="badge badge-green">新增聯絡紀錄</span>
+          </td>
+          <td><span class="badge badge-gray">不可開立 / 寄送報價</span></td>
+        </tr>
+        <tr>
+          <td>特助（HR）</td>
+          <td>×1</td>
+          <td>
+            <span class="badge badge-amber">開立 / 寄送報價單</span>
+            <span class="badge badge-blue">查看 Dashboard</span>
+            <span class="badge badge-blue">查看客戶資料</span>
+          </td>
+          <td><span class="badge badge-amber">對外唯一發件窗口</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="flow-wrap">
+      <p class="flow-label">📋 報價單審核流程</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-bubble navy">特</div>
+          <p>特助建立<br/>草稿</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-bubble amber">📤</div>
+          <p>送交<br/>經理審核</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-bubble navy">經</div>
+          <p>經理<br/>核准 / 退回</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-bubble teal">✉️</div>
+          <p>特助寄送<br/>給客戶</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-bubble accent">💬</div>
+          <p>議價<br/>追蹤</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-bubble navy">✓</div>
+          <p>成案<br/>轉訂單</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── 05 HIGHLIGHTS ─── -->
+<section id="highlights">
+  <div class="container">
+    <p class="eyebrow">04 — Design Highlights</p>
+    <h2 class="section-title">兩個讓我最自豪的設計決策</h2>
+    <p class="section-lead">
+      B2B 內部工具不需要炫技，但要讓人一眼看懂狀態、一步找到歷史。這兩個設計決策直接回應了業務痛點。
+    </p>
+    <div class="highlight-grid">
+
+      <!-- Card 1: Quote Status -->
+      <div class="highlight-card">
+        <div class="highlight-visual">
+          <div class="status-row">
+            <span class="quote-id">QT-2025-001</span>
+            <span class="status-pill draft">草稿</span>
+          </div>
+          <div class="status-row">
+            <span class="quote-id">QT-2025-002</span>
+            <span class="status-pill review">審核中</span>
+          </div>
+          <div class="status-row">
+            <span class="quote-id">QT-2025-003</span>
+            <span class="status-pill approved">已核准</span>
+          </div>
+          <div class="status-row">
+            <span class="quote-id">QT-2025-004</span>
+            <span class="status-pill sent">已寄出</span>
+          </div>
+          <div class="status-row">
+            <span class="quote-id">QT-2025-005</span>
+            <span class="status-pill closed">已成案</span>
+          </div>
+        </div>
+        <div class="highlight-body">
+          <h3>報價單狀態視覺化</h3>
+          <p>將報價單的 5 種狀態（草稿、審核中、已核准、已寄出、已成案）分別賦予顏色系統與圓點指示器。業務和特助不需要點開就能掌握全局，也減少了「那張報價到哪了？」的口頭確認。</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Edit History -->
+      <div class="highlight-card">
+        <div class="highlight-visual">
+          <div class="log-item">
+            <div class="log-avatar">陳</div>
+            <div class="log-content">
+              <div><span class="log-who">陳業務 (AM)</span> <span class="log-action">修改了 聯絡電話</span></div>
+              <div class="log-diff">
+                <span class="log-old">0912-345-678</span>
+                <span class="log-arrow">→</span>
+                <span class="log-new">0923-456-789</span>
+              </div>
+              <div class="log-time">2025-11-14 · 14:32</div>
+            </div>
+          </div>
+          <div class="log-item">
+            <div class="log-avatar">林</div>
+            <div class="log-content">
+              <div><span class="log-who">林特助 (HR)</span> <span class="log-action">新增了 備註</span></div>
+              <div class="log-diff">
+                <span class="log-old">（空白）</span>
+                <span class="log-arrow">→</span>
+                <span class="log-new">Q4 優先客戶</span>
+              </div>
+              <div class="log-time">2025-11-15 · 09:07</div>
+            </div>
+          </div>
+          <div class="log-item">
+            <div class="log-avatar">王</div>
+            <div class="log-content">
+              <div><span class="log-who">王 PM</span> <span class="log-action">修改了 負責業務</span></div>
+              <div class="log-diff">
+                <span class="log-old">陳業務</span>
+                <span class="log-arrow">→</span>
+                <span class="log-new">王 PM</span>
+              </div>
+              <div class="log-time">2025-11-18 · 11:20</div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-body">
+          <h3>編輯歷程 Tab</h3>
+          <p>客戶詳情頁設有專屬的「編輯歷程」分頁，每次修改都記錄操作人（角色＋姓名）、時間（精確到分鐘）、以及欄位前後值。解決了「誰改了什麼、什麼時候改的」的稽核需求，也是主管信任系統的關鍵設計。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── 06 SCREENS ─── -->
+<section id="screens">
+  <div class="container--wide">
+    <p class="eyebrow">05 — Key Screens</p>
+    <h2 class="section-title">核心頁面展示</h2>
+    <p class="section-lead">以下為三個核心頁面的 UI 示意，以深藍色調建立 B2B 專業感。</p>
+
+    <div class="screen-tabs">
+      <button class="screen-tab active" onclick="switchTab(this,'tab-dash')">📊 Dashboard</button>
+      <button class="screen-tab" onclick="switchTab(this,'tab-customers')">👥 客戶列表</button>
+      <button class="screen-tab" onclick="switchTab(this,'tab-quotes')">📋 報價單</button>
+    </div>
+
+    <div class="screen-panels">
+
+      <!-- TAB: DASHBOARD v2 -->
+      <div id="tab-dash" class="active">
+        <div class="screen-mockup">
+          <div class="screen-bar">
+            <span class="screen-dot dot-r"></span>
+            <span class="screen-dot dot-y"></span>
+            <span class="screen-dot dot-g"></span>
+            <span class="screen-url">crm.internal / dashboard</span>
+          </div>
+          <div class="screen-inner" style="height:560px;">
+            <div class="app-sidebar">
+              <div class="sidebar-logo">CRM <span>Pro</span></div>
+              <div class="sidebar-item active"><span class="si">📊</span> Dashboard</div>
+              <div class="sidebar-item"><span class="si">👥</span> 客戶管理</div>
+              <div class="sidebar-item"><span class="si">📋</span> 報價單</div>
+              <div class="sidebar-item"><span class="si">📁</span> 專案資產</div>
+              <div class="sidebar-item"><span class="si">⚙️</span> 系統設定</div>
+            </div>
+            <div class="app-main" style="overflow-y:auto;">
+
+              <!-- Topbar -->
+              <div class="app-topbar">
+                <h3>全公司 Dashboard</h3>
+                <button class="btn btn-ghost">近 6 個月 ▾</button>
+              </div>
+
+              <!-- Stat cards -->
+              <div class="stat-row" style="margin-bottom:12px;">
+                <div class="stat-card">
+                  <div class="s-label">活躍客戶</div>
+                  <div class="s-value">47</div>
+                  <div class="s-trend">↑ 3 vs 上月</div>
+                </div>
+                <div class="stat-card">
+                  <div class="s-label">本月報價金額</div>
+                  <div class="s-value monofont" style="font-size:16px;">$2.45M</div>
+                  <div class="s-trend">↑ 11.4%</div>
+                </div>
+                <div class="stat-card">
+                  <div class="s-label">報價成案率</div>
+                  <div class="s-value">26%</div>
+                  <div class="s-trend">↑ 5pp vs Q2</div>
+                </div>
+                <div class="stat-card">
+                  <div class="s-label">待審核報價</div>
+                  <div class="s-value" style="color:var(--warn);">3</div>
+                  <div class="s-trend down">最久 4 天未核</div>
+                </div>
+              </div>
+
+              <!-- Row 2: Trend + Funnel -->
+              <div class="dash-grid-2">
+
+                <!-- 6-month Revenue Trend -->
+                <div class="chart-card">
+                  <div class="chart-card-title">6 個月報價 vs 成案趨勢</div>
+                  <div class="trend-legend">
+                    <div class="trend-legend-item">
+                      <div class="trend-legend-dot" style="background:var(--accent);"></div>報價金額
+                    </div>
+                    <div class="trend-legend-item">
+                      <div class="trend-legend-dot" style="background:var(--teal);"></div>成案金額
+                    </div>
+                  </div>
+                  <svg viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;overflow:visible;">
+                    <!-- Y-axis grid lines -->
+                    <line x1="18" y1="20" x2="292" y2="20" stroke="#EEF1F6" stroke-width="1"/>
+                    <line x1="18" y1="46" x2="292" y2="46" stroke="#EEF1F6" stroke-width="1"/>
+                    <line x1="18" y1="72" x2="292" y2="72" stroke="#EEF1F6" stroke-width="1"/>
+                    <line x1="18" y1="98" x2="292" y2="98" stroke="#EEF1F6" stroke-width="1"/>
+                    <!-- Y-axis labels -->
+                    <text x="14" y="23" font-size="7" fill="#94A3B8" text-anchor="end">2.5M</text>
+                    <text x="14" y="49" font-size="7" fill="#94A3B8" text-anchor="end">1.8M</text>
+                    <text x="14" y="75" font-size="7" fill="#94A3B8" text-anchor="end">0.9M</text>
+                    <!-- X-axis labels -->
+                    <text x="20"  y="108" font-size="7" fill="#94A3B8" text-anchor="middle">6月</text>
+                    <text x="71"  y="108" font-size="7" fill="#94A3B8" text-anchor="middle">7月</text>
+                    <text x="122" y="108" font-size="7" fill="#94A3B8" text-anchor="middle">8月</text>
+                    <text x="173" y="108" font-size="7" fill="#94A3B8" text-anchor="middle">9月</text>
+                    <text x="224" y="108" font-size="7" fill="#94A3B8" text-anchor="middle">10月</text>
+                    <text x="292" y="108" font-size="7" fill="#94A3B8" text-anchor="middle">11月</text>
+                    <!-- Quote area fill -->
+                    <path d="M20,56 L71,44 L122,62 L173,22 L224,30 L292,22 L292,98 L20,98 Z"
+                          fill="#3D7BF5" fill-opacity="0.08"/>
+                    <!-- Quote line -->
+                    <polyline points="20,56 71,44 122,62 173,22 224,30 292,22"
+                              fill="none" stroke="#3D7BF5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                    <!-- Quote dots -->
+                    <circle cx="20"  cy="56" r="3" fill="#3D7BF5"/>
+                    <circle cx="71"  cy="44" r="3" fill="#3D7BF5"/>
+                    <circle cx="122" cy="62" r="3" fill="#3D7BF5"/>
+                    <circle cx="173" cy="22" r="3" fill="#3D7BF5"/>
+                    <circle cx="224" cy="30" r="3" fill="#3D7BF5"/>
+                    <circle cx="292" cy="22" r="4" fill="#3D7BF5" stroke="white" stroke-width="1.5"/>
+                    <!-- Closed area fill -->
+                    <path d="M20,80 L71,74 L122,77 L173,64 L224,70 L292,62 L292,98 L20,98 Z"
+                          fill="#38BFA8" fill-opacity="0.12"/>
+                    <!-- Closed line -->
+                    <polyline points="20,80 71,74 122,77 173,64 224,70 292,62"
+                              fill="none" stroke="#38BFA8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4,2"/>
+                    <!-- Closed dots -->
+                    <circle cx="20"  cy="80" r="3" fill="#38BFA8"/>
+                    <circle cx="71"  cy="74" r="3" fill="#38BFA8"/>
+                    <circle cx="122" cy="77" r="3" fill="#38BFA8"/>
+                    <circle cx="173" cy="64" r="3" fill="#38BFA8"/>
+                    <circle cx="224" cy="70" r="3" fill="#38BFA8"/>
+                    <circle cx="292" cy="62" r="4" fill="#38BFA8" stroke="white" stroke-width="1.5"/>
+                    <!-- Latest value callout -->
+                    <rect x="255" y="10" width="44" height="14" rx="3" fill="#3D7BF5"/>
+                    <text x="277" y="20" font-size="7.5" fill="white" text-anchor="middle" font-weight="700">$2.45M</text>
+                  </svg>
+                </div>
+
+                <!-- Pipeline Funnel v2 with avg days -->
+                <div class="chart-card">
+                  <div class="chart-card-title">報價管線 · 平均停留天數</div>
+                  <!-- Header -->
+                  <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+                    <span style="font-size:9px;color:var(--gray-400);width:44px;flex-shrink:0;">階段</span>
+                    <span style="font-size:9px;color:var(--gray-400);flex:1;">件數</span>
+                    <span style="font-size:9px;color:var(--gray-400);width:54px;text-align:right;">平均天數</span>
+                  </div>
+                  <div class="funnel-row">
+                    <span class="funnel-label">草稿</span>
+                    <div class="funnel-bar-wrap">
+                      <div class="funnel-bar" style="width:100%;background:#9CA3AF;">
+                        <span class="funnel-count">12</span>
+                      </div>
+                    </div>
+                    <span class="funnel-meta" style="color:var(--gray-400);">1.5 天</span>
+                  </div>
+                  <div class="funnel-row">
+                    <span class="funnel-label">已報價</span>
+                    <div class="funnel-bar-wrap">
+                      <div class="funnel-bar" style="width:66%;background:var(--accent);">
+                        <span class="funnel-count">8</span>
+                      </div>
+                    </div>
+                    <span class="funnel-meta" style="color:var(--accent);">3.2 天</span>
+                  </div>
+                  <div class="funnel-row">
+                    <span class="funnel-label">議價中</span>
+                    <div class="funnel-bar-wrap">
+                      <div class="funnel-bar" style="width:42%;background:var(--warn);">
+                        <span class="funnel-count">5</span>
+                      </div>
+                    </div>
+                    <span class="funnel-meta" style="color:var(--warn);font-weight:700;">⚠ 8.4 天</span>
+                  </div>
+                  <div class="funnel-row">
+                    <span class="funnel-label">已成案</span>
+                    <div class="funnel-bar-wrap">
+                      <div class="funnel-bar" style="width:25%;background:var(--teal);">
+                        <span class="funnel-count">3</span>
+                      </div>
+                    </div>
+                    <span class="funnel-meta" style="color:var(--teal);">成案</span>
+                  </div>
+                  <div style="margin-top:10px;padding:8px 10px;background:#FFFBEB;border-radius:5px;border:1px solid #FDE68A;">
+                    <span style="font-size:10px;color:#92400E;font-weight:600;">💡 「議價中」平均停留 8.4 天，高於健康值 5 天，建議業務跟進。</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: AM/PM Performance -->
+              <div class="chart-card" style="margin-bottom:4px;">
+                <div class="chart-card-title">業務績效比較 · 本月</div>
+                <div style="display:grid;grid-template-columns:36px 1fr 1fr 60px;gap:8px;margin-bottom:6px;align-items:end;">
+                  <span></span>
+                  <span style="font-size:9px;color:var(--gray-400);text-transform:uppercase;letter-spacing:.04em;">報價金額</span>
+                  <span style="font-size:9px;color:var(--gray-400);text-transform:uppercase;letter-spacing:.04em;">成案率</span>
+                  <span style="font-size:9px;color:var(--gray-400);text-transform:uppercase;letter-spacing:.04em;text-align:right;">成案金額</span>
+                </div>
+                <!-- 李 AM (top) -->
+                <div class="perf-row">
+                  <span class="perf-name">李 AM</span>
+                  <div class="perf-bar-wrap">
+                    <div class="perf-bar" style="width:100%;background:var(--accent);"></div>
+                  </div>
+                  <div class="perf-bar-wrap">
+                    <div class="perf-bar" style="width:100%;background:var(--teal);"></div>
+                  </div>
+                  <div>
+                    <div class="perf-rate">$980K</div>
+                    <div class="perf-sub">勝率 31%</div>
+                  </div>
+                </div>
+                <!-- 陳 AM -->
+                <div class="perf-row">
+                  <span class="perf-name">陳 AM</span>
+                  <div class="perf-bar-wrap">
+                    <div class="perf-bar" style="width:87%;background:var(--accent);opacity:.75;"></div>
+                  </div>
+                  <div class="perf-bar-wrap">
+                    <div class="perf-bar" style="width:77%;background:var(--teal);opacity:.75;"></div>
+                  </div>
+                  <div>
+                    <div class="perf-rate">$850K</div>
+                    <div class="perf-sub">勝率 24%</div>
+                  </div>
+                </div>
+                <!-- 王 PM -->
+                <div class="perf-row">
+                  <span class="perf-name">王 PM</span>
+                  <div class="perf-bar-wrap">
+                    <div class="perf-bar" style="width:63%;background:var(--accent);opacity:.5;"></div>
+                  </div>
+                  <div class="perf-bar-wrap">
+                    <div class="perf-bar" style="width:58%;background:var(--teal);opacity:.5;"></div>
+                  </div>
+                  <div>
+                    <div class="perf-rate">$620K</div>
+                    <div class="perf-sub">勝率 18%</div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /app-main -->
+          </div><!-- /screen-inner -->
+          <div class="screen-caption">
+            <strong>Dashboard v2</strong> — 參考 Pipedrive + HubSpot Sales Hub 的設計邏輯。新增「6 個月報價 vs 成案趨勢折線圖」取代無管理價值的「最近查看」；漏斗加入<strong>平均停留天數</strong>讓經理一眼看出卡點；業務績效橫條比較讓 3 位 AM/PM 的表現可視化。
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: CUSTOMERS -->
+      <div id="tab-customers">
+        <div class="screen-mockup">
+          <div class="screen-bar">
+            <span class="screen-dot dot-r"></span>
+            <span class="screen-dot dot-y"></span>
+            <span class="screen-dot dot-g"></span>
+            <span class="screen-url">crm.internal / customers</span>
+          </div>
+          <div class="screen-inner">
+            <div class="app-sidebar">
+              <div class="sidebar-logo">CRM <span>Pro</span></div>
+              <div class="sidebar-item"><span class="si">📊</span> Dashboard</div>
+              <div class="sidebar-item active"><span class="si">👥</span> 客戶管理</div>
+              <div class="sidebar-item"><span class="si">📋</span> 報價單</div>
+              <div class="sidebar-item"><span class="si">📁</span> 專案資產</div>
+              <div class="sidebar-item"><span class="si">⚙️</span> 系統設定</div>
+            </div>
+            <div class="app-main">
+              <div class="app-topbar">
+                <h3>客戶列表</h3>
+                <button class="btn btn-ghost">篩選 ▾</button>
+                <button class="btn btn-primary">＋ 新增客戶</button>
+              </div>
+              <div class="mini-table">
+                <div class="mini-table-head cols-5">
+                  <span>客戶名稱</span><span>產業</span><span>負責業務</span><span>最近聯絡</span><span>操作</span>
+                </div>
+                <div class="mini-table-row cols-5">
+                  <span class="col-name">台灣電商集團</span>
+                  <span class="col-muted">電商</span>
+                  <span class="col-muted">陳業務</span>
+                  <span class="col-muted">2025-11-18</span>
+                  <span class="badge badge-blue" style="cursor:pointer">查看</span>
+                </div>
+                <div class="mini-table-row cols-5">
+                  <span class="col-name">創新科技有限公司</span>
+                  <span class="col-muted">SaaS</span>
+                  <span class="col-muted">王 PM</span>
+                  <span class="col-muted">2025-11-21</span>
+                  <span class="badge badge-blue" style="cursor:pointer">查看</span>
+                </div>
+                <div class="mini-table-row cols-5">
+                  <span class="col-name">遠東物流</span>
+                  <span class="col-muted">物流</span>
+                  <span class="col-muted">李 AM</span>
+                  <span class="col-muted">2025-11-10</span>
+                  <span class="badge badge-blue" style="cursor:pointer">查看</span>
+                </div>
+                <div class="mini-table-row cols-5">
+                  <span class="col-name">聯合醫療器材</span>
+                  <span class="col-muted">醫療</span>
+                  <span class="col-muted">陳業務</span>
+                  <span class="col-muted">2025-10-30</span>
+                  <span class="badge badge-blue" style="cursor:pointer">查看</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <strong>客戶列表</strong> — AM/PM 可查看並編輯全公司客戶資料，點入後可見聯絡紀錄（拜訪紀錄、通話備忘錄、待辦）及編輯歷程 Tab。
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: QUOTES -->
+      <div id="tab-quotes">
+        <div class="screen-mockup">
+          <div class="screen-bar">
+            <span class="screen-dot dot-r"></span>
+            <span class="screen-dot dot-y"></span>
+            <span class="screen-dot dot-g"></span>
+            <span class="screen-url">crm.internal / quotes</span>
+          </div>
+          <div class="screen-inner">
+            <div class="app-sidebar">
+              <div class="sidebar-logo">CRM <span>Pro</span></div>
+              <div class="sidebar-item"><span class="si">📊</span> Dashboard</div>
+              <div class="sidebar-item"><span class="si">👥</span> 客戶管理</div>
+              <div class="sidebar-item active"><span class="si">📋</span> 報價單</div>
+              <div class="sidebar-item"><span class="si">📁</span> 專案資產</div>
+              <div class="sidebar-item"><span class="si">⚙️</span> 系統設定</div>
+            </div>
+            <div class="app-main">
+              <div class="app-topbar">
+                <h3>報價單管理</h3>
+                <button class="btn btn-ghost">本季 ▾</button>
+                <button class="btn btn-primary">＋ 建立報價單</button>
+              </div>
+              <div class="mini-table">
+                <div class="mini-table-head cols-q">
+                  <span>報價單編號</span><span>客戶</span><span>金額</span><span>狀態</span>
+                </div>
+                <div class="mini-table-row cols-q">
+                  <span class="col-name">QT-2025-012</span>
+                  <span class="col-muted">台灣電商集團</span>
+                  <span class="monofont">$480,000</span>
+                  <span class="status-pill sent" style="font-size:10px">已寄出</span>
+                </div>
+                <div class="mini-table-row cols-q">
+                  <span class="col-name">QT-2025-011</span>
+                  <span class="col-muted">創新科技</span>
+                  <span class="monofont">$230,000</span>
+                  <span class="status-pill review" style="font-size:10px">審核中</span>
+                </div>
+                <div class="mini-table-row cols-q">
+                  <span class="col-name">QT-2025-010</span>
+                  <span class="col-muted">遠東物流</span>
+                  <span class="monofont">$750,000</span>
+                  <span class="status-pill closed" style="font-size:10px">已成案</span>
+                </div>
+                <div class="mini-table-row cols-q">
+                  <span class="col-name">QT-2025-009</span>
+                  <span class="col-muted">聯合醫療</span>
+                  <span class="monofont">$120,000</span>
+                  <span class="status-pill draft" style="font-size:10px">草稿</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen-caption">
+            <strong>報價單列表</strong> — 僅特助可建立與寄出報價，經理可審核。金額欄位採等寬字體（tabular-nums）確保數字對齊整齊，狀態色彩系統延伸自 Design System。
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /screen-panels -->
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── 07 RESULTS ─── -->
+<section id="results">
+  <div class="container">
+    <p class="eyebrow">06 — Results & Reflection</p>
+    <h2 class="section-title">交付成果與設計回顧</h2>
+    <p class="section-lead">
+      設計稿已完整交付，系統尚在開發規劃中。以下是這個專案對我的設計能力的實質積累。
+    </p>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="r-num">3+</div>
+        <div class="r-label">核心模組完整設計<br/>（客戶 / 報價 / 儀表板）</div>
+      </div>
+      <div class="result-card">
+        <div class="r-num">5</div>
+        <div class="r-label">角色 × 功能<br/>權限矩陣設計</div>
+      </div>
+      <div class="result-card">
+        <div class="r-num">100%</div>
+        <div class="r-label">由單一設計師獨立完成<br/>從 UX 到 UI 完稿</div>
+      </div>
+    </div>
+
+    <div class="reflection">
+      <h3>🪞 我學到了什麼</h3>
+      <ul>
+        <li>B2B 內部工具的設計核心不是「好看」，而是「讓對的人做對的事」。當使用者人數少但職責差異大，權限邏輯的清晰度比視覺驚豔更重要。</li>
+        <li>狀態視覺化是內部工具的隱形 UX 力量。讓業務不需要點進每一張報價單，光看列表就知道當前狀況，大幅減少溝通成本。</li>
+        <li>「誰改了什麼」是 B2B 工具的信任基礎。稽核紀錄不是附加功能，而是讓使用者願意依賴系統的根本設計。</li>
+        <li>獨立作業需要更強的自我驗收能力。沒有設計評審可以倚賴，我必須主動建立自己的 design review checklist，並以使用者視角反覆走查。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <p>Designed by <a href="mailto:sk2377328816@gmail.com">Jess Chung</a> &nbsp;·&nbsp; B2B CRM Case Study &nbsp;·&nbsp; 2025–2026</p>
+  </div>
+</footer>
+
+
+<script>
+  function switchTab(btn, targetId) {
+    // update tab buttons
+    document.querySelectorAll('.screen-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    // update panels
+    document.querySelectorAll('.screen-panels > div').forEach(p => p.classList.remove('active'));
+    document.getElementById(targetId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>

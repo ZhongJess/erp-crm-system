@@ -1,0 +1,205 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - navigation [ref=e71]:
+            - link "客戶管理" [ref=e73] [cursor=pointer]:
+              - /url: /customers
+            - generic [ref=e74]:
+              - img [ref=e75]
+              - generic [ref=e77]: 客戶列表
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - img [ref=e80]
+              - searchbox "搜尋客戶、報價單..." [ref=e83]
+            - button "新增" [ref=e84]
+            - button "切換深色模式" [ref=e85]:
+              - img
+            - button "2" [ref=e86]:
+              - img
+              - generic [ref=e87]: "2"
+        - main [ref=e88]:
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - heading "客戶管理" [level=1] [ref=e91]
+              - paragraph [ref=e92]: 管理所有客戶資料與聯絡資訊
+            - generic [ref=e93]:
+              - button "匯出" [ref=e94]:
+                - img
+                - text: 匯出
+              - link "新增客戶" [ref=e95] [cursor=pointer]:
+                - /url: /customers/new
+                - img
+                - text: 新增客戶
+          - generic [ref=e96]:
+            - tablist [ref=e98]:
+              - tab "全部" [selected] [ref=e99]
+              - tab "活躍客戶" [ref=e100]
+              - tab "封存客戶" [ref=e101]
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - img [ref=e104]
+                - textbox "搜尋客戶名稱、簡稱、統一編號..." [ref=e107]
+              - generic [ref=e108]:
+                - combobox [ref=e109]:
+                  - img
+                - combobox [ref=e110]
+                - combobox [ref=e111]:
+                  - img
+                - combobox [ref=e112]
+                - button [ref=e113]:
+                  - img
+          - table [ref=e116]:
+            - rowgroup [ref=e117]:
+              - row "流水編號 客戶名稱 主要聯絡人 電話 Email 負責業務 建立日期 操作" [ref=e118]:
+                - columnheader "流水編號" [ref=e119]
+                - columnheader "客戶名稱" [ref=e120]
+                - columnheader "主要聯絡人" [ref=e121]
+                - columnheader "電話" [ref=e122]
+                - columnheader "Email" [ref=e123]
+                - columnheader "負責業務" [ref=e124]
+                - columnheader "建立日期" [ref=e125]
+                - columnheader "操作" [ref=e126]
+            - rowgroup [ref=e127]:
+              - row "CUS-2025-0024 台灣數位科技股份有限公司 陳小華 02-2345-6789 chen@taiwan-digital.com 王小明 2025-04-10" [ref=e128]:
+                - cell "CUS-2025-0024" [ref=e129]:
+                  - link "CUS-2025-0024" [ref=e130] [cursor=pointer]:
+                    - /url: /customers/CUS-2025-0024
+                - cell "台灣數位科技股份有限公司" [ref=e131]:
+                  - generic [ref=e133]: 台灣數位科技股份有限公司
+                - cell "陳小華" [ref=e134]
+                - cell "02-2345-6789" [ref=e135]
+                - cell "chen@taiwan-digital.com" [ref=e136]:
+                  - generic [ref=e137]:
+                    - generic [ref=e138]: chen@taiwan-digital.com
+                    - button [ref=e139]:
+                      - img
+                - cell "王小明" [ref=e140]
+                - cell "2025-04-10" [ref=e141]
+                - cell [ref=e142]:
+                  - button [ref=e143]:
+                    - img
+              - row "CUS-2025-0023 創新軟體開發有限公司 林大偉 02-8765-4321 lin@innovate-soft.com 李美麗 2025-04-08" [ref=e144]:
+                - cell "CUS-2025-0023" [ref=e145]:
+                  - link "CUS-2025-0023" [ref=e146] [cursor=pointer]:
+                    - /url: /customers/CUS-2025-0023
+                - cell "創新軟體開發有限公司" [ref=e147]:
+                  - generic [ref=e149]: 創新軟體開發有限公司
+                - cell "林大偉" [ref=e150]
+                - cell "02-8765-4321" [ref=e151]
+                - cell "lin@innovate-soft.com" [ref=e152]:
+                  - generic [ref=e153]:
+                    - generic [ref=e154]: lin@innovate-soft.com
+                    - button [ref=e155]:
+                      - img
+                - cell "李美麗" [ref=e156]
+                - cell "2025-04-08" [ref=e157]
+                - cell [ref=e158]:
+                  - button [ref=e159]:
+                    - img
+              - row "CUS-2025-0022 智慧製造科技股份有限公司 張志明 04-2234-5678 chang@smart-mfg.com 王小明 2025-04-05" [ref=e160]:
+                - cell "CUS-2025-0022" [ref=e161]:
+                  - link "CUS-2025-0022" [ref=e162] [cursor=pointer]:
+                    - /url: /customers/CUS-2025-0022
+                - cell "智慧製造科技股份有限公司" [ref=e163]:
+                  - generic [ref=e165]: 智慧製造科技股份有限公司
+                - cell "張志明" [ref=e166]
+                - cell "04-2234-5678" [ref=e167]
+                - cell "chang@smart-mfg.com" [ref=e168]:
+                  - generic [ref=e169]:
+                    - generic [ref=e170]: chang@smart-mfg.com
+                    - button [ref=e171]:
+                      - img
+                - cell "王小明" [ref=e172]
+                - cell "2025-04-05" [ref=e173]
+                - cell [ref=e174]:
+                  - button [ref=e175]:
+                    - img
+              - row "CUS-2025-0021 東方貿易有限公司 黃董事長 07-3456-7890 huang@east-trade.com 陳志偉 2025-04-01" [ref=e176]:
+                - cell "CUS-2025-0021" [ref=e177]:
+                  - link "CUS-2025-0021" [ref=e178] [cursor=pointer]:
+                    - /url: /customers/CUS-2025-0021
+                - cell "東方貿易有限公司" [ref=e179]:
+                  - generic [ref=e181]: 東方貿易有限公司
+                - cell "黃董事長" [ref=e182]
+                - cell "07-3456-7890" [ref=e183]
+                - cell "huang@east-trade.com" [ref=e184]:
+                  - generic [ref=e185]:
+                    - generic [ref=e186]: huang@east-trade.com
+                    - button [ref=e187]:
+                      - img
+                - cell "陳志偉" [ref=e188]
+                - cell "2025-04-01" [ref=e189]
+                - cell [ref=e190]:
+                  - button [ref=e191]:
+                    - img
+              - row "CUS-2025-0020 台北金融科技公司 封存 吳經理 02-5678-1234 wu@taipei-fintech.com 李美麗 2025-03-28" [ref=e192]:
+                - cell "CUS-2025-0020" [ref=e193]:
+                  - link "CUS-2025-0020" [ref=e194] [cursor=pointer]:
+                    - /url: /customers/CUS-2025-0020
+                - cell "台北金融科技公司 封存" [ref=e195]:
+                  - generic [ref=e196]:
+                    - generic [ref=e197]: 台北金融科技公司
+                    - generic [ref=e198]: 封存
+                - cell "吳經理" [ref=e199]
+                - cell "02-5678-1234" [ref=e200]
+                - cell "wu@taipei-fintech.com" [ref=e201]:
+                  - generic [ref=e202]:
+                    - generic [ref=e203]: wu@taipei-fintech.com
+                    - button [ref=e204]:
+                      - img
+                - cell "李美麗" [ref=e205]
+                - cell "2025-03-28" [ref=e206]
+                - cell [ref=e207]:
+                  - button [ref=e208]:
+                    - img
+          - generic [ref=e210]: 顯示 1-5 筆，共 5 筆
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e216] [cursor=pointer]:
+    - img [ref=e217]

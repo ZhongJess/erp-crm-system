@@ -1,0 +1,214 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "客戶概覽" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: 客戶概覽
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - button "Toggle Sidebar" [ref=e71]:
+            - img
+            - generic [ref=e72]: Toggle Sidebar
+          - navigation [ref=e73]:
+            - generic [ref=e75]: 客戶概覽
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - searchbox "搜尋客戶、報價單..." [ref=e81]
+            - button "新增" [ref=e82]
+            - button "切換深色模式" [ref=e83]:
+              - img
+            - button "2" [ref=e84]:
+              - img
+              - generic [ref=e85]: "2"
+        - main [ref=e86]:
+          - generic [ref=e87]:
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - generic [ref=e92]: 本月新增客戶數
+                - generic [ref=e93]: +12%
+              - generic [ref=e94]: "24"
+              - generic [ref=e95]: 較上月 +3 位
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - generic [ref=e100]: 本月報價總金額
+                - generic [ref=e101]: +8.5%
+              - generic [ref=e102]: NT$ 2,450,000
+              - generic [ref=e103]: 較上月 +NT$ 192,000
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - generic [ref=e108]: 報價成案率
+                - generic [ref=e109]: +5%
+              - generic [ref=e110]: 68%
+              - generic [ref=e111]: 已成案 17 / 全部已結案 25
+            - generic [ref=e114]:
+              - generic [ref=e116]: 即將到期報價
+              - generic [ref=e117]: "5"
+              - generic [ref=e118]: 3 天內到期
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - generic [ref=e122]: 即將到期的報價單
+                - link "查看全部" [ref=e123] [cursor=pointer]:
+                  - /url: /quotations
+                  - text: 查看全部
+                  - img [ref=e124]
+              - table [ref=e129]:
+                - rowgroup [ref=e130]:
+                  - row "報價單號 客戶名稱 案件名稱 總金額 到期時間" [ref=e131]:
+                    - columnheader "報價單號" [ref=e132]
+                    - columnheader "客戶名稱" [ref=e133]
+                    - columnheader "案件名稱" [ref=e134]
+                    - columnheader "總金額" [ref=e135]
+                    - columnheader "到期時間" [ref=e136]
+                - rowgroup [ref=e137]:
+                  - row "QUO-2025-0042 台灣數位科技 官網改版專案 NT$ 350,000 1 天" [ref=e138]:
+                    - cell "QUO-2025-0042" [ref=e139]:
+                      - link "QUO-2025-0042" [ref=e140] [cursor=pointer]:
+                        - /url: /quotations/QUO-2025-0042
+                    - cell "台灣數位科技" [ref=e141]
+                    - cell "官網改版專案" [ref=e142]
+                    - cell "NT$ 350,000" [ref=e143]
+                    - cell "1 天" [ref=e144]:
+                      - generic [ref=e145]: 1 天
+                  - row "QUO-2025-0038 創新軟體開發 APP 開發 NT$ 580,000 2 天" [ref=e146]:
+                    - cell "QUO-2025-0038" [ref=e147]:
+                      - link "QUO-2025-0038" [ref=e148] [cursor=pointer]:
+                        - /url: /quotations/QUO-2025-0038
+                    - cell "創新軟體開發" [ref=e149]
+                    - cell "APP 開發" [ref=e150]
+                    - cell "NT$ 580,000" [ref=e151]
+                    - cell "2 天" [ref=e152]:
+                      - generic [ref=e153]: 2 天
+                  - row "QUO-2025-0035 智慧製造公司 ERP 系統導入 NT$ 1,200,000 3 天" [ref=e154]:
+                    - cell "QUO-2025-0035" [ref=e155]:
+                      - link "QUO-2025-0035" [ref=e156] [cursor=pointer]:
+                        - /url: /quotations/QUO-2025-0035
+                    - cell "智慧製造公司" [ref=e157]
+                    - cell "ERP 系統導入" [ref=e158]
+                    - cell "NT$ 1,200,000" [ref=e159]
+                    - cell "3 天" [ref=e160]:
+                      - generic [ref=e161]: 3 天
+            - generic [ref=e162]:
+              - generic [ref=e164]: 報價轉換漏斗
+              - generic [ref=e165]:
+                - generic [ref=e167]:
+                  - generic [ref=e168]: 草稿
+                  - generic [ref=e169]: "12"
+                - generic [ref=e173]:
+                  - generic [ref=e174]: 已報價
+                  - generic [ref=e175]: "8"
+                - generic [ref=e179]:
+                  - generic [ref=e180]: 議價中
+                  - generic [ref=e181]: "5"
+                - generic [ref=e185]:
+                  - generic [ref=e186]: 已成案
+                  - generic [ref=e187]: "3"
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - generic [ref=e193]: 最近查看的客戶
+                - link "查看全部" [ref=e194] [cursor=pointer]:
+                  - /url: /customers
+                  - text: 查看全部
+                  - img [ref=e195]
+              - generic [ref=e198]:
+                - link "台北金融科技 陳經理 2 小時前" [ref=e199] [cursor=pointer]:
+                  - /url: /customers/CUS-2025-0024
+                  - generic [ref=e200]:
+                    - generic [ref=e201]: 台北金融科技
+                    - generic [ref=e202]: 陳經理
+                  - generic [ref=e203]:
+                    - generic [ref=e204]: 2 小時前
+                    - img [ref=e205]
+                - link "南部製造公司 林主管 5 小時前" [ref=e208] [cursor=pointer]:
+                  - /url: /customers/CUS-2025-0023
+                  - generic [ref=e209]:
+                    - generic [ref=e210]: 南部製造公司
+                    - generic [ref=e211]: 林主管
+                  - generic [ref=e212]:
+                    - generic [ref=e213]: 5 小時前
+                    - img [ref=e214]
+                - link "東方貿易行 張董事 昨天" [ref=e217] [cursor=pointer]:
+                  - /url: /customers/CUS-2025-0022
+                  - generic [ref=e218]:
+                    - generic [ref=e219]: 東方貿易行
+                    - generic [ref=e220]: 張董事
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: 昨天
+                    - img [ref=e223]
+            - generic [ref=e226]:
+              - generic [ref=e227]:
+                - generic [ref=e228]: 最近查看的報價單
+                - link "查看全部" [ref=e229] [cursor=pointer]:
+                  - /url: /quotations
+                  - text: 查看全部
+                  - img [ref=e230]
+              - generic [ref=e233]:
+                - link "QUO-2025-0045 台灣數位科技 - 資安升級方案 30 分鐘前" [ref=e234] [cursor=pointer]:
+                  - /url: /quotations/QUO-2025-0045
+                  - generic [ref=e235]:
+                    - generic [ref=e236]: QUO-2025-0045
+                    - generic [ref=e237]: 台灣數位科技 - 資安升級方案
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: 30 分鐘前
+                    - img [ref=e240]
+                - link "QUO-2025-0044 創新軟體開發 - 雲端遷移服務 1 小時前" [ref=e243] [cursor=pointer]:
+                  - /url: /quotations/QUO-2025-0044
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: QUO-2025-0044
+                    - generic [ref=e246]: 創新軟體開發 - 雲端遷移服務
+                  - generic [ref=e247]:
+                    - generic [ref=e248]: 1 小時前
+                    - img [ref=e249]
+                - link "QUO-2025-0043 智慧製造公司 - IoT 感測器整合 3 小時前" [ref=e252] [cursor=pointer]:
+                  - /url: /quotations/QUO-2025-0043
+                  - generic [ref=e253]:
+                    - generic [ref=e254]: QUO-2025-0043
+                    - generic [ref=e255]: 智慧製造公司 - IoT 感測器整合
+                  - generic [ref=e256]:
+                    - generic [ref=e257]: 3 小時前
+                    - img [ref=e258]
+  - region "Notifications alt+T"

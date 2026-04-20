@@ -1,0 +1,183 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "客戶概覽" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: 客戶概覽
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - button "Toggle Sidebar" [ref=e71]:
+            - img
+            - generic [ref=e72]: Toggle Sidebar
+          - navigation [ref=e73]:
+            - link "客戶管理" [ref=e75] [cursor=pointer]:
+              - /url: /customers
+            - generic [ref=e76]:
+              - img [ref=e77]
+              - generic [ref=e79]: 台灣數位科技股份有限公司
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - img [ref=e82]
+              - searchbox "搜尋客戶、報價單..." [ref=e85]
+            - button "新增" [ref=e86]
+            - button "切換深色模式" [ref=e87]:
+              - img
+            - button "2" [ref=e88]:
+              - img
+              - generic [ref=e89]: "2"
+        - main [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - generic [ref=e93]:
+                - generic [ref=e94]: CUS-2025-0024
+                - generic [ref=e95]: 活躍
+              - heading "台灣數位科技股份有限公司" [level=1] [ref=e96]
+            - generic [ref=e97]:
+              - link "編輯" [ref=e98] [cursor=pointer]:
+                - /url: /customers/CUS-2025-0024/edit
+                - img
+                - text: 編輯
+              - button "封存" [ref=e99]:
+                - img
+                - text: 封存
+          - generic [ref=e100]:
+            - tablist [ref=e101]:
+              - tab "基本資料" [ref=e102]
+              - tab "聯絡人" [ref=e103]
+              - tab "資產" [ref=e104]
+              - tab "報價單" [ref=e105]
+              - tab "活動紀錄 1" [active] [selected] [ref=e106]:
+                - text: 活動紀錄
+                - generic [ref=e107]: "1"
+              - tab "異動歷史" [ref=e108]
+            - tabpanel "活動紀錄 1" [ref=e162]:
+              - generic [ref=e163]:
+                - generic [ref=e164]:
+                  - generic [ref=e165]: 活動紀錄
+                  - generic [ref=e166]:
+                    - button "全部" [ref=e167]
+                    - button "拜訪紀錄(1)" [ref=e168]:
+                      - text: 拜訪紀錄
+                      - generic [ref=e169]: (1)
+                    - button "通話備忘錄(2)" [ref=e170]:
+                      - text: 通話備忘錄
+                      - generic [ref=e171]: (2)
+                    - button "待辦追蹤(1)" [ref=e172]:
+                      - text: 待辦追蹤
+                      - generic [ref=e173]: (1)
+                  - button "新增紀錄" [ref=e174]:
+                    - img
+                    - text: 新增紀錄
+                - generic [ref=e178]:
+                  - generic [ref=e179]:
+                    - img [ref=e181]
+                    - generic [ref=e184]:
+                      - generic [ref=e185]:
+                        - generic [ref=e186]: 拜訪紀錄
+                        - generic [ref=e187]:
+                          - img [ref=e188]
+                          - text: 2026/04/14 10:00
+                        - generic [ref=e191]: · AM 王小明
+                      - generic [ref=e192]:
+                        - generic [ref=e193]:
+                          - img [ref=e194]
+                          - generic [ref=e197]: 地點：台北市信義區信義路五段100號12樓（客戶辦公室）
+                        - generic [ref=e198]:
+                          - img [ref=e199]
+                          - generic [ref=e202]: 與會人員：陳小華（專案經理）、林大偉（技術總監）
+                        - generic [ref=e203]:
+                          - img [ref=e204]
+                          - generic [ref=e207]: 拜訪摘要：討論官網改版需求，客戶希望新版首頁強調行動裝置體驗，並整合線上預約功能。
+                        - generic [ref=e208]: 後續行動：請特助準備改版報價單（V2），預算上限 NT$400,000。
+                  - generic [ref=e209]:
+                    - img [ref=e211]
+                    - generic [ref=e213]:
+                      - generic [ref=e214]:
+                        - generic [ref=e215]: 通話備忘錄
+                        - generic [ref=e216]:
+                          - img [ref=e217]
+                          - text: 2026/04/10 14:32
+                        - generic [ref=e220]: · AM 王小明
+                      - generic [ref=e221]:
+                        - generic [ref=e222]:
+                          - generic [ref=e223]: 通話對象：陳小華
+                          - generic [ref=e224]: 時長：15 分鐘
+                        - paragraph [ref=e225]: 客戶詢問 QUO-2025-0045 進度，表示對現有報價有議價意願，希望能在本月底前確認。
+                  - generic [ref=e226]:
+                    - img [ref=e228]
+                    - generic [ref=e231]:
+                      - generic [ref=e232]:
+                        - generic [ref=e233]: 待辦追蹤
+                        - generic [ref=e234]:
+                          - img [ref=e235]
+                          - text: 2026/04/20 17:00
+                        - generic [ref=e238]: · AM 王小明
+                      - generic [ref=e240]:
+                        - button [ref=e241]:
+                          - img [ref=e242]
+                        - generic [ref=e244]:
+                          - paragraph [ref=e245]: 請特助準備官網改版 V2 報價單
+                          - generic [ref=e246]:
+                            - generic [ref=e247]: 截止：2026/04/20 17:00
+                            - generic [ref=e248]: 指派：特助 林雅婷
+                          - paragraph [ref=e249]: 客戶預算上限 NT$400,000，請注意品項拆分方式。
+                  - generic [ref=e250]:
+                    - img [ref=e252]
+                    - generic [ref=e254]:
+                      - generic [ref=e255]:
+                        - generic [ref=e256]: 通話備忘錄
+                        - generic [ref=e257]:
+                          - img [ref=e258]
+                          - text: 2026/04/08 09:15
+                        - generic [ref=e261]: · PM 張美麗
+                      - generic [ref=e262]:
+                        - generic [ref=e263]:
+                          - generic [ref=e264]: 通話對象：林大偉
+                          - generic [ref=e265]: 時長：20 分鐘
+                        - paragraph [ref=e266]: 確認技術規格，客戶需要 API 串接既有 CRM 系統，技術評估複雜度中等。
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e157] [cursor=pointer]:
+    - img [ref=e158]
+  - alert [ref=e161]

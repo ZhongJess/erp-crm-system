@@ -1,0 +1,2100 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Components
+    - generic [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]:
+        - generic [ref=e6]: 🎨
+        - text: 基礎
+      - generic [ref=e7] [cursor=pointer]: Colours
+      - generic [ref=e8] [cursor=pointer]: Typography
+      - generic [ref=e9] [cursor=pointer]: Icons
+    - generic [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 📝
+        - text: 表單
+      - generic [ref=e13] [cursor=pointer]: Buttons
+      - generic [ref=e14] [cursor=pointer]: Inputs
+      - generic [ref=e15] [cursor=pointer]: Checkboxes · Radio
+      - generic [ref=e16] [cursor=pointer]: File Upload
+      - generic [ref=e17] [cursor=pointer]: Search Bar
+      - generic [ref=e18] [cursor=pointer]: Date Picker
+    - generic [ref=e19]:
+      - generic [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]: 📊
+        - text: 數據展示
+      - generic [ref=e22] [cursor=pointer]: Badges
+      - generic [ref=e23] [cursor=pointer]: Table
+      - generic [ref=e24] [cursor=pointer]: Pagination
+      - generic [ref=e25] [cursor=pointer]: Cards
+      - generic [ref=e26] [cursor=pointer]: KPI / Stat Cards
+      - generic [ref=e27] [cursor=pointer]: Charts
+      - generic [ref=e28] [cursor=pointer]: Tree View
+    - generic [ref=e29]:
+      - generic [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: 🧭
+        - text: 導航
+      - generic [ref=e32] [cursor=pointer]: Breadcrumb
+      - generic [ref=e33] [cursor=pointer]: Tabs
+      - generic [ref=e34] [cursor=pointer]: Dropdown Menu
+      - generic [ref=e35] [cursor=pointer]: Top Nav Bar
+      - generic [ref=e36] [cursor=pointer]: Command Palette
+    - generic [ref=e37]:
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: 💬
+        - text: 反饋
+      - generic [ref=e40] [cursor=pointer]: Alerts
+      - generic [ref=e41] [cursor=pointer]: Toast / Snackbar
+      - generic [ref=e42] [cursor=pointer]: Banner
+      - generic [ref=e43] [cursor=pointer]: Tooltip
+      - generic [ref=e44] [cursor=pointer]: Modal / Dialog
+      - generic [ref=e45] [cursor=pointer]: Loading Skeleton
+    - generic [ref=e46]:
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]: 📦
+        - text: 佔位符
+      - generic [ref=e49] [cursor=pointer]: Empty State
+      - generic [ref=e50] [cursor=pointer]: Placeholder States
+    - generic [ref=e51]:
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]: 🔧
+        - text: 複雜組件
+      - generic [ref=e54] [cursor=pointer]: Image Upload
+      - generic [ref=e55] [cursor=pointer]: Data Upload
+      - generic [ref=e56] [cursor=pointer]: Detail Card
+      - generic [ref=e57] [cursor=pointer]: Content Block
+      - generic [ref=e58] [cursor=pointer]: Attachments
+      - generic [ref=e59] [cursor=pointer]: Image Gallery
+      - generic [ref=e60] [cursor=pointer]: Related Links
+      - generic [ref=e61] [cursor=pointer]: Stepper
+      - generic [ref=e62] [cursor=pointer]: Checklist
+      - generic [ref=e63] [cursor=pointer]: Avatar Group
+      - generic [ref=e64] [cursor=pointer]: Settings
+      - generic [ref=e65] [cursor=pointer]: Rich Text Editor
+      - generic [ref=e66] [cursor=pointer]: Activity Timeline
+      - generic [ref=e67] [cursor=pointer]: Pricing Cards
+      - generic [ref=e68] [cursor=pointer]: Feature Highlight
+      - generic [ref=e69] [cursor=pointer]: Star Rating
+  - complementary [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]: ERP
+      - generic [ref=e73]: 系統管理
+    - navigation [ref=e74]:
+      - generic [ref=e75]: 主選單
+      - link "儀表板" [ref=e76] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e77]
+        - text: 儀表板
+      - link "客戶管理" [ref=e82] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e83]
+        - text: 客戶管理
+      - link "報價管理" [ref=e88] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e89]
+        - text: 報價管理
+      - link "訂單管理" [ref=e92] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e93]
+        - text: 訂單管理
+      - generic [ref=e96]: 設定
+      - link "系統設定" [ref=e97] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e98]
+        - text: 系統設定
+  - generic [ref=e101]:
+    - generic [ref=e102]:
+      - generic [ref=e103]: Design System
+      - generic [ref=e104] [cursor=pointer]:
+        - generic [ref=e105]: 張
+        - text: 張經理
+        - img [ref=e106]
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e110]: Colours
+        - generic [ref=e112]:
+          - generic [ref=e114]:
+            - generic [ref=e115]: 🎨 基礎
+            - generic [ref=e116]: Colours
+            - generic [ref=e117]: 系統中所有語意色彩 Token，包含主色、背景、文字、狀態色。
+          - generic [ref=e118]: Colours
+          - generic [ref=e119]:
+            - generic [ref=e122]:
+              - text: Sidebar
+              - text: "#1D3557"
+            - generic [ref=e125]:
+              - text: Primary
+              - text: "#1A6E5C"
+            - generic [ref=e128]:
+              - text: Primary Hover
+              - text: "#145449"
+            - generic [ref=e131]:
+              - text: Background
+              - text: "#F4F6F8"
+            - generic [ref=e134]:
+              - text: Surface
+              - text: "#FFFFFF"
+            - generic [ref=e137]:
+              - text: Text
+              - text: "#1A202C"
+            - generic [ref=e140]:
+              - text: Secondary
+              - text: "#4A5568"
+            - generic [ref=e143]:
+              - text: Muted
+              - text: "#718096"
+            - generic [ref=e146]:
+              - text: Success
+              - text: "#276749"
+            - generic [ref=e149]:
+              - text: Error
+              - text: "#C53030"
+            - generic [ref=e152]:
+              - text: Warning
+              - text: "#B7791F"
+            - generic [ref=e155]:
+              - text: Info
+              - text: "#2B6CB0"
+      - generic [ref=e156]:
+        - generic [ref=e157]: Typography
+        - generic [ref=e159]:
+          - generic [ref=e161]:
+            - generic [ref=e162]: 🎨 基礎
+            - generic [ref=e163]: Typography
+            - generic [ref=e164]: 字型系統、字重、行高定義，以及中英文展示規範。
+          - generic [ref=e165]: Typography
+          - generic [ref=e166]:
+            - generic [ref=e167]:
+              - generic [ref=e168]: TRADITIONAL FONT STYLES
+              - generic [ref=e169]: 永 微風迎客
+              - generic [ref=e170]: Noto Sans TC（思源黑體）
+              - generic [ref=e171]:
+                - text: 壹貳參肆伍陸柒捌玖拾
+                - text: 永字八法：側勒努趯策掠啄磔
+                - text: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                - text: abcdefghijklmnopqrstuvwxyz
+                - text: 0123456789 ！？、。，：；「」『』
+            - generic [ref=e172]:
+              - generic [ref=e173]: ENGLISH FONT STYLES
+              - generic [ref=e174]: AaBbCc
+              - generic [ref=e175]: IBM Plex Sans
+              - generic [ref=e176]:
+                - text: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                - text: abcdefghijklmnopqrstuvwxyz
+                - text: "0123456789"
+                - text: "!@#$%^&*()_+-=[]{}|;':\",<>?/`~"
+            - generic [ref=e177]:
+              - generic [ref=e178]: HEADINGS
+              - generic [ref=e179]:
+                - generic [ref=e180]:
+                  - generic [ref=e181]: $h6-font-size
+                  - generic [ref=e182]: $h6-font-size
+                - generic [ref=e183]:
+                  - generic [ref=e184]: $h5-font-size
+                  - generic [ref=e185]: $h5-font-size
+                - generic [ref=e186]:
+                  - generic [ref=e187]: $h4-font-size
+                  - generic [ref=e188]: $h4-font-size
+                - generic [ref=e189]:
+                  - generic [ref=e190]: $h3-font-size
+                  - generic [ref=e191]: $h3-font-size
+                - generic [ref=e192]:
+                  - generic [ref=e193]: $h2-font-size
+                  - generic [ref=e194]: $h2-font-size
+                - generic [ref=e195]:
+                  - generic [ref=e196]: $h1-font-size
+                  - generic [ref=e197]: $h1-font-size
+          - generic [ref=e198]:
+            - generic [ref=e199]: FONT WEIGHTS
+            - generic [ref=e200]:
+              - generic [ref=e201]: 300 Light
+              - generic [ref=e202]: 報價管理系統 ERP System
+            - generic [ref=e203]:
+              - generic [ref=e204]: 400 Regular
+              - generic [ref=e205]: 報價管理系統 ERP System
+            - generic [ref=e206]:
+              - generic [ref=e207]: 500 Medium
+              - generic [ref=e208]: 報價管理系統 ERP System
+            - generic [ref=e209]:
+              - generic [ref=e210]: 600 SemiBold
+              - generic [ref=e211]: 報價管理系統 ERP System
+            - generic [ref=e212]:
+              - generic [ref=e213]: 700 Bold
+              - generic [ref=e214]: 報價管理系統 ERP System
+            - generic [ref=e215]:
+              - generic [ref=e216]: 700 Bold Italic
+              - generic [ref=e217]: 報價管理系統 ERP System
+          - generic [ref=e218]:
+            - generic [ref=e219]: BODY COPY
+            - paragraph [ref=e220]: 一、訪談背景：本次客戶拜訪目的為確認報價單 KF2025052501 的內容正確性，並針對第三項服務費用進行討論。客戶對整體報價持正面態度，唯對交期提出疑慮，希望縮短至 30 個工作天內完成交付。業務人員已承諾於 2025/06/07 前提供修訂版本供審閱。
+            - paragraph [ref=e221]: 二、後續行動：業務專員需於本週五前完成報價單修訂，並同步通知財務部門進行成本試算。若客戶於 2025/06/15 前簽回合約，可維持現有優惠條件；逾期則依標準定價重新報價。請相關部門提前安排人力，確保交期可行性。
+            - generic [ref=e222]: Paragraph Text ｜ 段落文字 Regular 14px · line-height 1.75 · Noto Sans TC + IBM Plex Sans
+      - generic [ref=e223]:
+        - generic [ref=e224]: Badges
+        - generic [ref=e226]:
+          - generic [ref=e228]:
+            - generic [ref=e229]: 📊 數據展示
+            - generic [ref=e230]: Badges
+            - generic [ref=e231]: 狀態標籤：顏色語意、尺寸，以及帶圖示的複合變體。
+          - generic [ref=e232]: Badges
+          - generic [ref=e233]:
+            - generic [ref=e234]: 已完成
+            - generic [ref=e235]: 已取消
+            - generic [ref=e236]: 待審核
+            - generic [ref=e237]: 處理中
+            - generic [ref=e238]: 草稿
+            - generic [ref=e239]: 已報價
+      - generic [ref=e240]:
+        - generic [ref=e241]: Buttons
+        - generic [ref=e243]:
+          - generic [ref=e245]:
+            - generic [ref=e246]: 📝 表單
+            - generic [ref=e247]: Buttons
+            - generic [ref=e248]: 包含 Primary、Secondary、Outline、Ghost、Danger 五種變體，三種尺寸，及所有互動狀態。
+          - generic [ref=e249]: Buttons
+          - generic [ref=e250]:
+            - generic [ref=e252]: Default
+            - generic [ref=e253]: Hover
+            - generic [ref=e254]: Focus
+            - generic [ref=e255]: Active
+            - generic [ref=e256]: Loading
+            - generic [ref=e257]: Disabled
+            - generic [ref=e258]: Primary
+            - button "確認送出" [ref=e260] [cursor=pointer]
+            - button "確認送出" [ref=e262] [cursor=pointer]
+            - button "確認送出" [ref=e264] [cursor=pointer]
+            - button "確認送出" [ref=e266] [cursor=pointer]
+            - button "處理中…" [disabled] [ref=e268]: 處理中…
+            - button "確認送出" [disabled] [ref=e271]
+            - generic [ref=e272]: Secondary
+            - button "返回列表" [ref=e274] [cursor=pointer]
+            - button "返回列表" [ref=e276] [cursor=pointer]
+            - button "返回列表" [ref=e278] [cursor=pointer]
+            - button "返回列表" [ref=e280] [cursor=pointer]
+            - button "處理中…" [disabled] [ref=e282]: 處理中…
+            - button "返回列表" [disabled] [ref=e285]
+            - generic [ref=e286]: Outline
+            - button "匯出 Excel" [ref=e288] [cursor=pointer]
+            - button "匯出 Excel" [ref=e290] [cursor=pointer]
+            - button "匯出 Excel" [ref=e292] [cursor=pointer]
+            - button "匯出 Excel" [ref=e294] [cursor=pointer]
+            - button "處理中…" [disabled] [ref=e296]: 處理中…
+            - button "匯出 Excel" [disabled] [ref=e299]
+            - generic [ref=e300]: Ghost
+            - button "取消" [ref=e302] [cursor=pointer]
+            - button "取消" [ref=e304] [cursor=pointer]
+            - button "取消" [ref=e306] [cursor=pointer]
+            - button "取消" [ref=e308] [cursor=pointer]
+            - button "處理中…" [disabled] [ref=e310]: 處理中…
+            - button "取消" [disabled] [ref=e313]
+            - generic [ref=e314]: Danger
+            - button "刪除" [ref=e316] [cursor=pointer]
+            - button "刪除" [ref=e318] [cursor=pointer]
+            - button "刪除" [ref=e320] [cursor=pointer]
+            - button "刪除" [ref=e322] [cursor=pointer]
+            - button "處理中…" [disabled] [ref=e324]: 處理中…
+            - button "刪除" [disabled] [ref=e327]
+          - generic [ref=e328]:
+            - generic [ref=e329]: Sizes
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - button "+ 新增" [ref=e332] [cursor=pointer]
+                - generic [ref=e333]: sm · 12px · h28
+              - generic [ref=e334]:
+                - button "確認送出" [ref=e335] [cursor=pointer]
+                - generic [ref=e336]: md · 13.5px · h36
+              - generic [ref=e337]:
+                - button "建立報價單" [ref=e338] [cursor=pointer]
+                - generic [ref=e339]: lg · 15px · h44
+          - generic [ref=e340]:
+            - generic [ref=e341]: With Icon
+            - generic [ref=e342]:
+              - button "新增報價單" [ref=e343] [cursor=pointer]:
+                - img [ref=e344]
+                - text: 新增報價單
+              - button "匯出" [ref=e345] [cursor=pointer]:
+                - img [ref=e346]
+                - text: 匯出
+              - button "搜尋" [ref=e349] [cursor=pointer]:
+                - img [ref=e350]
+                - text: 搜尋
+              - button "編輯" [ref=e353] [cursor=pointer]:
+                - img [ref=e354]
+                - text: 編輯
+              - button "刪除" [ref=e357] [cursor=pointer]:
+                - img [ref=e358]
+                - text: 刪除
+      - generic [ref=e360]:
+        - generic [ref=e361]: Inputs
+        - generic [ref=e363]:
+          - generic [ref=e365]:
+            - generic [ref=e366]: 📝 表單
+            - generic [ref=e367]: Inputs
+            - generic [ref=e368]: 文字輸入框的各種狀態：預設、聚焦、錯誤、停用，及前後綴裝飾。
+          - generic [ref=e369]: Inputs
+          - generic [ref=e370]:
+            - generic [ref=e371]:
+              - generic [ref=e372]: 客戶名稱
+              - textbox "請輸入客戶名稱" [ref=e373]
+              - generic [ref=e374]: 最多 50 個字元
+            - generic [ref=e375]:
+              - generic [ref=e376]: 報價日期
+              - textbox [ref=e377]: 2025-05-23
+            - generic [ref=e378]:
+              - generic [ref=e379]: 客戶編號（錯誤狀態）
+              - textbox [ref=e380]: KF-INVALID
+              - generic [ref=e381]: 格式錯誤，請重新輸入
+            - generic [ref=e382]:
+              - generic [ref=e383]: 狀態
+              - combobox [ref=e384] [cursor=pointer]:
+                - option "全部"
+                - option "已報價" [selected]
+                - option "待審核"
+      - generic [ref=e385]:
+        - generic [ref=e386]: File Upload
+        - generic [ref=e388]:
+          - generic [ref=e390]:
+            - generic [ref=e391]: 📝 表單
+            - generic [ref=e392]: File Upload
+            - generic [ref=e393]: 拖放上傳區域的所有狀態：預設、拖曳中、上傳中、成功、錯誤。
+          - generic [ref=e394]: File Upload & Select
+          - generic [ref=e395]:
+            - generic [ref=e396]:
+              - generic [ref=e397]: Idle — 預設
+              - generic [ref=e398]:
+                - img [ref=e399]
+                - paragraph [ref=e402]: 拖曳檔案到此處，或
+                - button "瀏覽檔案" [ref=e403] [cursor=pointer]
+                - paragraph [ref=e404]: 支援 PDF、DOCX、XLSX，最大 10 MB
+            - generic [ref=e405]:
+              - generic [ref=e406]: Drag Over — 拖曳中
+              - generic [ref=e407]:
+                - img [ref=e408]
+                - paragraph [ref=e411]: 放開以上傳檔案
+                - button "放開上傳" [ref=e412] [cursor=pointer]
+                - paragraph [ref=e413]: 支援 PDF、DOCX、XLSX，最大 10 MB
+            - generic [ref=e414]:
+              - generic [ref=e415]: Uploading — 上傳中
+              - generic [ref=e416]:
+                - img [ref=e417]
+                - paragraph [ref=e420]: 上傳中，請稍候…
+                - paragraph [ref=e423]: 65% — 報價單_2025.pdf
+            - generic [ref=e424]:
+              - generic [ref=e425]: Success — 上傳成功
+              - generic [ref=e426]:
+                - img [ref=e427]
+                - paragraph [ref=e430]: 上傳成功
+                - paragraph [ref=e431]: 報價單_2025.pdf · 2.3 MB
+            - generic [ref=e432]:
+              - generic [ref=e433]: Error — 上傳失敗
+              - generic [ref=e434]:
+                - img [ref=e435]
+                - paragraph [ref=e439]: 上傳失敗
+                - paragraph [ref=e440]: 檔案超過 10 MB 上限
+                - button "重新上傳" [ref=e441] [cursor=pointer]
+          - generic [ref=e442]:
+            - generic [ref=e443]: 已選取檔案列表 — File List
+            - generic [ref=e444]:
+              - generic [ref=e445]:
+                - img [ref=e447]
+                - generic [ref=e450]:
+                  - generic [ref=e451]: 報價單_KF2025052501.pdf
+                  - generic [ref=e455]: 72% · 上傳中
+                - button "取消" [ref=e456] [cursor=pointer]:
+                  - img [ref=e457]
+              - generic [ref=e460]:
+                - img [ref=e462]
+                - generic [ref=e465]:
+                  - generic [ref=e466]: 客戶需求規格書_v2.xlsx
+                  - generic [ref=e467]:
+                    - generic [ref=e468]: 已完成
+                    - generic [ref=e469]: 128 KB
+                - button "移除" [ref=e470] [cursor=pointer]:
+                  - img [ref=e471]
+              - generic [ref=e474]:
+                - img [ref=e476]
+                - generic [ref=e479]:
+                  - generic [ref=e480]: 大型附件_超過限制.zip
+                  - generic [ref=e481]:
+                    - generic [ref=e482]: 超過大小限制
+                    - generic [ref=e483]: 15.2 MB
+                - button "移除" [ref=e484] [cursor=pointer]:
+                  - img [ref=e485]
+              - generic [ref=e488]:
+                - img [ref=e490]
+                - generic [ref=e493]:
+                  - generic [ref=e494]: 會議記錄_2025-05-23.docx
+                  - generic [ref=e495]:
+                    - generic [ref=e496]: 等待中
+                    - generic [ref=e497]: 89 KB
+                - button "移除" [ref=e498] [cursor=pointer]:
+                  - img [ref=e499]
+            - generic [ref=e502]:
+              - button "手動上傳" [ref=e503] [cursor=pointer]:
+                - img [ref=e504]
+                - text: 手動上傳
+              - button "重新整理" [ref=e507] [cursor=pointer]:
+                - img [ref=e508]
+                - text: 重新整理
+      - generic [ref=e511]:
+        - generic [ref=e512]: Checkboxes · Radio · Toggle
+        - generic [ref=e514]:
+          - generic [ref=e516]:
+            - generic [ref=e517]: 📝 表單
+            - generic [ref=e518]: Checkboxes · Radio · Toggle
+            - generic [ref=e519]: 選取控制元件：Checkbox、Radio、Switch，含狀態與群組排列。
+          - generic [ref=e520]: Checkboxes · Radio · Toggle
+          - generic [ref=e521]:
+            - generic [ref=e522]:
+              - generic [ref=e523] [cursor=pointer]:
+                - checkbox "已確認報價" [checked] [ref=e524]
+                - text: 已確認報價
+              - generic [ref=e525] [cursor=pointer]:
+                - checkbox "需要審核" [ref=e526]
+                - text: 需要審核
+              - generic [ref=e527] [cursor=pointer]:
+                - checkbox "停用（disabled）" [disabled] [ref=e528]
+                - text: 停用（disabled）
+            - generic [ref=e529]:
+              - generic [ref=e530] [cursor=pointer]:
+                - radio "直接客戶" [checked] [ref=e531]
+                - text: 直接客戶
+              - generic [ref=e532] [cursor=pointer]:
+                - radio "代理商" [ref=e533]
+                - text: 代理商
+              - generic [ref=e534] [cursor=pointer]:
+                - radio "停用" [disabled] [ref=e535]
+                - text: 停用
+            - generic [ref=e536]:
+              - generic [ref=e537]:
+                - generic [ref=e538]:
+                  - checkbox [checked]
+                - text: 啟用通知
+              - generic [ref=e540]:
+                - generic [ref=e541]:
+                  - checkbox
+                - text: 自動儲存
+      - generic [ref=e543]:
+        - generic [ref=e544]: Alerts
+        - generic [ref=e546]:
+          - generic [ref=e548]:
+            - generic [ref=e549]: 💬 反饋
+            - generic [ref=e550]: Alerts
+            - generic [ref=e551]: 四種語意告警：資訊、成功、警告、錯誤，含關閉按鈕。
+          - generic [ref=e552]: Alerts
+          - generic [ref=e553]:
+            - generic [ref=e554]: 報價單已成功送出，等待客戶確認。
+            - generic [ref=e555]: 送出失敗，請確認必填欄位是否完整。
+            - generic [ref=e556]: 此報價單將於 3 天後逾期，請盡快處理。
+            - generic [ref=e557]: 系統將於今晚 23:00 進行例行維護。
+      - generic [ref=e558]:
+        - generic [ref=e559]: Table
+        - generic [ref=e561]:
+          - generic [ref=e563]:
+            - generic [ref=e564]: 📊 數據展示
+            - generic [ref=e565]: Table
+            - generic [ref=e566]: 資料表格，含排序、選取列、操作欄，以及 hover 狀態。
+          - generic [ref=e567]: Table
+          - table [ref=e569]:
+            - rowgroup [ref=e570]:
+              - row "報價單編號 客戶名稱 報價日期 金額 狀態 操作" [ref=e571]:
+                - columnheader "報價單編號" [ref=e572]
+                - columnheader "客戶名稱" [ref=e573]
+                - columnheader "報價日期" [ref=e574]
+                - columnheader "金額" [ref=e575]
+                - columnheader "狀態" [ref=e576]
+                - columnheader "操作" [ref=e577]
+            - rowgroup [ref=e578]:
+              - row "KF2025052501 科技創新有限公司 2025/05/23 NT$ 128,000 已報價 查看" [ref=e579]:
+                - cell "KF2025052501" [ref=e580]
+                - cell "科技創新有限公司" [ref=e581]
+                - cell "2025/05/23" [ref=e582]
+                - cell "NT$ 128,000" [ref=e583]
+                - cell "已報價" [ref=e584]:
+                  - generic [ref=e585]: 已報價
+                - cell "查看" [ref=e586]:
+                  - button "查看" [ref=e587] [cursor=pointer]
+              - row "KF2025052502 全球貿易股份有限公司 2025/05/24 NT$ 56,500 待審核 查看" [ref=e588]:
+                - cell "KF2025052502" [ref=e589]
+                - cell "全球貿易股份有限公司" [ref=e590]
+                - cell "2025/05/24" [ref=e591]
+                - cell "NT$ 56,500" [ref=e592]
+                - cell "待審核" [ref=e593]:
+                  - generic [ref=e594]: 待審核
+                - cell "查看" [ref=e595]:
+                  - button "查看" [ref=e596] [cursor=pointer]
+              - row "KF2025052503 台灣製造業有限公司 2025/05/25 NT$ 234,000 已完成 查看" [ref=e597]:
+                - cell "KF2025052503" [ref=e598]
+                - cell "台灣製造業有限公司" [ref=e599]
+                - cell "2025/05/25" [ref=e600]
+                - cell "NT$ 234,000" [ref=e601]
+                - cell "已完成" [ref=e602]:
+                  - generic [ref=e603]: 已完成
+                - cell "查看" [ref=e604]:
+                  - button "查看" [ref=e605] [cursor=pointer]
+              - row "KF2025052504 新北工程顧問公司 2025/05/26 NT$ 89,000 已取消 查看" [ref=e606]:
+                - cell "KF2025052504" [ref=e607]
+                - cell "新北工程顧問公司" [ref=e608]
+                - cell "2025/05/26" [ref=e609]
+                - cell "NT$ 89,000" [ref=e610]
+                - cell "已取消" [ref=e611]:
+                  - generic [ref=e612]: 已取消
+                - cell "查看" [ref=e613]:
+                  - button "查看" [ref=e614] [cursor=pointer]
+      - generic [ref=e615]:
+        - generic [ref=e616]: Pagination
+        - generic [ref=e618]:
+          - generic [ref=e620]:
+            - generic [ref=e621]: 📊 數據展示
+            - generic [ref=e622]: Pagination
+            - generic [ref=e623]: 分頁導覽元件，含頁碼按鈕、前後翻頁、跳頁輸入。
+          - generic [ref=e624]: Pagination
+          - generic [ref=e625]:
+            - button "‹ 上一頁" [disabled] [ref=e626]
+            - button "1" [ref=e627] [cursor=pointer]
+            - button "2" [ref=e628] [cursor=pointer]
+            - button "3" [ref=e629] [cursor=pointer]
+            - generic [ref=e630]: …
+            - button "8" [ref=e631] [cursor=pointer]
+            - button "下一頁 ›" [ref=e632] [cursor=pointer]
+      - generic [ref=e633]:
+        - generic [ref=e634]: Icons
+        - generic [ref=e636]:
+          - generic [ref=e638]:
+            - generic [ref=e639]: 🎨 基礎
+            - generic [ref=e640]: Icons
+            - generic [ref=e641]: 系統圖示集：檔案類型、狀態指示與 UI 操作圖示。
+          - generic [ref=e642]: Icons
+          - generic [ref=e643]:
+            - generic [ref=e644]:
+              - generic [ref=e645]: File Type Badges
+              - generic [ref=e646]:
+                - generic [ref=e647]: XLSX
+                - generic [ref=e648]: XLS
+                - generic [ref=e649]: PPTX
+                - generic [ref=e650]: PPT
+                - generic [ref=e651]: DOCX
+                - generic [ref=e652]: DOC
+                - generic [ref=e653]: ODF
+                - generic [ref=e654]: ODS
+                - generic [ref=e655]: ODT
+                - generic [ref=e656]: ODP
+                - generic [ref=e657]: TXT
+                - generic [ref=e658]: PDF
+                - generic [ref=e659]: BMP
+                - generic [ref=e660]: PNG
+                - generic [ref=e661]: JPG
+                - generic [ref=e662]: JPEG
+                - generic [ref=e663]: GIF
+                - generic [ref=e664]: ZIP
+                - generic [ref=e665]: OTHER
+            - generic [ref=e666]:
+              - generic [ref=e667]: Status Indicators
+              - generic [ref=e668]:
+                - generic [ref=e669]:
+                  - img [ref=e670]
+                  - generic [ref=e673]: 拒絕存取
+                - generic [ref=e674]:
+                  - img [ref=e675]
+                  - generic [ref=e679]: 連線拒絕
+                - generic [ref=e680]:
+                  - img [ref=e681]
+                  - generic [ref=e683]: 未回覆
+                - generic [ref=e684]:
+                  - img [ref=e685]
+                  - generic [ref=e688]: 允許存取
+                - generic [ref=e689]:
+                  - img [ref=e690]
+                  - generic [ref=e693]: 正確允許
+                - generic [ref=e694]:
+                  - img [ref=e695]
+                  - generic [ref=e697]: 已回覆
+                - generic [ref=e698]:
+                  - img [ref=e699]
+                  - generic [ref=e701]: 查看解鎖
+                - generic [ref=e702]:
+                  - img [ref=e703]
+                  - generic [ref=e706]: 已結束
+                - generic [ref=e707]:
+                  - img [ref=e708]
+                  - generic [ref=e710]: 服務注意
+                - generic [ref=e711]:
+                  - img [ref=e712]
+                  - generic [ref=e715]: 待處理
+                - generic [ref=e716]:
+                  - img [ref=e717]
+                  - generic [ref=e720]: 僅可瀏覽
+            - generic [ref=e721]:
+              - generic [ref=e722]: UI Icons — Lucide
+              - generic [ref=e723]:
+                - generic [ref=e724]:
+                  - img [ref=e725]
+                  - generic [ref=e728]: delete
+                - generic [ref=e729]:
+                  - img [ref=e730]
+                  - generic [ref=e733]: bell
+                - generic [ref=e734]:
+                  - img [ref=e735]
+                  - generic [ref=e738]: user
+                - generic [ref=e739]:
+                  - img [ref=e740]
+                  - generic [ref=e743]: home
+                - generic [ref=e744]:
+                  - img [ref=e745]
+                  - generic [ref=e747]: send
+                - generic [ref=e748]:
+                  - img [ref=e749]
+                  - generic [ref=e751]: chat
+                - generic [ref=e752]:
+                  - img [ref=e753]
+                  - generic [ref=e754]: list
+                - generic [ref=e755]:
+                  - img [ref=e756]
+                  - generic [ref=e759]: document
+                - generic [ref=e760]:
+                  - img [ref=e761]
+                  - generic [ref=e763]: calendar
+                - generic [ref=e764]:
+                  - img [ref=e765]
+                  - generic [ref=e769]: external
+                - generic [ref=e770]:
+                  - img [ref=e771]
+                  - generic [ref=e773]: folder
+                - generic [ref=e774]:
+                  - img [ref=e775]
+                  - generic [ref=e778]: folder-open
+                - generic [ref=e779]:
+                  - img [ref=e780]
+                  - generic [ref=e785]: users
+                - generic [ref=e786]:
+                  - img [ref=e787]
+                  - generic [ref=e790]: user-add
+                - generic [ref=e791]:
+                  - img [ref=e792]
+                  - generic [ref=e796]: image
+                - generic [ref=e797]:
+                  - img [ref=e798]
+                  - generic [ref=e801]: settings
+                - generic [ref=e802]:
+                  - img [ref=e803]
+                  - generic [ref=e806]: edit
+                - generic [ref=e807]:
+                  - img [ref=e808]
+                  - generic [ref=e811]: close
+                - generic [ref=e812]:
+                  - img [ref=e813]
+                  - generic [ref=e815]: warning
+                - generic [ref=e816]:
+                  - img [ref=e817]
+                  - generic [ref=e820]: search
+      - generic [ref=e821]:
+        - generic [ref=e822]: Modal / Dialog
+        - generic [ref=e824]:
+          - generic [ref=e826]:
+            - generic [ref=e827]: 💬 反饋
+            - generic [ref=e828]: Modal / Dialog
+            - generic [ref=e829]: 對話框：確認、表單、資訊三種類型，含遮罩層。
+          - generic [ref=e830]: Modal / Dialog
+          - generic [ref=e831]:
+            - generic [ref=e832]:
+              - generic [ref=e833]: Confirm
+              - generic [ref=e834]:
+                - generic [ref=e835]:
+                  - generic [ref=e836]: 確認刪除
+                  - button [ref=e837] [cursor=pointer]:
+                    - img [ref=e838]
+                - paragraph [ref=e842]:
+                  - text: 確定要刪除報價單
+                  - strong [ref=e843]: KF2025052501
+                  - text: 嗎？此操作無法復原。
+                - generic [ref=e844]:
+                  - button "取消" [ref=e845] [cursor=pointer]
+                  - button "確認刪除" [ref=e846] [cursor=pointer]
+            - generic [ref=e847]:
+              - generic [ref=e848]: Form Dialog
+              - generic [ref=e849]:
+                - generic [ref=e850]:
+                  - generic [ref=e851]: 新增客戶
+                  - button [ref=e852] [cursor=pointer]:
+                    - img [ref=e853]
+                - generic [ref=e856]:
+                  - generic [ref=e857]:
+                    - generic [ref=e858]: 客戶名稱 *
+                    - textbox "請輸入客戶名稱" [ref=e859]
+                  - generic [ref=e860]:
+                    - generic [ref=e861]: 聯絡電話
+                    - textbox "0912-345-678" [ref=e862]
+                  - generic [ref=e863]:
+                    - generic [ref=e864]: 負責業務
+                    - combobox [ref=e865] [cursor=pointer]:
+                      - option "請選擇" [selected]
+                      - option "張經理"
+                      - option "王業務"
+                - generic [ref=e866]:
+                  - button "取消" [ref=e867] [cursor=pointer]
+                  - button "儲存" [ref=e868] [cursor=pointer]
+            - generic [ref=e869]:
+              - generic [ref=e870]: Info / Alert Dialog
+              - generic [ref=e871]:
+                - generic [ref=e873]:
+                  - img [ref=e875]
+                  - generic [ref=e877]: 系統維護通知
+                - paragraph [ref=e879]: 系統將於 2025/06/10 23:00–01:00 進行例行維護，請提前儲存作業。
+                - button "我知道了" [ref=e881] [cursor=pointer]
+      - generic [ref=e882]:
+        - generic [ref=e883]: Tooltip
+        - generic [ref=e885]:
+          - generic [ref=e887]:
+            - generic [ref=e888]: 💬 反饋
+            - generic [ref=e889]: Tooltip
+            - generic [ref=e890]: 工具提示，四個方向，含深色/淺色變體及圖示觸發器。
+          - generic [ref=e891]: Tooltip
+          - generic [ref=e892]:
+            - generic [ref=e893]:
+              - generic [ref=e894]: Top
+              - generic [ref=e895]:
+                - generic [ref=e896]: 報價單已逾期，請盡快處理
+                - button "懸停顯示" [ref=e898] [cursor=pointer]
+            - generic [ref=e899]:
+              - generic [ref=e900]: Bottom
+              - generic [ref=e901]:
+                - button "懸停顯示" [ref=e902] [cursor=pointer]
+                - generic [ref=e903]: 此欄位為必填項目
+            - generic [ref=e905]:
+              - generic [ref=e906]: Right
+              - generic [ref=e907]:
+                - button "懸停顯示" [ref=e908] [cursor=pointer]
+                - generic [ref=e909]: 查看詳細資料
+            - generic [ref=e911]:
+              - generic [ref=e912]: Left
+              - generic [ref=e913]:
+                - generic [ref=e914]: 返回上一頁
+                - button "懸停顯示" [ref=e916] [cursor=pointer]
+            - generic [ref=e917]:
+              - generic [ref=e918]: Icon Trigger
+              - generic [ref=e919]:
+                - generic [ref=e920]: 報價單自送出日起 30 天內有效
+                - generic [ref=e922]:
+                  - generic [ref=e923]: 有效日期
+                  - img [ref=e924]
+            - generic [ref=e926]:
+              - generic [ref=e927]: Variants
+              - generic [ref=e928]:
+                - generic [ref=e929]:
+                  - generic [ref=e930]: Dark（預設）
+                  - button "Dark" [ref=e932] [cursor=pointer]
+                - generic [ref=e933]:
+                  - generic [ref=e934]: Light 提示文字
+                  - button "Light" [ref=e936] [cursor=pointer]
+      - generic [ref=e937]:
+        - generic [ref=e938]: Dropdown Menu
+        - generic [ref=e940]:
+          - generic [ref=e942]:
+            - generic [ref=e943]: 🧭 導航
+            - generic [ref=e944]: Dropdown Menu
+            - generic [ref=e945]: 下拉選單，含分組、圖示、快捷鍵標示，以及 hover/active 狀態。
+          - generic [ref=e946]: Dropdown Menu
+          - generic [ref=e947]:
+            - generic [ref=e948]:
+              - generic [ref=e949]: Basic
+              - generic [ref=e950]:
+                - button "操作" [ref=e951] [cursor=pointer]:
+                  - text: 操作
+                  - img [ref=e952]
+                - generic [ref=e954]:
+                  - generic [ref=e955] [cursor=pointer]:
+                    - img [ref=e956]
+                    - text: 編輯
+                  - generic [ref=e959] [cursor=pointer]:
+                    - img [ref=e960]
+                    - text: 複製
+                  - generic [ref=e963] [cursor=pointer]:
+                    - img [ref=e964]
+                    - text: 匯出
+                  - generic [ref=e968] [cursor=pointer]:
+                    - img [ref=e969]
+                    - text: 刪除
+            - generic [ref=e971]:
+              - generic [ref=e972]: Item States
+              - generic [ref=e973]:
+                - generic [ref=e974] [cursor=pointer]: 預設項目
+                - generic [ref=e975] [cursor=pointer]: Hover 狀態
+                - generic [ref=e976] [cursor=pointer]: Active 選中
+                - generic [ref=e977]: 停用項目
+                - generic [ref=e979] [cursor=pointer]: 刪除動作
+            - generic [ref=e980]:
+              - generic [ref=e981]: With Shortcut
+              - generic [ref=e982]:
+                - generic [ref=e983] [cursor=pointer]:
+                  - generic [ref=e984]:
+                    - img [ref=e985]
+                    - text: 編輯
+                  - generic [ref=e988]: Ctrl E
+                - generic [ref=e989] [cursor=pointer]:
+                  - generic [ref=e990]:
+                    - img [ref=e991]
+                    - text: 複製
+                  - generic [ref=e994]: Ctrl D
+                - generic [ref=e996] [cursor=pointer]:
+                  - generic [ref=e997]:
+                    - img [ref=e998]
+                    - text: 刪除
+                  - generic [ref=e1000]: Del
+      - generic [ref=e1001]:
+        - generic [ref=e1002]: Tabs
+        - generic [ref=e1004]:
+          - generic [ref=e1006]:
+            - generic [ref=e1007]: 🧭 導航
+            - generic [ref=e1008]: Tabs
+            - generic [ref=e1009]: 頁籤三種樣式：底線、膠囊、框線，含停用與徽章。
+          - generic [ref=e1010]: Tabs
+          - generic [ref=e1011]:
+            - generic [ref=e1012]:
+              - generic [ref=e1013]: Underline（頁面導航）
+              - generic [ref=e1014]:
+                - button "基本資訊" [ref=e1015] [cursor=pointer]
+                - button "專案明細" [ref=e1016] [cursor=pointer]
+                - button "版本歷程" [ref=e1017] [cursor=pointer]
+                - button "權限設定" [disabled] [ref=e1018]
+              - paragraph [ref=e1020]: 基本資訊的內容會顯示在此區域。
+            - generic [ref=e1021]:
+              - generic [ref=e1022]: Pill（篩選切換）
+              - generic [ref=e1023]:
+                - button "全部" [ref=e1024] [cursor=pointer]
+                - button "進行中" [ref=e1025] [cursor=pointer]
+                - button "已完成" [ref=e1026] [cursor=pointer]
+                - button "已取消" [ref=e1027] [cursor=pointer]
+            - generic [ref=e1028]:
+              - generic [ref=e1029]: Boxed（卡片內切換）
+              - generic [ref=e1030]:
+                - generic [ref=e1031]:
+                  - button "月報表" [ref=e1032] [cursor=pointer]
+                  - button "季報表" [ref=e1033] [cursor=pointer]
+                  - button "年報表" [ref=e1034] [cursor=pointer]
+                - generic [ref=e1035]: 月報表資料顯示於此。
+      - generic [ref=e1036]:
+        - generic [ref=e1037]: Breadcrumb
+        - generic [ref=e1039]:
+          - generic [ref=e1041]:
+            - generic [ref=e1042]: 🧭 導航
+            - generic [ref=e1043]: Breadcrumb
+            - generic [ref=e1044]: 麵包屑導覽，含路徑截斷、帶圖示版本。
+          - generic [ref=e1045]: Breadcrumb
+          - generic [ref=e1046]:
+            - generic [ref=e1047]:
+              - generic [ref=e1048]: Basic
+              - navigation [ref=e1049]:
+                - link "首頁" [ref=e1050] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=e1051]: /
+                - link "客戶管理" [ref=e1052] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=e1053]: /
+                - generic [ref=e1054]: 報價管理
+            - generic [ref=e1055]:
+              - generic [ref=e1056]: With Icon
+              - navigation [ref=e1057]:
+                - link "首頁" [ref=e1058] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e1059]
+                  - text: 首頁
+                - generic [ref=e1061]: ›
+                - link "報價管理" [ref=e1062] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=e1063]: ›
+                - link "科技創新有限公司" [ref=e1064] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=e1065]: ›
+                - generic [ref=e1066]: KF2025052501
+      - generic [ref=e1067]:
+        - generic [ref=e1068]: Empty State
+        - generic [ref=e1070]:
+          - generic [ref=e1072]:
+            - generic [ref=e1073]: 📦 佔位符
+            - generic [ref=e1074]: Empty State
+            - generic [ref=e1075]: 空狀態展示：搜尋無結果、尚無資料、錯誤狀態。
+          - generic [ref=e1076]: Empty State
+          - generic [ref=e1077]:
+            - generic [ref=e1078]:
+              - generic [ref=e1079]: No Data — 無資料
+              - generic [ref=e1080]:
+                - img [ref=e1082]
+                - generic [ref=e1085]: 尚無報價單
+                - generic [ref=e1086]: 目前沒有任何報價資料，點擊下方按鈕建立第一筆。
+                - button "新增報價單" [ref=e1087] [cursor=pointer]:
+                  - img [ref=e1088]
+                  - text: 新增報價單
+            - generic [ref=e1089]:
+              - generic [ref=e1090]: No Result — 搜尋無結果
+              - generic [ref=e1091]:
+                - img [ref=e1093]
+                - generic [ref=e1096]: 找不到符合的結果
+                - generic [ref=e1097]: 請嘗試調整搜尋條件或篩選器，確認輸入是否正確。
+                - button "清除篩選條件" [ref=e1098] [cursor=pointer]
+            - generic [ref=e1099]:
+              - generic [ref=e1100]: Error — 載入失敗
+              - generic [ref=e1101]:
+                - img [ref=e1103]
+                - generic [ref=e1105]: 載入失敗
+                - generic [ref=e1106]: 無法取得資料，請檢查網路連線後再試。
+                - button "重新載入" [ref=e1107] [cursor=pointer]:
+                  - img [ref=e1108]
+                  - text: 重新載入
+      - generic [ref=e1111]:
+        - generic [ref=e1112]: Loading Skeleton
+        - generic [ref=e1114]:
+          - generic [ref=e1116]:
+            - generic [ref=e1117]: 💬 反饋
+            - generic [ref=e1118]: Loading Skeleton
+            - generic [ref=e1119]: 骨架屏載入動畫，對應卡片、列表、詳情頁各種佈局。
+          - generic [ref=e1120]: Loading Skeleton
+          - generic [ref=e1121]:
+            - generic [ref=e1123]: Card Skeleton
+            - generic [ref=e1137]:
+              - generic [ref=e1138]: Table Skeleton
+              - table [ref=e1140]:
+                - rowgroup [ref=e1141]:
+                  - row [ref=e1142]:
+                    - columnheader [ref=e1143]
+                    - columnheader [ref=e1145]
+                    - columnheader [ref=e1147]
+                    - columnheader [ref=e1149]
+                - rowgroup [ref=e1151]:
+                  - row [ref=e1152]:
+                    - cell [ref=e1153]
+                    - cell [ref=e1155]
+                    - cell [ref=e1157]
+                    - cell [ref=e1159]
+                  - row [ref=e1161]:
+                    - cell [ref=e1162]
+                    - cell [ref=e1164]
+                    - cell [ref=e1166]
+                    - cell [ref=e1168]
+                  - row [ref=e1170]:
+                    - cell [ref=e1171]
+                    - cell [ref=e1173]
+                    - cell [ref=e1175]
+                    - cell [ref=e1177]
+            - generic [ref=e1180]: Detail Skeleton
+      - generic [ref=e1193]:
+        - generic [ref=e1194]: Search Bar
+        - generic [ref=e1196]:
+          - generic [ref=e1198]:
+            - generic [ref=e1199]: 📝 表單
+            - generic [ref=e1200]: Search Bar
+            - generic [ref=e1201]: 搜尋列元件，含展開動畫、篩選標籤、清除按鈕。
+          - generic [ref=e1202]: Search Bar
+          - generic [ref=e1203]:
+            - generic [ref=e1204]:
+              - generic [ref=e1205]:
+                - generic [ref=e1206]: 分類標籤
+                - combobox [ref=e1207] [cursor=pointer]:
+                  - option "全部" [selected]
+                  - option "業務"
+                  - option "採購"
+              - generic [ref=e1208]:
+                - generic [ref=e1209]: 分類標籤
+                - combobox [ref=e1210] [cursor=pointer]:
+                  - option "全部" [selected]
+                  - option "進行中"
+                  - option "已完成"
+              - generic [ref=e1211]:
+                - generic [ref=e1212]: 關鍵字
+                - textbox "單行文字輸入欄位" [ref=e1213]
+              - generic [ref=e1214]:
+                - button "搜尋" [ref=e1215] [cursor=pointer]
+                - button "取消" [ref=e1216] [cursor=pointer]
+            - generic [ref=e1217]:
+              - generic [ref=e1218]:
+                - generic [ref=e1219]: 分類標籤
+                - combobox [ref=e1220] [cursor=pointer]:
+                  - option "全部" [selected]
+              - generic [ref=e1221]:
+                - generic [ref=e1222]: 分類標籤
+                - combobox [ref=e1223] [cursor=pointer]:
+                  - option "全部" [selected]
+              - generic [ref=e1224]:
+                - generic [ref=e1225]: 開始日期
+                - textbox [ref=e1226]:
+                  - /placeholder: 年/月/日
+              - generic [ref=e1227]: ～
+              - generic [ref=e1228]:
+                - generic [ref=e1229]: 結束日期
+                - textbox [ref=e1230]:
+                  - /placeholder: 年/月/日
+              - generic [ref=e1231]:
+                - generic [ref=e1232]: 關鍵字
+                - textbox "單行文字輸入欄位" [ref=e1233]
+              - generic [ref=e1234]:
+                - button "搜尋" [ref=e1235] [cursor=pointer]
+                - button "取消" [ref=e1236] [cursor=pointer]
+      - generic [ref=e1237]:
+        - generic [ref=e1238]: Placeholder States
+        - generic [ref=e1240]:
+          - generic [ref=e1242]:
+            - generic [ref=e1243]: 📦 佔位符
+            - generic [ref=e1244]: Placeholder States
+            - generic [ref=e1245]: 各種佔位符狀態元件，用於圖片、文字、圖表等。
+          - generic [ref=e1246]: Placeholder States
+          - generic [ref=e1247]:
+            - generic [ref=e1248]:
+              - generic [ref=e1249]: Empty — 空白預設
+              - textbox "單行文字輸入欄位" [ref=e1250]
+              - generic [ref=e1251]: 顯示 placeholder 文字
+            - generic [ref=e1252]:
+              - generic [ref=e1253]: Filled — 已填入
+              - textbox [ref=e1254]: 科技創新有限公司
+              - generic [ref=e1255]: 使用者已輸入內容
+            - generic [ref=e1256]:
+              - generic [ref=e1257]: Focus — 聚焦中
+              - textbox "單行文字輸入欄位" [ref=e1258]
+              - generic [ref=e1259]: Focus ring 顯示
+            - generic [ref=e1260]:
+              - generic [ref=e1261]: Error — 錯誤
+              - textbox [ref=e1262]: KF-INVALID
+              - generic [ref=e1263]: 格式不符，請重新輸入
+            - generic [ref=e1264]:
+              - generic [ref=e1265]: Disabled — 停用
+              - textbox "不可編輯" [disabled] [ref=e1266]
+              - generic [ref=e1267]: 此欄位目前不可操作
+            - generic [ref=e1268]:
+              - generic [ref=e1269]: Read Only — 唯讀
+              - textbox [ref=e1270]: KF2025052501
+              - generic [ref=e1271]: 可複製但不可編輯
+            - generic [ref=e1272]:
+              - generic [ref=e1273]: Textarea — 多行文字
+              - textbox "請輸入備註說明…" [ref=e1274]
+              - generic [ref=e1275]: 多行文字輸入欄位
+            - generic [ref=e1276]:
+              - generic [ref=e1277]: Textarea Filled
+              - textbox [ref=e1278]: 本次拜訪目的為確認報價單 KF2025052501 的內容，並討論後續合約細節。客戶對整體報價持正面態度。
+              - generic [ref=e1279]: 已填入內容狀態
+      - generic [ref=e1280]:
+        - generic [ref=e1281]: Tree View
+        - generic [ref=e1283]:
+          - generic [ref=e1285]:
+            - generic [ref=e1286]: 📊 數據展示
+            - generic [ref=e1287]: Tree View
+            - generic [ref=e1288]: 樹狀清單元件，含展開/收合、選取、停用節點。
+          - generic [ref=e1289]: Tree View
+          - generic [ref=e1290]:
+            - generic [ref=e1291]:
+              - generic [ref=e1292]: Expandable Tree
+              - generic [ref=e1293]:
+                - generic [ref=e1294]: 新增群組名稱
+                - generic [ref=e1295]:
+                  - generic [ref=e1296] [cursor=pointer]:
+                    - generic [ref=e1297]: ▾
+                    - generic [ref=e1298]: 分類1
+                  - generic [ref=e1299]:
+                    - generic [ref=e1300] [cursor=pointer]:
+                      - generic [ref=e1301]: ▾
+                      - generic [ref=e1302]: 分類1-1
+                    - generic [ref=e1304] [cursor=pointer]: 分類1-2
+                    - generic [ref=e1305] [cursor=pointer]:
+                      - generic [ref=e1306]: ▾
+                      - generic [ref=e1307]: 分類1-3
+                    - generic [ref=e1308]:
+                      - generic [ref=e1310] [cursor=pointer]: 分類1-3-1
+                      - generic [ref=e1312] [cursor=pointer]: 分類1-3-2
+                  - generic [ref=e1313] [cursor=pointer]:
+                    - generic [ref=e1314]: ▸
+                    - generic [ref=e1315]: 分類2
+            - generic [ref=e1316]:
+              - generic [ref=e1317]: Flat List
+              - generic [ref=e1318]:
+                - generic [ref=e1319]: 新增群組名稱
+                - generic [ref=e1320]:
+                  - generic [ref=e1322] [cursor=pointer]: 分類1
+                  - generic [ref=e1324] [cursor=pointer]: 分類2
+                  - generic [ref=e1326] [cursor=pointer]: 分類3
+                  - generic [ref=e1328] [cursor=pointer]: 分類4
+      - generic [ref=e1329]:
+        - generic [ref=e1330]: Cards
+        - generic [ref=e1332]:
+          - generic [ref=e1334]:
+            - generic [ref=e1335]: 📊 數據展示
+            - generic [ref=e1336]: Cards
+            - generic [ref=e1337]: 資料卡片變體：基本、帶操作、帶狀態標籤。
+          - generic [ref=e1338]: Cards
+          - generic [ref=e1339]: Card Types
+          - generic [ref=e1340]:
+            - generic [ref=e1341] [cursor=pointer]:
+              - img [ref=e1343]
+              - generic [ref=e1345]:
+                - generic [ref=e1346]: 陳幕
+                - generic [ref=e1347]:
+                  - img [ref=e1348]
+                  - text: 5 人
+              - generic [ref=e1353]: Default
+            - generic [ref=e1354] [cursor=pointer]:
+              - img [ref=e1356]
+              - generic [ref=e1358]:
+                - generic [ref=e1359]: 業務部門
+                - generic [ref=e1360]:
+                  - img [ref=e1361]
+                  - text: 12 人
+              - generic [ref=e1364]: Hover
+            - generic [ref=e1365] [cursor=pointer]:
+              - generic [ref=e1366]: 林
+              - generic [ref=e1367]:
+                - generic [ref=e1368]: 林水水
+                - generic [ref=e1369]:
+                  - img [ref=e1370]
+                  - text: 13 年相識
+                - generic [ref=e1372]:
+                  - img [ref=e1373]
+                  - text: 2020/09/18
+            - generic [ref=e1375] [cursor=pointer]:
+              - generic [ref=e1376]:
+                - generic [ref=e1377]: KF2025052501
+                - generic [ref=e1378]: 已報價
+              - generic [ref=e1379]: 科技創新有限公司
+              - generic [ref=e1380]:
+                - generic [ref=e1381]: 2025/05/23
+                - generic [ref=e1382]: NT$ 128,000
+          - generic [ref=e1383]:
+            - generic [ref=e1384]: RWD — Responsive Breakpoints
+            - generic [ref=e1385]:
+              - generic [ref=e1386]: Desktop（≥ 1024px）— 4 欄
+              - generic [ref=e1387]:
+                - generic [ref=e1388] [cursor=pointer]:
+                  - img [ref=e1390]
+                  - generic [ref=e1392]:
+                    - generic [ref=e1393]: 業務部
+                    - generic [ref=e1394]: 8 人
+                - generic [ref=e1395] [cursor=pointer]:
+                  - img [ref=e1397]
+                  - generic [ref=e1399]:
+                    - generic [ref=e1400]: 採購部
+                    - generic [ref=e1401]: 5 人
+                - generic [ref=e1402] [cursor=pointer]:
+                  - img [ref=e1404]
+                  - generic [ref=e1406]:
+                    - generic [ref=e1407]: 財務部
+                    - generic [ref=e1408]: 3 人
+                - generic [ref=e1409] [cursor=pointer]:
+                  - img [ref=e1411]
+                  - generic [ref=e1413]:
+                    - generic [ref=e1414]: 工程部
+                    - generic [ref=e1415]: 12 人
+              - generic [ref=e1416]: Tablet（≥ 768px）— 2 欄
+              - generic [ref=e1417]:
+                - generic [ref=e1418] [cursor=pointer]:
+                  - img [ref=e1420]
+                  - generic [ref=e1422]:
+                    - generic [ref=e1423]: 業務部
+                    - generic [ref=e1424]: 8 人
+                - generic [ref=e1425] [cursor=pointer]:
+                  - img [ref=e1427]
+                  - generic [ref=e1429]:
+                    - generic [ref=e1430]: 採購部
+                    - generic [ref=e1431]: 5 人
+              - generic [ref=e1432]: Mobile（< 640px）— 1 欄
+              - generic [ref=e1434] [cursor=pointer]:
+                - img [ref=e1436]
+                - generic [ref=e1438]:
+                  - generic [ref=e1439]: 業務部
+                  - generic [ref=e1440]: 8 人
+      - generic [ref=e1441]:
+        - generic [ref=e1442]: Image Upload
+        - generic [ref=e1444]:
+          - generic [ref=e1446]:
+            - generic [ref=e1447]: 🔧 複雜組件
+            - generic [ref=e1448]: Image Upload
+            - generic [ref=e1449]: 圖片上傳元件，含預覽、裁切提示、多張管理。
+          - generic [ref=e1450]: Image Upload — 圖片上傳
+          - generic [ref=e1451]:
+            - generic [ref=e1452]:
+              - button "✕" [ref=e1454] [cursor=pointer]
+              - textbox "單行文字輸入欄位" [ref=e1455]
+              - generic [ref=e1456]:
+                - generic [ref=e1457]: 計劃事宜
+                - generic [ref=e1458]:
+                  - checkbox [checked]
+                - generic [ref=e1460]: "On"
+              - button "刪除" [ref=e1461] [cursor=pointer]
+            - generic [ref=e1462]:
+              - button "✕" [ref=e1464] [cursor=pointer]
+              - textbox "單行文字輸入欄位" [ref=e1465]
+              - generic [ref=e1466]:
+                - generic [ref=e1467]: 計劃事宜
+                - generic [ref=e1468]:
+                  - checkbox
+                - generic [ref=e1470]: "Off"
+              - button "刪除" [ref=e1471] [cursor=pointer]
+            - generic [ref=e1472]:
+              - button "✕" [ref=e1474] [cursor=pointer]
+              - textbox "單行文字輸入欄位" [ref=e1475]
+              - generic [ref=e1476]:
+                - generic [ref=e1477]: 計劃事宜
+                - generic [ref=e1478]:
+                  - checkbox [checked]
+                - generic [ref=e1480]: "On"
+              - button "刪除" [ref=e1481] [cursor=pointer]
+            - generic [ref=e1482]:
+              - button "✕" [ref=e1484] [cursor=pointer]
+              - textbox "單行文字輸入欄位" [ref=e1485]
+              - generic [ref=e1486]:
+                - generic [ref=e1487]: 計劃事宜
+                - generic [ref=e1488]:
+                  - checkbox
+                - generic [ref=e1490]: "Off"
+              - button "刪除" [ref=e1491] [cursor=pointer]
+            - generic [ref=e1492]:
+              - generic [ref=e1493]:
+                - img [ref=e1494]
+                - generic [ref=e1498]: 尚未上傳
+              - textbox "單行文字輸入欄位" [ref=e1499]
+              - generic [ref=e1500]:
+                - generic [ref=e1501]: 計劃事宜
+                - generic [ref=e1502]:
+                  - checkbox
+                - generic [ref=e1504]: "Off"
+              - button "刪除" [disabled] [ref=e1505]
+          - generic [ref=e1506]:
+            - generic [ref=e1507]:
+              - button "上傳" [ref=e1508] [cursor=pointer]:
+                - img [ref=e1509]
+                - text: 上傳
+              - button "另存" [ref=e1511] [cursor=pointer]:
+                - img [ref=e1512]
+                - text: 另存
+            - generic [ref=e1514]:
+              - img [ref=e1515]
+              - generic [ref=e1518]: 拖曳檔案到此處，或
+              - button "瀏覽檔案" [ref=e1519] [cursor=pointer]
+      - generic [ref=e1520]:
+        - generic [ref=e1521]: Data Upload
+        - generic [ref=e1523]:
+          - generic [ref=e1525]:
+            - generic [ref=e1526]: 🔧 複雜組件
+            - generic [ref=e1527]: Data Upload
+            - generic [ref=e1528]: 結構化資料上傳（CSV/Excel），含格式說明與錯誤回報。
+          - generic [ref=e1529]: Data Upload — 資料上傳
+          - generic [ref=e1530]:
+            - generic [ref=e1531]:
+              - generic [ref=e1533]: DOC
+              - textbox "單行文字輸入欄位" [ref=e1534]
+              - button "刪除" [ref=e1535] [cursor=pointer]
+            - generic [ref=e1536]:
+              - generic [ref=e1538]: DOCX
+              - textbox "單行文字輸入欄位" [ref=e1539]
+              - button "刪除" [ref=e1540] [cursor=pointer]
+            - generic [ref=e1541]:
+              - generic [ref=e1543]: PDF
+              - textbox "單行文字輸入欄位" [ref=e1544]
+              - button "刪除" [ref=e1545] [cursor=pointer]
+            - generic [ref=e1546]:
+              - generic [ref=e1548]: ZIP
+              - textbox "單行文字輸入欄位" [ref=e1549]
+              - button "刪除" [ref=e1550] [cursor=pointer]
+            - generic [ref=e1551]:
+              - img [ref=e1553]
+              - textbox "單行文字輸入欄位" [disabled] [ref=e1554]
+              - button "新增檔案" [ref=e1555] [cursor=pointer]
+          - generic [ref=e1556]:
+            - generic [ref=e1557]:
+              - button "上傳" [ref=e1558] [cursor=pointer]:
+                - img [ref=e1559]
+                - text: 上傳
+              - button "另存" [ref=e1561] [cursor=pointer]:
+                - img [ref=e1562]
+                - text: 另存
+            - generic [ref=e1564]:
+              - generic [ref=e1565]:
+                - img [ref=e1566]
+                - generic [ref=e1569]: 拖曳檔案到此處，或
+                - button "瀏覽檔案" [ref=e1570] [cursor=pointer]
+              - textbox "單行文字輸入欄位" [ref=e1571]
+              - button "搜尋" [ref=e1572] [cursor=pointer]
+      - generic [ref=e1573]:
+        - generic [ref=e1574]: Detail Card
+        - generic [ref=e1576]:
+          - generic [ref=e1578]:
+            - generic [ref=e1579]: 🔧 複雜組件
+            - generic [ref=e1580]: Detail Card
+            - generic [ref=e1581]: 資料詳情卡，含標籤值對、編輯模式、欄位群組。
+          - generic [ref=e1582]: Detail Card — 資料詳情
+          - generic [ref=e1583]:
+            - generic [ref=e1584]:
+              - generic [ref=e1585]:
+                - generic [ref=e1586]: 報告人
+                - generic [ref=e1587]:
+                  - img [ref=e1588]
+                  - text: 張豪傑 (2023-07-04 22:14:00)
+              - generic [ref=e1591]:
+                - generic [ref=e1592]: 報告編號
+                - generic [ref=e1593]: RPT-2025-0042
+              - generic [ref=e1594]:
+                - generic [ref=e1595]: 已報價
+                - generic [ref=e1596]: 待審核
+            - generic [ref=e1597]:
+              - generic [ref=e1598]:
+                - generic [ref=e1599]: 部門 / 職稱
+                - generic [ref=e1600]: 業務部 業務專員
+              - generic [ref=e1601]:
+                - generic [ref=e1602]: 聯絡方式
+                - generic [ref=e1603]: 0902-324-695
+              - generic [ref=e1604]:
+                - generic [ref=e1605]: 分類標籤
+                - generic [ref=e1606]:
+                  - generic [ref=e1607]: 客戶拜訪
+                  - generic [ref=e1608]: 潛在客戶
+                  - generic [ref=e1609]: 優先處理
+      - generic [ref=e1610]:
+        - generic [ref=e1611]: Content Block
+        - generic [ref=e1613]:
+          - generic [ref=e1615]:
+            - generic [ref=e1616]: 🔧 複雜組件
+            - generic [ref=e1617]: Content Block
+            - generic [ref=e1618]: 通用內容區塊，含標題、描述、操作按鈕組合。
+          - generic [ref=e1619]: Content Block — 內容區塊
+          - generic [ref=e1620]:
+            - generic [ref=e1621]:
+              - generic [ref=e1623]:
+                - button "基本資訊" [ref=e1624] [cursor=pointer]
+                - button "專案明細" [ref=e1625] [cursor=pointer]
+                - button "版本歷程" [ref=e1626] [cursor=pointer]
+              - generic [ref=e1627]:
+                - button "更多" [ref=e1628] [cursor=pointer]
+                - button "編輯" [ref=e1629] [cursor=pointer]
+            - generic [ref=e1630]:
+              - heading "標題為\"微軟正黑體 Bold\" 30pt 1.5 行高" [level=2] [ref=e1631]
+              - paragraph [ref=e1632]: 本次拜訪目的為確認客戶對報價單 KF2025052501 的意見，並討論後續合約細節。 客戶表示對報價金額有疑慮，希望能針對第三項服務項目進行調整，預計下週再次確認。 業務同仁需於 2025/06/01 前完成修訂並重新送出報價。
+              - paragraph [ref=e1633]: 補充說明：客戶目前同時洽談三家供應商，競爭對手主要為 A 公司與 B 公司。 建議強調我方在交期與售後服務上的優勢，提高成交機率。
+      - generic [ref=e1634]:
+        - generic [ref=e1635]: Attachments
+        - generic [ref=e1637]:
+          - generic [ref=e1639]:
+            - generic [ref=e1640]: 🔧 複雜組件
+            - generic [ref=e1641]: Attachments
+            - generic [ref=e1642]: 附件清單，含檔案類型圖示、大小、下載操作。
+          - generic [ref=e1643]: Attachments — 相關檔案
+          - generic [ref=e1645]:
+            - generic [ref=e1646]:
+              - checkbox [checked] [ref=e1647] [cursor=pointer]
+              - img [ref=e1648]
+              - generic [ref=e1651]: KF2025052501_報價單.pdf
+              - generic [ref=e1652]: 245 KB
+            - generic [ref=e1653]:
+              - checkbox [checked] [ref=e1654] [cursor=pointer]
+              - img [ref=e1655]
+              - generic [ref=e1658]: 客戶需求規格書_v2.xlsx
+              - generic [ref=e1659]: 128 KB
+            - generic [ref=e1660]:
+              - checkbox [ref=e1661] [cursor=pointer]
+              - img [ref=e1662]
+              - generic [ref=e1665]: 會議記錄_2025-05-23.docx
+              - generic [ref=e1666]: 89 KB
+      - generic [ref=e1667]:
+        - generic [ref=e1668]: Image Gallery
+        - generic [ref=e1670]:
+          - generic [ref=e1672]:
+            - generic [ref=e1673]: 🔧 複雜組件
+            - generic [ref=e1674]: Image Gallery
+            - generic [ref=e1675]: 圖片縮圖牆，含新增、移除、全螢幕預覽。
+          - generic [ref=e1676]: Image Gallery — 附加圖片
+          - generic [ref=e1677]:
+            - generic [ref=e1680] [cursor=pointer]: 現場照片 1
+            - generic [ref=e1683] [cursor=pointer]: 現場照片 2
+            - generic [ref=e1686] [cursor=pointer]: 現場照片 3
+            - generic [ref=e1689] [cursor=pointer]: 現場照片 4
+            - generic [ref=e1692] [cursor=pointer]: 現場照片 5
+      - generic [ref=e1693]:
+        - generic [ref=e1694]: Related Links
+        - generic [ref=e1696]:
+          - generic [ref=e1698]:
+            - generic [ref=e1699]: 🔧 複雜組件
+            - generic [ref=e1700]: Related Links
+            - generic [ref=e1701]: 相關連結區塊，含外部連結圖示、說明文字。
+          - generic [ref=e1702]: Related Links — 相關連結
+          - list [ref=e1704]:
+            - listitem [ref=e1705]:
+              - link "科技創新有限公司官方網站" [ref=e1706] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e1707]:
+              - link "報價單線上審核系統入口" [ref=e1708] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e1709]:
+              - link "關聯合約文件 CT-2025-0018" [ref=e1710] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e1711]:
+        - generic [ref=e1712]: Toast / Snackbar
+        - generic [ref=e1714]:
+          - generic [ref=e1716]:
+            - generic [ref=e1717]: 💬 反饋
+            - generic [ref=e1718]: Toast / Snackbar
+            - generic [ref=e1719]: 浮動通知彈出，含自動消失、操作按鈕、堆疊模式。
+          - generic [ref=e1720]: Toast / Snackbar — 通知彈出
+          - generic [ref=e1721]:
+            - generic [ref=e1722]:
+              - img [ref=e1723]
+              - generic [ref=e1726]:
+                - generic [ref=e1727]: 儲存成功
+                - generic [ref=e1728]: 報價單已成功建立並送出。
+              - button "✕" [ref=e1729] [cursor=pointer]
+            - generic [ref=e1730]:
+              - img [ref=e1731]
+              - generic [ref=e1735]:
+                - generic [ref=e1736]: 送出失敗
+                - generic [ref=e1737]: 請確認必填欄位是否完整。
+              - button "✕" [ref=e1738] [cursor=pointer]
+            - generic [ref=e1739]:
+              - img [ref=e1740]
+              - generic [ref=e1742]:
+                - generic [ref=e1743]: 注意
+                - generic [ref=e1744]: 此報價單將於 3 天後逾期。
+              - button "✕" [ref=e1745] [cursor=pointer]
+            - generic [ref=e1746]:
+              - img [ref=e1747]
+              - generic [ref=e1749]:
+                - generic [ref=e1750]: 系統通知
+                - generic [ref=e1751]: 系統將於今晚 23:00 進行維護。
+              - button "✕" [ref=e1752] [cursor=pointer]
+      - generic [ref=e1753]:
+        - generic [ref=e1754]: Banner
+        - generic [ref=e1756]:
+          - generic [ref=e1758]:
+            - generic [ref=e1759]: 💬 反饋
+            - generic [ref=e1760]: Banner
+            - generic [ref=e1761]: 頁面橫幅公告，含圖示、行動按鈕、關閉。
+          - generic [ref=e1762]: Banner / Announcement — 頁面橫幅
+          - generic [ref=e1763]:
+            - generic [ref=e1764]:
+              - img [ref=e1765]
+              - text: 系統升級通知：新版本將於 2025/07/01 上線，請
+              - link "查看更新說明" [ref=e1767] [cursor=pointer]:
+                - /url: "#"
+              - text: 。
+              - button "✕" [ref=e1768] [cursor=pointer]
+            - generic [ref=e1769]:
+              - img [ref=e1770]
+              - text: 您的帳號將於 7 天後到期，請聯繫管理員續約以避免服務中斷。
+              - button "✕" [ref=e1772] [cursor=pointer]
+            - generic [ref=e1773]:
+              - img [ref=e1774]
+              - text: 🎉 新功能上線：報價單批次匯出功能現已開放！
+              - link "立即使用" [ref=e1777] [cursor=pointer]:
+                - /url: "#"
+              - button "✕" [ref=e1778] [cursor=pointer]
+      - generic [ref=e1779]:
+        - generic [ref=e1780]: Top Nav Bar
+        - generic [ref=e1782]:
+          - generic [ref=e1784]:
+            - generic [ref=e1785]: 🧭 導航
+            - generic [ref=e1786]: Top Nav Bar
+            - generic [ref=e1787]: 頂部水平導覽列，含 Logo、主選單、右側操作區。
+          - generic [ref=e1788]: Top Nav Bar — 水平導覽
+          - generic [ref=e1790]:
+            - generic [ref=e1791]:
+              - generic [ref=e1792]: ERP
+              - generic [ref=e1793]: 系統管理
+            - navigation [ref=e1794]:
+              - link "儀表板" [ref=e1795] [cursor=pointer]:
+                - /url: "#"
+              - link "客戶管理" [ref=e1796] [cursor=pointer]:
+                - /url: "#"
+              - link "報價管理" [ref=e1797] [cursor=pointer]:
+                - /url: "#"
+              - link "訂單管理" [ref=e1798] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=e1799] [cursor=pointer]:
+                - text: 更多
+                - img [ref=e1800]
+            - generic [ref=e1802]:
+              - img [ref=e1803]
+              - img [ref=e1806]
+              - generic [ref=e1809]: 張
+      - generic [ref=e1810]:
+        - generic [ref=e1811]: Command Palette
+        - generic [ref=e1813]:
+          - generic [ref=e1815]:
+            - generic [ref=e1816]: 🧭 導航
+            - generic [ref=e1817]: Command Palette
+            - generic [ref=e1818]: ⌘K 快速指令面板，含分組、搜尋、鍵盤導覽。
+          - generic [ref=e1819]: Command Palette — ⌘K 快速指令
+          - generic [ref=e1820]:
+            - generic [ref=e1821]:
+              - img [ref=e1822]
+              - textbox "搜尋或輸入指令…" [ref=e1825]: 報價
+              - generic [ref=e1826]: ESC
+            - generic [ref=e1827]: 報價管理
+            - generic [ref=e1828] [cursor=pointer]:
+              - img [ref=e1829]
+              - text: 前往 報價管理
+              - generic [ref=e1831]: ↵
+            - generic [ref=e1832] [cursor=pointer]:
+              - img [ref=e1833]
+              - text: 新增報價單
+              - generic [ref=e1834]: ⌘ N
+            - generic [ref=e1835] [cursor=pointer]:
+              - img [ref=e1836]
+              - text: 搜尋「報價」相關記錄
+            - generic [ref=e1838]: 最近瀏覽
+            - generic [ref=e1839] [cursor=pointer]:
+              - img [ref=e1840]
+              - text: KF2025052501 · 科技創新有限公司
+            - generic [ref=e1843] [cursor=pointer]:
+              - img [ref=e1844]
+              - text: KF2025052502 · 全球貿易股份有限公司
+      - generic [ref=e1847]:
+        - generic [ref=e1848]: KPI / Stat Cards
+        - generic [ref=e1850]:
+          - generic [ref=e1852]:
+            - generic [ref=e1853]: 📊 數據展示
+            - generic [ref=e1854]: KPI / Stat Cards
+            - generic [ref=e1855]: 統計數字卡：趨勢指示、比較值、微型圖表。
+          - generic [ref=e1856]: KPI / Stat Cards — 統計卡
+          - generic [ref=e1857]:
+            - generic [ref=e1858]:
+              - generic [ref=e1859]: 本月報價總額
+              - generic [ref=e1860]: NT$ 4,280,000
+              - generic [ref=e1861]:
+                - img [ref=e1862]
+                - text: +12.5% vs 上月
+            - generic [ref=e1864]:
+              - generic [ref=e1865]: 成交筆數
+              - generic [ref=e1866]: "38"
+              - generic [ref=e1867]:
+                - img [ref=e1868]
+                - text: +6 筆 vs 上月
+            - generic [ref=e1870]:
+              - generic [ref=e1871]: 待處理報價
+              - generic [ref=e1872]: "12"
+              - generic [ref=e1873]: ── 同上月
+            - generic [ref=e1874]:
+              - generic [ref=e1875]: 客戶流失率
+              - generic [ref=e1876]: 3.2%
+              - generic [ref=e1877]:
+                - img [ref=e1878]
+                - text: "-0.8% vs 上月"
+      - generic [ref=e1880]:
+        - generic [ref=e1881]: Charts
+        - generic [ref=e1883]:
+          - generic [ref=e1885]:
+            - generic [ref=e1886]: 📊 數據展示
+            - generic [ref=e1887]: Charts
+            - generic [ref=e1888]: 圖表元件展示：長條圖、折線圖、圓餅圖，含 Tooltip。
+          - generic [ref=e1889]: Charts — 圖表
+          - generic [ref=e1890]:
+            - generic [ref=e1891]:
+              - generic [ref=e1892]: 月度報價金額（萬）
+              - generic [ref=e1893]:
+                - generic [ref=e1896]: 1月
+                - generic [ref=e1899]: 2月
+                - generic [ref=e1902]: 3月
+                - generic [ref=e1905]: 4月
+                - generic [ref=e1908]: 5月
+                - generic [ref=e1911]: 6月
+            - generic [ref=e1912]:
+              - generic [ref=e1913]: 儲存空間使用量
+              - generic [ref=e1914]:
+                - generic [ref=e1916]:
+                  - generic [ref=e1917]: 文件
+                  - generic [ref=e1918]: 68%
+                - generic [ref=e1922]:
+                  - generic [ref=e1923]: 圖片
+                  - generic [ref=e1924]: 42%
+                - generic [ref=e1928]:
+                  - generic [ref=e1929]: 影片
+                  - generic [ref=e1930]: 85%
+                - generic [ref=e1934]:
+                  - generic [ref=e1935]: 備份
+                  - generic [ref=e1936]: 23%
+            - generic [ref=e1939]:
+              - generic [ref=e1940]: 訂單狀態分佈
+              - generic [ref=e1943]:
+                - generic [ref=e1944]: 72%
+                - generic [ref=e1945]: 成交率
+              - generic [ref=e1946]:
+                - generic [ref=e1947]:
+                  - generic [ref=e1949]: 已成交
+                  - generic [ref=e1950]: 72%
+                - generic [ref=e1951]:
+                  - generic [ref=e1953]: 進行中
+                  - generic [ref=e1954]: 18%
+                - generic [ref=e1955]:
+                  - generic [ref=e1957]: 已取消
+                  - generic [ref=e1958]: 10%
+      - generic [ref=e1959]:
+        - generic [ref=e1960]: Stepper
+        - generic [ref=e1962]:
+          - generic [ref=e1964]:
+            - generic [ref=e1965]: 🔧 複雜組件
+            - generic [ref=e1966]: Stepper
+            - generic [ref=e1967]: 步驟引導元件，含水平、垂直排列，及完成/進行/待完成狀態。
+          - generic [ref=e1968]: Stepper — 步驟引導
+          - generic [ref=e1969]:
+            - generic [ref=e1970]:
+              - generic [ref=e1971]: Horizontal
+              - generic [ref=e1972]:
+                - generic [ref=e1973]:
+                  - generic [ref=e1974]: ✓
+                  - generic [ref=e1975]: 基本資料
+                - generic [ref=e1977]:
+                  - generic [ref=e1978]: ✓
+                  - generic [ref=e1979]: 聯絡資訊
+                - generic [ref=e1981]:
+                  - generic [ref=e1982]: "3"
+                  - generic [ref=e1983]: 審核設定
+                - generic [ref=e1985]:
+                  - generic [ref=e1986]: "4"
+                  - generic [ref=e1987]: 確認送出
+            - generic [ref=e1988]:
+              - generic [ref=e1989]: Vertical
+              - generic [ref=e1990]:
+                - generic [ref=e1991]:
+                  - generic [ref=e1992]: ✓
+                  - generic [ref=e1993]:
+                    - generic [ref=e1994]: 帳號建立
+                    - generic [ref=e1995]: 已完成基本帳號設定
+                - generic [ref=e1997]:
+                  - generic [ref=e1998]: "2"
+                  - generic [ref=e1999]:
+                    - generic [ref=e2000]: 公司資料
+                    - generic [ref=e2001]: 請填寫公司基本資訊
+                - generic [ref=e2003]:
+                  - generic [ref=e2004]: "3"
+                  - generic [ref=e2005]:
+                    - generic [ref=e2006]: 權限設定
+                    - generic [ref=e2007]: 設定使用者角色與權限
+      - generic [ref=e2008]:
+        - generic [ref=e2009]: Checklist
+        - generic [ref=e2011]:
+          - generic [ref=e2013]:
+            - generic [ref=e2014]: 🔧 複雜組件
+            - generic [ref=e2015]: Checklist
+            - generic [ref=e2016]: 新手入門清單，含進度條、勾選動畫、完成狀態。
+          - generic [ref=e2017]: Checklist — 新手入門
+          - generic [ref=e2018]:
+            - generic [ref=e2019]:
+              - generic [ref=e2020]:
+                - generic [ref=e2021]: 開始使用系統
+                - generic [ref=e2022]: 已完成 3 / 5 項
+              - generic [ref=e2023]: 60%
+            - generic [ref=e2026]:
+              - img [ref=e2027]
+              - generic [ref=e2030]: 建立第一個帳號
+            - generic [ref=e2031]:
+              - img [ref=e2032]
+              - generic [ref=e2035]: 填寫公司基本資料
+            - generic [ref=e2036]:
+              - img [ref=e2037]
+              - generic [ref=e2040]: 建立第一筆客戶資料
+            - generic [ref=e2041]:
+              - img [ref=e2042]
+              - generic [ref=e2044]:
+                - text: 建立第一份報價單
+                - generic [ref=e2045]: 進行中
+            - generic [ref=e2046]:
+              - img [ref=e2047]
+              - generic [ref=e2049]: 邀請第一位團隊成員
+      - generic [ref=e2050]:
+        - generic [ref=e2051]: Avatar Group
+        - generic [ref=e2053]:
+          - generic [ref=e2055]:
+            - generic [ref=e2056]: 🔧 複雜組件
+            - generic [ref=e2057]: Avatar Group
+            - generic [ref=e2058]: 多人頭像群組，含角色標籤、溢出計數、新增按鈕。
+          - generic [ref=e2059]: Avatar Group & Role Badges
+          - generic [ref=e2060]:
+            - generic [ref=e2061]:
+              - generic [ref=e2062]: Avatar Group
+              - generic [ref=e2063]:
+                - generic [ref=e2064]:
+                  - generic [ref=e2065]: 張
+                  - generic [ref=e2066]: 林
+                  - generic [ref=e2067]: 王
+                  - generic [ref=e2068]: 陳
+                  - generic [ref=e2069]: "+3"
+                - generic [ref=e2070]:
+                  - generic [ref=e2071]: 張
+                  - generic [ref=e2072]: 林
+                  - generic [ref=e2073]: 王
+                  - generic [ref=e2074]: "+5"
+            - generic [ref=e2075]:
+              - generic [ref=e2076]: Role Badges
+              - generic [ref=e2077]:
+                - generic [ref=e2078]: 管理員
+                - generic [ref=e2079]: 編輯者
+                - generic [ref=e2080]: 檢視者
+                - generic [ref=e2081]: 擁有者
+                - generic [ref=e2082]: 訪客
+      - generic [ref=e2083]:
+        - generic [ref=e2084]: Settings
+        - generic [ref=e2086]:
+          - generic [ref=e2088]:
+            - generic [ref=e2089]: 🔧 複雜組件
+            - generic [ref=e2090]: Settings
+            - generic [ref=e2091]: 設定列元件，含選項說明、控制項、分組排列。
+          - generic [ref=e2092]: Settings — 設定列
+          - generic [ref=e2093]:
+            - generic [ref=e2094]:
+              - generic [ref=e2095]: 通知設定
+              - generic [ref=e2096]:
+                - generic [ref=e2097]:
+                  - generic [ref=e2098]: 電子郵件通知
+                  - generic [ref=e2099]: 當有新報價單或狀態異動時寄送通知
+                - generic [ref=e2100]:
+                  - checkbox [checked]
+              - generic [ref=e2102]:
+                - generic [ref=e2103]:
+                  - generic [ref=e2104]: 系統維護通知
+                  - generic [ref=e2105]: 接收系統維護與更新的提前通知
+                - generic [ref=e2106]:
+                  - checkbox [checked]
+              - generic [ref=e2108]:
+                - generic [ref=e2109]:
+                  - generic [ref=e2110]: 行銷資訊
+                  - generic [ref=e2111]: 接收新功能介紹與促銷訊息
+                - generic [ref=e2112]:
+                  - checkbox
+            - generic [ref=e2114]:
+              - generic [ref=e2115]: API 金鑰
+              - generic [ref=e2116]:
+                - generic [ref=e2117]: Public API Key
+                - generic [ref=e2118]:
+                  - textbox [ref=e2119]: sk-live-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                  - button "複製" [ref=e2120] [cursor=pointer]
+                  - button "重新產生" [ref=e2121] [cursor=pointer]
+            - generic [ref=e2122]:
+              - generic [ref=e2123]:
+                - img [ref=e2124]
+                - text: Danger Zone
+              - generic [ref=e2126]:
+                - generic [ref=e2127]:
+                  - generic [ref=e2128]: 刪除此帳號
+                  - generic [ref=e2129]: 永久刪除帳號及所有資料，此動作無法復原
+                - button "刪除帳號" [ref=e2130] [cursor=pointer]
+              - generic [ref=e2131]:
+                - generic [ref=e2132]:
+                  - generic [ref=e2133]: 清除所有資料
+                  - generic [ref=e2134]: 刪除所有報價單、客戶與訂單資料
+                - button "清除資料" [ref=e2135] [cursor=pointer]
+      - generic [ref=e2136]:
+        - generic [ref=e2137]: Date Picker
+        - generic [ref=e2139]:
+          - generic [ref=e2141]:
+            - generic [ref=e2142]: 📝 表單
+            - generic [ref=e2143]: Date Picker
+            - generic [ref=e2144]: 日曆選擇器，含單選、範圍選取，以及月份導覽。
+          - generic [ref=e2145]: Date Picker — 日曆選擇
+          - generic [ref=e2146]:
+            - generic [ref=e2147]:
+              - generic [ref=e2148]: Single Date
+              - generic [ref=e2149]:
+                - generic [ref=e2150]:
+                  - button "‹" [ref=e2151] [cursor=pointer]
+                  - generic [ref=e2152]: 2025 年 6 月
+                  - button "›" [ref=e2153] [cursor=pointer]
+                - generic [ref=e2154]:
+                  - generic [ref=e2155]: 日
+                  - generic [ref=e2156]: 一
+                  - generic [ref=e2157]: 二
+                  - generic [ref=e2158]: 三
+                  - generic [ref=e2159]: 四
+                  - generic [ref=e2160]: 五
+                  - generic [ref=e2161]: 六
+                - generic [ref=e2162]:
+                  - generic [ref=e2163] [cursor=pointer]: "25"
+                  - generic [ref=e2164] [cursor=pointer]: "26"
+                  - generic [ref=e2165] [cursor=pointer]: "27"
+                  - generic [ref=e2166] [cursor=pointer]: "28"
+                  - generic [ref=e2167] [cursor=pointer]: "29"
+                  - generic [ref=e2168] [cursor=pointer]: "30"
+                  - generic [ref=e2169] [cursor=pointer]: "31"
+                  - generic [ref=e2170] [cursor=pointer]: "1"
+                  - generic [ref=e2171] [cursor=pointer]: "2"
+                  - generic [ref=e2172] [cursor=pointer]: "3"
+                  - generic [ref=e2173] [cursor=pointer]: "4"
+                  - generic [ref=e2174] [cursor=pointer]: "5"
+                  - generic [ref=e2175] [cursor=pointer]: "6"
+                  - generic [ref=e2176] [cursor=pointer]: "7"
+                  - generic [ref=e2177] [cursor=pointer]: "8"
+                  - generic [ref=e2178] [cursor=pointer]: "9"
+                  - generic [ref=e2179] [cursor=pointer]: "10"
+                  - generic [ref=e2180] [cursor=pointer]: "11"
+                  - generic [ref=e2181] [cursor=pointer]: "12"
+                  - generic [ref=e2182] [cursor=pointer]: "13"
+                  - generic [ref=e2183] [cursor=pointer]: "14"
+                  - generic [ref=e2184] [cursor=pointer]: "15"
+                  - generic [ref=e2185] [cursor=pointer]: "16"
+                  - generic [ref=e2186] [cursor=pointer]: "17"
+                  - generic [ref=e2187] [cursor=pointer]: "18"
+                  - generic [ref=e2188] [cursor=pointer]: "19"
+                  - generic [ref=e2189] [cursor=pointer]: "20"
+                  - generic [ref=e2190] [cursor=pointer]: "21"
+                  - generic [ref=e2191] [cursor=pointer]: "22"
+                  - generic [ref=e2192] [cursor=pointer]: "23"
+                  - generic [ref=e2193] [cursor=pointer]: "24"
+                  - generic [ref=e2194] [cursor=pointer]: "25"
+                  - generic [ref=e2195] [cursor=pointer]: "26"
+                  - generic [ref=e2196] [cursor=pointer]: "27"
+                  - generic [ref=e2197] [cursor=pointer]: "28"
+                  - generic [ref=e2198] [cursor=pointer]: "29"
+                  - generic [ref=e2199] [cursor=pointer]: "30"
+                  - generic [ref=e2200] [cursor=pointer]: "1"
+                  - generic [ref=e2201] [cursor=pointer]: "2"
+                  - generic [ref=e2202] [cursor=pointer]: "3"
+                  - generic [ref=e2203] [cursor=pointer]: "4"
+                  - generic [ref=e2204] [cursor=pointer]: "5"
+            - generic [ref=e2205]:
+              - generic [ref=e2206]: Date Range
+              - generic [ref=e2207]:
+                - generic [ref=e2208]:
+                  - button "‹" [ref=e2209] [cursor=pointer]
+                  - generic [ref=e2210]: 2025 年 6 月
+                  - button "›" [ref=e2211] [cursor=pointer]
+                - generic [ref=e2212]:
+                  - generic [ref=e2213]: 日
+                  - generic [ref=e2214]: 一
+                  - generic [ref=e2215]: 二
+                  - generic [ref=e2216]: 三
+                  - generic [ref=e2217]: 四
+                  - generic [ref=e2218]: 五
+                  - generic [ref=e2219]: 六
+                - generic [ref=e2220]:
+                  - generic [ref=e2221] [cursor=pointer]: "25"
+                  - generic [ref=e2222] [cursor=pointer]: "26"
+                  - generic [ref=e2223] [cursor=pointer]: "27"
+                  - generic [ref=e2224] [cursor=pointer]: "28"
+                  - generic [ref=e2225] [cursor=pointer]: "29"
+                  - generic [ref=e2226] [cursor=pointer]: "30"
+                  - generic [ref=e2227] [cursor=pointer]: "31"
+                  - generic [ref=e2228] [cursor=pointer]: "1"
+                  - generic [ref=e2229] [cursor=pointer]: "2"
+                  - generic [ref=e2230] [cursor=pointer]: "3"
+                  - generic [ref=e2231] [cursor=pointer]: "4"
+                  - generic [ref=e2232] [cursor=pointer]: "5"
+                  - generic [ref=e2233] [cursor=pointer]: "6"
+                  - generic [ref=e2234] [cursor=pointer]: "7"
+                  - generic [ref=e2235] [cursor=pointer]: "8"
+                  - generic [ref=e2236] [cursor=pointer]: "9"
+                  - generic [ref=e2237] [cursor=pointer]: "10"
+                  - generic [ref=e2238] [cursor=pointer]: "11"
+                  - generic [ref=e2239] [cursor=pointer]: "12"
+                  - generic [ref=e2240] [cursor=pointer]: "13"
+                  - generic [ref=e2241] [cursor=pointer]: "14"
+                  - generic [ref=e2242] [cursor=pointer]: "15"
+                  - generic [ref=e2243] [cursor=pointer]: "16"
+                  - generic [ref=e2244] [cursor=pointer]: "17"
+                  - generic [ref=e2245] [cursor=pointer]: "18"
+                  - generic [ref=e2246] [cursor=pointer]: "19"
+                  - generic [ref=e2247] [cursor=pointer]: "20"
+                  - generic [ref=e2248] [cursor=pointer]: "21"
+                  - generic [ref=e2249] [cursor=pointer]: "22"
+                  - generic [ref=e2250] [cursor=pointer]: "23"
+                  - generic [ref=e2251] [cursor=pointer]: "24"
+                  - generic [ref=e2252] [cursor=pointer]: "25"
+                  - generic [ref=e2253] [cursor=pointer]: "26"
+                  - generic [ref=e2254] [cursor=pointer]: "27"
+                  - generic [ref=e2255] [cursor=pointer]: "28"
+                  - generic [ref=e2256] [cursor=pointer]: "29"
+                  - generic [ref=e2257] [cursor=pointer]: "30"
+                  - generic [ref=e2258] [cursor=pointer]: "1"
+                  - generic [ref=e2259] [cursor=pointer]: "2"
+                  - generic [ref=e2260] [cursor=pointer]: "3"
+                  - generic [ref=e2261] [cursor=pointer]: "4"
+                  - generic [ref=e2262] [cursor=pointer]: "5"
+      - generic [ref=e2263]:
+        - generic [ref=e2264]: Rich Text Editor
+        - generic [ref=e2266]:
+          - generic [ref=e2268]:
+            - generic [ref=e2269]: 🔧 複雜組件
+            - generic [ref=e2270]: Rich Text Editor
+            - generic [ref=e2271]: 富文字編輯工具列，含格式、清單、插入媒體操作。
+          - generic [ref=e2272]: Rich Text Editor — 編輯工具列
+          - generic [ref=e2273]:
+            - generic [ref=e2274]:
+              - generic [ref=e2275]:
+                - button "B" [ref=e2276] [cursor=pointer]:
+                  - generic [ref=e2277]: B
+                - button "I" [ref=e2278] [cursor=pointer]:
+                  - generic [ref=e2279]: I
+                - button "U" [ref=e2280] [cursor=pointer]:
+                  - generic [ref=e2281]: U
+                - button "S" [ref=e2282] [cursor=pointer]:
+                  - generic [ref=e2283]: S
+              - generic [ref=e2285]:
+                - button "H1" [ref=e2286] [cursor=pointer]
+                - button "H2" [ref=e2287] [cursor=pointer]
+                - button "H3" [ref=e2288] [cursor=pointer]
+              - generic [ref=e2290]:
+                - button "無序清單" [ref=e2291] [cursor=pointer]:
+                  - img [ref=e2292]
+                - button "有序清單" [ref=e2293] [cursor=pointer]:
+                  - img [ref=e2294]
+              - generic [ref=e2298]:
+                - button "連結" [ref=e2299] [cursor=pointer]:
+                  - img [ref=e2300]
+                - button "圖片" [ref=e2303] [cursor=pointer]:
+                  - img [ref=e2304]
+                - button "程式碼" [ref=e2308] [cursor=pointer]:
+                  - img [ref=e2309]
+              - generic [ref=e2313]:
+                - combobox [ref=e2314] [cursor=pointer]:
+                  - option "新細明體"
+                  - option "IBM Plex Sans" [selected]
+                  - option "Noto Sans TC"
+                - combobox [ref=e2315] [cursor=pointer]:
+                  - option "12"
+                  - option "14"
+                  - option "16" [selected]
+                  - option "18"
+                  - option "24"
+            - paragraph [ref=e2317]:
+              - strong [ref=e2318]: 本次拜訪摘要
+              - text: 與客戶確認報價單 KF2025052501 的內容，討論後續合約細節。客戶對整體報價持正面態度，唯對交期提出疑慮。
+      - generic [ref=e2319]:
+        - generic [ref=e2320]: Activity Timeline
+        - generic [ref=e2322]:
+          - generic [ref=e2324]:
+            - generic [ref=e2325]: 🔧 複雜組件
+            - generic [ref=e2326]: Activity Timeline
+            - generic [ref=e2327]: 活動時間軸，含使用者操作記錄、時間戳、事件類型。
+          - generic [ref=e2328]: Activity Timeline — 活動時間軸
+          - generic [ref=e2329]:
+            - generic [ref=e2330]:
+              - img [ref=e2332]
+              - generic [ref=e2334]:
+                - generic [ref=e2335]: 報價單已送出
+                - generic [ref=e2336]: KF2025052501 已送出給科技創新有限公司
+                - generic [ref=e2337]: 2025/05/23 14:32 · 張豪傑
+            - generic [ref=e2338]:
+              - img [ref=e2340]
+              - generic [ref=e2343]:
+                - generic [ref=e2344]: 報價單已修改
+                - generic [ref=e2345]: 調整第三項服務費用，金額由 NT$150,000 改為 NT$128,000
+                - generic [ref=e2346]: 2025/05/22 10:15 · 林水水
+            - generic [ref=e2347]:
+              - img [ref=e2349]
+              - generic [ref=e2350]:
+                - generic [ref=e2351]: 新增客戶資料
+                - generic [ref=e2352]: 新增科技創新有限公司客戶資料
+                - generic [ref=e2353]: 2025/05/20 09:00 · 張豪傑
+            - generic [ref=e2354]:
+              - img [ref=e2356]
+              - generic [ref=e2359]:
+                - generic [ref=e2360]: 系統建立記錄
+                - generic [ref=e2361]: 報價流程初始化
+                - generic [ref=e2362]: 2025/05/19 08:30 · 系統
+      - generic [ref=e2363]:
+        - generic [ref=e2364]: Pricing Cards
+        - generic [ref=e2366]:
+          - generic [ref=e2368]:
+            - generic [ref=e2369]: 🔧 複雜組件
+            - generic [ref=e2370]: Pricing Cards
+            - generic [ref=e2371]: 方案比較卡，含亮點標示、功能清單、行動按鈕。
+          - generic [ref=e2372]: Pricing Cards — 方案比較
+          - generic [ref=e2373]:
+            - generic [ref=e2374]:
+              - generic [ref=e2375]: 入門版
+              - generic [ref=e2376]: 免費 / 月
+              - generic [ref=e2377]: 適合小型團隊入門使用
+              - button "目前方案" [ref=e2378] [cursor=pointer]
+              - list [ref=e2379]:
+                - listitem [ref=e2380]: ✓ 最多 3 位使用者
+                - listitem [ref=e2381]: ✓ 50 份報價單 / 月
+                - listitem [ref=e2382]: ✓ 基本報表
+                - listitem [ref=e2383]: ✕ API 存取
+                - listitem [ref=e2384]: ✕ 進階分析
+            - generic [ref=e2385]:
+              - generic [ref=e2386]: 最受歡迎
+              - generic [ref=e2387]: 專業版
+              - generic [ref=e2388]: NT$ 1,200 / 月
+              - generic [ref=e2389]: 適合中型企業全面使用
+              - button "升級方案" [ref=e2390] [cursor=pointer]
+              - list [ref=e2391]:
+                - listitem [ref=e2392]: ✓ 最多 20 位使用者
+                - listitem [ref=e2393]: ✓ 無限報價單
+                - listitem [ref=e2394]: ✓ 進階報表
+                - listitem [ref=e2395]: ✓ API 存取
+                - listitem [ref=e2396]: ✕ 專屬客服
+            - generic [ref=e2397]:
+              - generic [ref=e2398]: 企業版
+              - generic [ref=e2399]: 洽談 報價
+              - generic [ref=e2400]: 大型企業客製化解決方案
+              - button "聯繫業務" [ref=e2401] [cursor=pointer]
+              - list [ref=e2402]:
+                - listitem [ref=e2403]: ✓ 無限使用者
+                - listitem [ref=e2404]: ✓ 無限報價單
+                - listitem [ref=e2405]: ✓ 自訂報表
+                - listitem [ref=e2406]: ✓ API 存取
+                - listitem [ref=e2407]: ✓ 專屬客服
+      - generic [ref=e2408]:
+        - generic [ref=e2409]: Feature Highlight
+        - generic [ref=e2411]:
+          - generic [ref=e2413]:
+            - generic [ref=e2414]: 🔧 複雜組件
+            - generic [ref=e2415]: Feature Highlight
+            - generic [ref=e2416]: 功能亮點區塊，含圖示、標題、描述的展示格。
+          - generic [ref=e2417]: Feature Highlight — 功能亮點
+          - generic [ref=e2418]:
+            - generic [ref=e2419]:
+              - img [ref=e2421]
+              - generic [ref=e2424]: 智慧報價管理
+              - generic [ref=e2425]: 自動產生報價單編號，支援多版本比較與歷程追蹤。
+            - generic [ref=e2426]:
+              - img [ref=e2428]
+              - generic [ref=e2431]: 客戶關係管理
+              - generic [ref=e2432]: 集中管理所有客戶資料、聯絡紀錄與互動歷史。
+            - generic [ref=e2433]:
+              - img [ref=e2435]
+              - generic [ref=e2437]: 即時數據分析
+              - generic [ref=e2438]: 即時監控業績指標，自動生成月報與趨勢分析。
+            - generic [ref=e2439]:
+              - img [ref=e2441]
+              - generic [ref=e2443]: 安全權限管理
+              - generic [ref=e2444]: 細粒度角色與權限控制，確保資料安全合規。
+      - generic [ref=e2445]:
+        - generic [ref=e2446]: Star Rating
+        - generic [ref=e2448]:
+          - generic [ref=e2450]:
+            - generic [ref=e2451]: 🔧 複雜組件
+            - generic [ref=e2452]: Star Rating
+            - generic [ref=e2453]: 星級評分元件，含互動選取、唯讀、尺寸變體。
+          - generic [ref=e2454]: Star Rating — 評分
+          - generic [ref=e2455]:
+            - generic [ref=e2456]:
+              - generic [ref=e2457]: 5 星（滿分）
+              - generic [ref=e2458]:
+                - generic [ref=e2459]: ★
+                - generic [ref=e2460]: ★
+                - generic [ref=e2461]: ★
+                - generic [ref=e2462]: ★
+                - generic [ref=e2463]: ★
+            - generic [ref=e2464]:
+              - generic [ref=e2465]: 4 星
+              - generic [ref=e2466]:
+                - generic [ref=e2467]: ★
+                - generic [ref=e2468]: ★
+                - generic [ref=e2469]: ★
+                - generic [ref=e2470]: ★
+                - generic [ref=e2471]: ★
+            - generic [ref=e2472]:
+              - generic [ref=e2473]: 3 星
+              - generic [ref=e2474]:
+                - generic [ref=e2475]: ★
+                - generic [ref=e2476]: ★
+                - generic [ref=e2477]: ★
+                - generic [ref=e2478]: ★
+                - generic [ref=e2479]: ★
+            - generic [ref=e2480]:
+              - generic [ref=e2481]: 帶數字
+              - generic [ref=e2482]:
+                - generic [ref=e2483]:
+                  - generic [ref=e2484]: ★
+                  - generic [ref=e2485]: ★
+                  - generic [ref=e2486]: ★
+                  - generic [ref=e2487]: ★
+                  - generic [ref=e2488]: ★ ★
+                - generic [ref=e2489]: "4.5"
+                - generic [ref=e2490]: (128 評價)
+            - generic [ref=e2491]:
+              - generic [ref=e2492]: Large
+              - generic [ref=e2493]:
+                - generic [ref=e2494]: ★
+                - generic [ref=e2495]: ★
+                - generic [ref=e2496]: ★
+                - generic [ref=e2497]: ★
+                - generic [ref=e2498]: ★

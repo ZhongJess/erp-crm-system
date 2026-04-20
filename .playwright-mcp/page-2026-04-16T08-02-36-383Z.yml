@@ -1,0 +1,662 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "✨ Introducing Magic UI Pro - 50+ blocks and templates to build beautiful landing pages in minutes" [ref=e4] [cursor=pointer]:
+      - /url: https://pro.magicui.design
+      - text: ✨
+      - generic [ref=e5]: Introducing Magic UI Pro - 50+ blocks and templates to build beautiful landing pages in minutes
+      - img [ref=e6]
+    - separator [ref=e8]
+  - banner [ref=e9]:
+    - generic [ref=e11]:
+      - link "Home" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - img [ref=e13]
+        - generic [ref=e17]: Magic UI
+      - navigation [ref=e18]:
+        - link "Components" [ref=e19] [cursor=pointer]:
+          - /url: /components
+        - link "Templates" [ref=e20] [cursor=pointer]:
+          - /url: https://pro.magicui.design
+        - link "Showcase" [ref=e21] [cursor=pointer]:
+          - /url: /showcase
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - button "Search documentation... ⌘ K" [ref=e25]:
+            - generic [ref=e26]: Search documentation...
+            - generic:
+              - generic: ⌘
+              - text: K
+          - generic [ref=e27]:
+            - heading "Command Palette" [level=2] [ref=e28]
+            - paragraph [ref=e29]: Search for a command to run...
+        - link "20,722" [ref=e30] [cursor=pointer]:
+          - /url: https://github.com/magicuidesign/magicui
+          - img
+          - generic [ref=e31]: 20,722
+        - link "173" [ref=e32] [cursor=pointer]:
+          - /url: https://discord.gg/87p2vpsat5
+          - img
+          - generic [ref=e37]: "173"
+        - button "Toggle theme" [ref=e38]:
+          - img
+          - generic [ref=e39]: Toggle theme
+  - main [ref=e40]:
+    - generic [ref=e43]:
+      - generic [ref=e45]:
+        - link "🎉 Introducing Noise Texture" [ref=e46] [cursor=pointer]:
+          - /url: /docs/components/noise-texture
+          - text: 🎉 Introducing Noise Texture
+          - img
+        - heading "UI library for Design Engineers" [level=1] [ref=e48]
+        - paragraph [ref=e49]:
+          - text: 150+ free and open-source animated components and effects built with React, Typescript, Tailwind CSS, and Motion.
+          - text: Perfect companion for shadcn/ui.
+        - generic [ref=e50]:
+          - link "Browse Components" [ref=e51] [cursor=pointer]:
+            - /url: /components
+            - text: Browse Components
+            - img
+          - link "Browse Templates" [ref=e52] [cursor=pointer]:
+            - /url: https://pro.magicui.design
+            - text: Browse Templates
+            - img
+      - generic [ref=e54]:
+        - button "React" [ref=e55]:
+          - img "React" [ref=e56]
+        - button "Typescript" [ref=e58]:
+          - img "Typescript" [ref=e59]
+        - button "Tailwind css" [ref=e61]:
+          - img "Tailwind css" [ref=e62]
+        - button "Motion" [ref=e64]:
+          - img "Motion" [ref=e65]
+        - button "shadcn" [ref=e69]:
+          - img "shadcn" [ref=e70]
+    - generic [ref=e73]:
+      - heading "Showcase" [level=2] [ref=e74]
+      - heading "Companies choose Magic UI to build their landing pages." [level=3] [ref=e75]
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - link "anara.com anara.com YC S24" [ref=e79] [cursor=pointer]:
+            - /url: https://anara.com
+            - img "anara.com" [ref=e80]
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - text: anara.com
+                - img [ref=e83]
+              - paragraph [ref=e85]: YC S24
+          - link "aomni.com aomni.com Raised seed round from notable investors." [ref=e86] [cursor=pointer]:
+            - /url: https://aomni.com
+            - img "aomni.com" [ref=e87]
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - text: aomni.com
+                - img [ref=e90]
+              - paragraph [ref=e92]: Raised seed round from notable investors.
+          - link "Aryan Karma Aryan Karma Personal Portfolio" [ref=e93] [cursor=pointer]:
+            - /url: https://aryankarma.com
+            - img "Aryan Karma" [ref=e94]
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - text: Aryan Karma
+                - img [ref=e97]
+              - paragraph [ref=e99]: Personal Portfolio
+          - link "cognosys.ai cognosys.ai Backed by Google Ventures, raised $2M" [ref=e100] [cursor=pointer]:
+            - /url: https://cognosys.ai
+            - img "cognosys.ai" [ref=e101]
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - text: cognosys.ai
+                - img [ref=e104]
+              - paragraph [ref=e106]: Backed by Google Ventures, raised $2M
+          - link "elhussary elhussary Personal Portfolio" [ref=e107] [cursor=pointer]:
+            - /url: https://elhussary.vercel.app/
+            - img "elhussary" [ref=e108]
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - text: elhussary
+                - img [ref=e111]
+              - paragraph [ref=e113]: Personal Portfolio
+          - link "guarahooks.com guarahooks.com Open Source Project" [ref=e114] [cursor=pointer]:
+            - /url: https://guarahooks.com
+            - img "guarahooks.com" [ref=e115]
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - text: guarahooks.com
+                - img [ref=e118]
+              - paragraph [ref=e120]: Open Source Project
+          - link "infisical.com infisical.com YC W23, raised $2.8M" [ref=e121] [cursor=pointer]:
+            - /url: https://infisical.com
+            - img "infisical.com" [ref=e122]
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - text: infisical.com
+                - img [ref=e125]
+              - paragraph [ref=e127]: YC W23, raised $2.8M
+          - link "langfuse.com langfuse.com YC W23, raised $4M" [ref=e128] [cursor=pointer]:
+            - /url: https://langfuse.com
+            - img "langfuse.com" [ref=e129]
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - text: langfuse.com
+                - img [ref=e132]
+              - paragraph [ref=e134]: YC W23, raised $4M
+          - link "llm.report llm.report Vercel AI Accelerator 2023, won $120k" [ref=e135] [cursor=pointer]:
+            - /url: https://llm.report
+            - img "llm.report" [ref=e136]
+            - generic [ref=e137]:
+              - generic [ref=e138]:
+                - text: llm.report
+                - img [ref=e139]
+              - paragraph [ref=e141]: Vercel AI Accelerator 2023, won $120k
+          - link "lyra.marqraft.com lyra.marqraft.com Bootstrapped" [ref=e142] [cursor=pointer]:
+            - /url: https://lyra.marqraft.com/?ref=magicui
+            - img "lyra.marqraft.com" [ref=e143]
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - text: lyra.marqraft.com
+                - img [ref=e146]
+              - paragraph [ref=e148]: Bootstrapped
+          - link "million.dev million.dev YC W24" [ref=e149] [cursor=pointer]:
+            - /url: https://million.dev
+            - img "million.dev" [ref=e150]
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - text: million.dev
+                - img [ref=e153]
+              - paragraph [ref=e155]: YC W24
+          - link "PulpSense.com PulpSense.com n8n Expert Partner" [ref=e156] [cursor=pointer]:
+            - /url: https://pulpsense.com
+            - img "PulpSense.com" [ref=e157]
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - text: PulpSense.com
+                - img [ref=e160]
+              - paragraph [ref=e162]: n8n Expert Partner
+          - link "querylab.ai querylab.ai Bootstrapped" [ref=e163] [cursor=pointer]:
+            - /url: https://querylab.ai
+            - img "querylab.ai" [ref=e164]
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - text: querylab.ai
+                - img [ref=e167]
+              - paragraph [ref=e169]: Bootstrapped
+          - link "trysherpa.bot trysherpa.bot Bootstrapped" [ref=e170] [cursor=pointer]:
+            - /url: https://trysherpa.bot/
+            - img "trysherpa.bot" [ref=e171]
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - text: trysherpa.bot
+                - img [ref=e174]
+              - paragraph [ref=e176]: Bootstrapped
+          - link "undrstnd.dev undrstnd.dev StartUp Act Tunisia" [ref=e177] [cursor=pointer]:
+            - /url: https://undrstnd.dev
+            - img "undrstnd.dev" [ref=e178]
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - text: undrstnd.dev
+                - img [ref=e181]
+              - paragraph [ref=e183]: StartUp Act Tunisia
+          - link "writora.xyz writora.xyz Open Source Project" [ref=e184] [cursor=pointer]:
+            - /url: https://writora.xyz
+            - img "writora.xyz" [ref=e185]
+            - generic [ref=e186]:
+              - generic [ref=e187]:
+                - text: writora.xyz
+                - img [ref=e188]
+              - paragraph [ref=e190]: Open Source Project
+          - link "shawn shawn Portfolio site" [ref=e191] [cursor=pointer]:
+            - /url: https://www.zzzzshawn.cloud/
+            - img "shawn" [ref=e192]
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - text: shawn
+                - img [ref=e195]
+              - paragraph [ref=e197]: Portfolio site
+        - generic [ref=e198]:
+          - link "anara.com anara.com YC S24" [ref=e199] [cursor=pointer]:
+            - /url: https://anara.com
+            - img "anara.com" [ref=e200]
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - text: anara.com
+                - img [ref=e203]
+              - paragraph [ref=e205]: YC S24
+          - link "aomni.com aomni.com Raised seed round from notable investors." [ref=e206] [cursor=pointer]:
+            - /url: https://aomni.com
+            - img "aomni.com" [ref=e207]
+            - generic [ref=e208]:
+              - generic [ref=e209]:
+                - text: aomni.com
+                - img [ref=e210]
+              - paragraph [ref=e212]: Raised seed round from notable investors.
+          - link "Aryan Karma Aryan Karma Personal Portfolio" [ref=e213] [cursor=pointer]:
+            - /url: https://aryankarma.com
+            - img "Aryan Karma" [ref=e214]
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - text: Aryan Karma
+                - img [ref=e217]
+              - paragraph [ref=e219]: Personal Portfolio
+          - link "cognosys.ai cognosys.ai Backed by Google Ventures, raised $2M" [ref=e220] [cursor=pointer]:
+            - /url: https://cognosys.ai
+            - img "cognosys.ai" [ref=e221]
+            - generic [ref=e222]:
+              - generic [ref=e223]:
+                - text: cognosys.ai
+                - img [ref=e224]
+              - paragraph [ref=e226]: Backed by Google Ventures, raised $2M
+          - link "elhussary elhussary Personal Portfolio" [ref=e227] [cursor=pointer]:
+            - /url: https://elhussary.vercel.app/
+            - img "elhussary" [ref=e228]
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - text: elhussary
+                - img [ref=e231]
+              - paragraph [ref=e233]: Personal Portfolio
+          - link "guarahooks.com guarahooks.com Open Source Project" [ref=e234] [cursor=pointer]:
+            - /url: https://guarahooks.com
+            - img "guarahooks.com" [ref=e235]
+            - generic [ref=e236]:
+              - generic [ref=e237]:
+                - text: guarahooks.com
+                - img [ref=e238]
+              - paragraph [ref=e240]: Open Source Project
+          - link "infisical.com infisical.com YC W23, raised $2.8M" [ref=e241] [cursor=pointer]:
+            - /url: https://infisical.com
+            - img "infisical.com" [ref=e242]
+            - generic [ref=e243]:
+              - generic [ref=e244]:
+                - text: infisical.com
+                - img [ref=e245]
+              - paragraph [ref=e247]: YC W23, raised $2.8M
+          - link "langfuse.com langfuse.com YC W23, raised $4M" [ref=e248] [cursor=pointer]:
+            - /url: https://langfuse.com
+            - img "langfuse.com" [ref=e249]
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - text: langfuse.com
+                - img [ref=e252]
+              - paragraph [ref=e254]: YC W23, raised $4M
+          - link "llm.report llm.report Vercel AI Accelerator 2023, won $120k" [ref=e255] [cursor=pointer]:
+            - /url: https://llm.report
+            - img "llm.report" [ref=e256]
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - text: llm.report
+                - img [ref=e259]
+              - paragraph [ref=e261]: Vercel AI Accelerator 2023, won $120k
+          - link "lyra.marqraft.com lyra.marqraft.com Bootstrapped" [ref=e262] [cursor=pointer]:
+            - /url: https://lyra.marqraft.com/?ref=magicui
+            - img "lyra.marqraft.com" [ref=e263]
+            - generic [ref=e264]:
+              - generic [ref=e265]:
+                - text: lyra.marqraft.com
+                - img [ref=e266]
+              - paragraph [ref=e268]: Bootstrapped
+          - link "million.dev million.dev YC W24" [ref=e269] [cursor=pointer]:
+            - /url: https://million.dev
+            - img "million.dev" [ref=e270]
+            - generic [ref=e271]:
+              - generic [ref=e272]:
+                - text: million.dev
+                - img [ref=e273]
+              - paragraph [ref=e275]: YC W24
+          - link "PulpSense.com PulpSense.com n8n Expert Partner" [ref=e276] [cursor=pointer]:
+            - /url: https://pulpsense.com
+            - img "PulpSense.com" [ref=e277]
+            - generic [ref=e278]:
+              - generic [ref=e279]:
+                - text: PulpSense.com
+                - img [ref=e280]
+              - paragraph [ref=e282]: n8n Expert Partner
+          - link "querylab.ai querylab.ai Bootstrapped" [ref=e283] [cursor=pointer]:
+            - /url: https://querylab.ai
+            - img "querylab.ai" [ref=e284]
+            - generic [ref=e285]:
+              - generic [ref=e286]:
+                - text: querylab.ai
+                - img [ref=e287]
+              - paragraph [ref=e289]: Bootstrapped
+          - link "trysherpa.bot trysherpa.bot Bootstrapped" [ref=e290] [cursor=pointer]:
+            - /url: https://trysherpa.bot/
+            - img "trysherpa.bot" [ref=e291]
+            - generic [ref=e292]:
+              - generic [ref=e293]:
+                - text: trysherpa.bot
+                - img [ref=e294]
+              - paragraph [ref=e296]: Bootstrapped
+          - link "undrstnd.dev undrstnd.dev StartUp Act Tunisia" [ref=e297] [cursor=pointer]:
+            - /url: https://undrstnd.dev
+            - img "undrstnd.dev" [ref=e298]
+            - generic [ref=e299]:
+              - generic [ref=e300]:
+                - text: undrstnd.dev
+                - img [ref=e301]
+              - paragraph [ref=e303]: StartUp Act Tunisia
+          - link "writora.xyz writora.xyz Open Source Project" [ref=e304] [cursor=pointer]:
+            - /url: https://writora.xyz
+            - img "writora.xyz" [ref=e305]
+            - generic [ref=e306]:
+              - generic [ref=e307]:
+                - text: writora.xyz
+                - img [ref=e308]
+              - paragraph [ref=e310]: Open Source Project
+          - link "shawn shawn Portfolio site" [ref=e311] [cursor=pointer]:
+            - /url: https://www.zzzzshawn.cloud/
+            - img "shawn" [ref=e312]
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - text: shawn
+                - img [ref=e315]
+              - paragraph [ref=e317]: Portfolio site
+        - generic [ref=e318]:
+          - link "anara.com anara.com YC S24" [ref=e319] [cursor=pointer]:
+            - /url: https://anara.com
+            - img "anara.com" [ref=e320]
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - text: anara.com
+                - img [ref=e323]
+              - paragraph [ref=e325]: YC S24
+          - link "aomni.com aomni.com Raised seed round from notable investors." [ref=e326] [cursor=pointer]:
+            - /url: https://aomni.com
+            - img "aomni.com" [ref=e327]
+            - generic [ref=e328]:
+              - generic [ref=e329]:
+                - text: aomni.com
+                - img [ref=e330]
+              - paragraph [ref=e332]: Raised seed round from notable investors.
+          - link "Aryan Karma Aryan Karma Personal Portfolio" [ref=e333] [cursor=pointer]:
+            - /url: https://aryankarma.com
+            - img "Aryan Karma" [ref=e334]
+            - generic [ref=e335]:
+              - generic [ref=e336]:
+                - text: Aryan Karma
+                - img [ref=e337]
+              - paragraph [ref=e339]: Personal Portfolio
+          - link "cognosys.ai cognosys.ai Backed by Google Ventures, raised $2M" [ref=e340] [cursor=pointer]:
+            - /url: https://cognosys.ai
+            - img "cognosys.ai" [ref=e341]
+            - generic [ref=e342]:
+              - generic [ref=e343]:
+                - text: cognosys.ai
+                - img [ref=e344]
+              - paragraph [ref=e346]: Backed by Google Ventures, raised $2M
+          - link "elhussary elhussary Personal Portfolio" [ref=e347] [cursor=pointer]:
+            - /url: https://elhussary.vercel.app/
+            - img "elhussary" [ref=e348]
+            - generic [ref=e349]:
+              - generic [ref=e350]:
+                - text: elhussary
+                - img [ref=e351]
+              - paragraph [ref=e353]: Personal Portfolio
+          - link "guarahooks.com guarahooks.com Open Source Project" [ref=e354] [cursor=pointer]:
+            - /url: https://guarahooks.com
+            - img "guarahooks.com" [ref=e355]
+            - generic [ref=e356]:
+              - generic [ref=e357]:
+                - text: guarahooks.com
+                - img [ref=e358]
+              - paragraph [ref=e360]: Open Source Project
+          - link "infisical.com infisical.com YC W23, raised $2.8M" [ref=e361] [cursor=pointer]:
+            - /url: https://infisical.com
+            - img "infisical.com" [ref=e362]
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - text: infisical.com
+                - img [ref=e365]
+              - paragraph [ref=e367]: YC W23, raised $2.8M
+          - link "langfuse.com langfuse.com YC W23, raised $4M" [ref=e368] [cursor=pointer]:
+            - /url: https://langfuse.com
+            - img "langfuse.com" [ref=e369]
+            - generic [ref=e370]:
+              - generic [ref=e371]:
+                - text: langfuse.com
+                - img [ref=e372]
+              - paragraph [ref=e374]: YC W23, raised $4M
+          - link "llm.report llm.report Vercel AI Accelerator 2023, won $120k" [ref=e375] [cursor=pointer]:
+            - /url: https://llm.report
+            - img "llm.report" [ref=e376]
+            - generic [ref=e377]:
+              - generic [ref=e378]:
+                - text: llm.report
+                - img [ref=e379]
+              - paragraph [ref=e381]: Vercel AI Accelerator 2023, won $120k
+          - link "lyra.marqraft.com lyra.marqraft.com Bootstrapped" [ref=e382] [cursor=pointer]:
+            - /url: https://lyra.marqraft.com/?ref=magicui
+            - img "lyra.marqraft.com" [ref=e383]
+            - generic [ref=e384]:
+              - generic [ref=e385]:
+                - text: lyra.marqraft.com
+                - img [ref=e386]
+              - paragraph [ref=e388]: Bootstrapped
+          - link "million.dev million.dev YC W24" [ref=e389] [cursor=pointer]:
+            - /url: https://million.dev
+            - img "million.dev" [ref=e390]
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - text: million.dev
+                - img [ref=e393]
+              - paragraph [ref=e395]: YC W24
+          - link "PulpSense.com PulpSense.com n8n Expert Partner" [ref=e396] [cursor=pointer]:
+            - /url: https://pulpsense.com
+            - img "PulpSense.com" [ref=e397]
+            - generic [ref=e398]:
+              - generic [ref=e399]:
+                - text: PulpSense.com
+                - img [ref=e400]
+              - paragraph [ref=e402]: n8n Expert Partner
+          - link "querylab.ai querylab.ai Bootstrapped" [ref=e403] [cursor=pointer]:
+            - /url: https://querylab.ai
+            - img "querylab.ai" [ref=e404]
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - text: querylab.ai
+                - img [ref=e407]
+              - paragraph [ref=e409]: Bootstrapped
+          - link "trysherpa.bot trysherpa.bot Bootstrapped" [ref=e410] [cursor=pointer]:
+            - /url: https://trysherpa.bot/
+            - img "trysherpa.bot" [ref=e411]
+            - generic [ref=e412]:
+              - generic [ref=e413]:
+                - text: trysherpa.bot
+                - img [ref=e414]
+              - paragraph [ref=e416]: Bootstrapped
+          - link "undrstnd.dev undrstnd.dev StartUp Act Tunisia" [ref=e417] [cursor=pointer]:
+            - /url: https://undrstnd.dev
+            - img "undrstnd.dev" [ref=e418]
+            - generic [ref=e419]:
+              - generic [ref=e420]:
+                - text: undrstnd.dev
+                - img [ref=e421]
+              - paragraph [ref=e423]: StartUp Act Tunisia
+          - link "writora.xyz writora.xyz Open Source Project" [ref=e424] [cursor=pointer]:
+            - /url: https://writora.xyz
+            - img "writora.xyz" [ref=e425]
+            - generic [ref=e426]:
+              - generic [ref=e427]:
+                - text: writora.xyz
+                - img [ref=e428]
+              - paragraph [ref=e430]: Open Source Project
+          - link "shawn shawn Portfolio site" [ref=e431] [cursor=pointer]:
+            - /url: https://www.zzzzshawn.cloud/
+            - img "shawn" [ref=e432]
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - text: shawn
+                - img [ref=e435]
+              - paragraph [ref=e437]: Portfolio site
+        - generic [ref=e438]:
+          - link "anara.com anara.com YC S24" [ref=e439] [cursor=pointer]:
+            - /url: https://anara.com
+            - img "anara.com" [ref=e440]
+            - generic [ref=e441]:
+              - generic [ref=e442]:
+                - text: anara.com
+                - img [ref=e443]
+              - paragraph [ref=e445]: YC S24
+          - link "aomni.com aomni.com Raised seed round from notable investors." [ref=e446] [cursor=pointer]:
+            - /url: https://aomni.com
+            - img "aomni.com" [ref=e447]
+            - generic [ref=e448]:
+              - generic [ref=e449]:
+                - text: aomni.com
+                - img [ref=e450]
+              - paragraph [ref=e452]: Raised seed round from notable investors.
+          - link "Aryan Karma Aryan Karma Personal Portfolio" [ref=e453] [cursor=pointer]:
+            - /url: https://aryankarma.com
+            - img "Aryan Karma" [ref=e454]
+            - generic [ref=e455]:
+              - generic [ref=e456]:
+                - text: Aryan Karma
+                - img [ref=e457]
+              - paragraph [ref=e459]: Personal Portfolio
+          - link "cognosys.ai cognosys.ai Backed by Google Ventures, raised $2M" [ref=e460] [cursor=pointer]:
+            - /url: https://cognosys.ai
+            - img "cognosys.ai" [ref=e461]
+            - generic [ref=e462]:
+              - generic [ref=e463]:
+                - text: cognosys.ai
+                - img [ref=e464]
+              - paragraph [ref=e466]: Backed by Google Ventures, raised $2M
+          - link "elhussary elhussary Personal Portfolio" [ref=e467] [cursor=pointer]:
+            - /url: https://elhussary.vercel.app/
+            - img "elhussary" [ref=e468]
+            - generic [ref=e469]:
+              - generic [ref=e470]:
+                - text: elhussary
+                - img [ref=e471]
+              - paragraph [ref=e473]: Personal Portfolio
+          - link "guarahooks.com guarahooks.com Open Source Project" [ref=e474] [cursor=pointer]:
+            - /url: https://guarahooks.com
+            - img "guarahooks.com" [ref=e475]
+            - generic [ref=e476]:
+              - generic [ref=e477]:
+                - text: guarahooks.com
+                - img [ref=e478]
+              - paragraph [ref=e480]: Open Source Project
+          - link "infisical.com infisical.com YC W23, raised $2.8M" [ref=e481] [cursor=pointer]:
+            - /url: https://infisical.com
+            - img "infisical.com" [ref=e482]
+            - generic [ref=e483]:
+              - generic [ref=e484]:
+                - text: infisical.com
+                - img [ref=e485]
+              - paragraph [ref=e487]: YC W23, raised $2.8M
+          - link "langfuse.com langfuse.com YC W23, raised $4M" [ref=e488] [cursor=pointer]:
+            - /url: https://langfuse.com
+            - img "langfuse.com" [ref=e489]
+            - generic [ref=e490]:
+              - generic [ref=e491]:
+                - text: langfuse.com
+                - img [ref=e492]
+              - paragraph [ref=e494]: YC W23, raised $4M
+          - link "llm.report llm.report Vercel AI Accelerator 2023, won $120k" [ref=e495] [cursor=pointer]:
+            - /url: https://llm.report
+            - img "llm.report" [ref=e496]
+            - generic [ref=e497]:
+              - generic [ref=e498]:
+                - text: llm.report
+                - img [ref=e499]
+              - paragraph [ref=e501]: Vercel AI Accelerator 2023, won $120k
+          - link "lyra.marqraft.com lyra.marqraft.com Bootstrapped" [ref=e502] [cursor=pointer]:
+            - /url: https://lyra.marqraft.com/?ref=magicui
+            - img "lyra.marqraft.com" [ref=e503]
+            - generic [ref=e504]:
+              - generic [ref=e505]:
+                - text: lyra.marqraft.com
+                - img [ref=e506]
+              - paragraph [ref=e508]: Bootstrapped
+          - link "million.dev million.dev YC W24" [ref=e509] [cursor=pointer]:
+            - /url: https://million.dev
+            - img "million.dev" [ref=e510]
+            - generic [ref=e511]:
+              - generic [ref=e512]:
+                - text: million.dev
+                - img [ref=e513]
+              - paragraph [ref=e515]: YC W24
+          - link "PulpSense.com PulpSense.com n8n Expert Partner" [ref=e516] [cursor=pointer]:
+            - /url: https://pulpsense.com
+            - img "PulpSense.com" [ref=e517]
+            - generic [ref=e518]:
+              - generic [ref=e519]:
+                - text: PulpSense.com
+                - img [ref=e520]
+              - paragraph [ref=e522]: n8n Expert Partner
+          - link "querylab.ai querylab.ai Bootstrapped" [ref=e523] [cursor=pointer]:
+            - /url: https://querylab.ai
+            - img "querylab.ai" [ref=e524]
+            - generic [ref=e525]:
+              - generic [ref=e526]:
+                - text: querylab.ai
+                - img [ref=e527]
+              - paragraph [ref=e529]: Bootstrapped
+          - link "trysherpa.bot trysherpa.bot Bootstrapped" [ref=e530] [cursor=pointer]:
+            - /url: https://trysherpa.bot/
+            - img "trysherpa.bot" [ref=e531]
+            - generic [ref=e532]:
+              - generic [ref=e533]:
+                - text: trysherpa.bot
+                - img [ref=e534]
+              - paragraph [ref=e536]: Bootstrapped
+          - link "undrstnd.dev undrstnd.dev StartUp Act Tunisia" [ref=e537] [cursor=pointer]:
+            - /url: https://undrstnd.dev
+            - img "undrstnd.dev" [ref=e538]
+            - generic [ref=e539]:
+              - generic [ref=e540]:
+                - text: undrstnd.dev
+                - img [ref=e541]
+              - paragraph [ref=e543]: StartUp Act Tunisia
+          - link "writora.xyz writora.xyz Open Source Project" [ref=e544] [cursor=pointer]:
+            - /url: https://writora.xyz
+            - img "writora.xyz" [ref=e545]
+            - generic [ref=e546]:
+              - generic [ref=e547]:
+                - text: writora.xyz
+                - img [ref=e548]
+              - paragraph [ref=e550]: Open Source Project
+          - link "shawn shawn Portfolio site" [ref=e551] [cursor=pointer]:
+            - /url: https://www.zzzzshawn.cloud/
+            - img "shawn" [ref=e552]
+            - generic [ref=e553]:
+              - generic [ref=e554]:
+                - text: shawn
+                - img [ref=e555]
+              - paragraph [ref=e557]: Portfolio site
+    - generic [ref=e558]:
+      - heading "What People Are Saying on Twitter" [level=2] [ref=e559]
+      - button "Show More" [ref=e560]
+    - generic [ref=e561]:
+      - heading "Featured on YouTube" [level=2] [ref=e562]
+      - generic [ref=e563]:
+        - button "Play testimonial 1" [ref=e564] [cursor=pointer]:
+          - img "Preview still for testimonial 1" [ref=e565]
+          - generic:
+            - img
+        - button "Play testimonial 2" [ref=e566] [cursor=pointer]:
+          - img "Preview still for testimonial 2" [ref=e567]
+          - generic:
+            - img
+        - button "Play testimonial 3" [ref=e568] [cursor=pointer]:
+          - img "Preview still for testimonial 3" [ref=e569]
+          - generic:
+            - img
+        - button "Play testimonial 4" [ref=e570] [cursor=pointer]:
+          - img "Preview still for testimonial 4" [ref=e571]
+          - generic:
+            - img
+        - button "Play testimonial 5" [ref=e572] [cursor=pointer]:
+          - img "Preview still for testimonial 5" [ref=e573]
+          - generic:
+            - img
+  - contentinfo [ref=e574]:
+    - generic [ref=e577]:
+      - text: Built by
+      - link "dillion" [ref=e578] [cursor=pointer]:
+        - /url: https://twitter.com/dillionverma
+      - text: . The source code is available on
+      - link "GitHub" [ref=e579] [cursor=pointer]:
+        - /url: https://github.com/magicuidesign/magicui
+      - text: .
+  - region "Notifications alt+T"
+  - alert [ref=e580]

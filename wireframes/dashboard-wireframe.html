@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>CRM Dashboard Wireframe — Low-fi</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    background: #d8d8d8;
+    color: #333;
+    overflow-x: auto;
+  }
+
+  /* ─── Top control bar (wireframe tool, not part of the system UI) ─── */
+  .wf-controls {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #2b2b2b;
+    color: #fff;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .wf-controls .label { font-size: 12px; opacity: 0.7; }
+  .wf-controls .title { font-size: 14px; font-weight: 600; margin-right: auto; }
+  .role-btn {
+    padding: 8px 16px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #666;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 4px;
+  }
+  .role-btn.active { background: #fff; color: #2b2b2b; border-color: #fff; font-weight: 600; }
+  .role-btn:hover:not(.active) { background: #444; }
+
+  /* ─── Canvas ─── */
+  .canvas { width: 1920px; margin: 0 auto; background: #f5f5f5; min-height: 100vh; }
+  .dashboard { display: none; }
+  .dashboard.active { display: block; }
+
+  /* ─── System Chrome: TopBar + Sidebar ─── */
+  .topbar {
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    gap: 24px;
+  }
+  .logo-placeholder {
+    width: 140px; height: 32px;
+    border: 1px dashed #999;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #777;
+  }
+  .nav-items { display: flex; gap: 4px; margin-left: 24px; }
+  .nav-item {
+    padding: 8px 14px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .nav-item.current { background: #ddd; color: #111; font-weight: 600; }
+  .topbar-right { margin-left: auto; display: flex; align-items: center; gap: 16px; }
+  .icon-placeholder {
+    width: 32px; height: 32px;
+    border: 1px dashed #999;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #777;
+    position: relative;
+  }
+  .icon-placeholder .dot {
+    position: absolute; top: -2px; right: -2px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #e74c3c; border: 1px solid #fff;
+  }
+  .user-chip {
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 12px 4px 4px; border: 1px solid #bbb; border-radius: 20px;
+  }
+  .avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #ccc; display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #666;
+  }
+  .user-info { font-size: 13px; }
+  .user-info .name { font-weight: 600; color: #222; }
+  .user-info .role { font-size: 11px; color: #777; }
+
+  /* ─── Main Layout ─── */
+  .main { display: flex; }
+  .sidebar {
+    width: 220px;
+    background: #ebebeb;
+    border-right: 1px solid #bbb;
+    padding: 24px 0;
+    min-height: calc(100vh - 64px);
+  }
+  .sidebar-item {
+    padding: 10px 24px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+  }
+  .sidebar-item.current {
+    color: #111;
+    font-weight: 600;
+    background: #dcdcdc;
+    border-left-color: #333;
+  }
+  .sidebar-item.locked {
+    color: #aaa;
+    position: relative;
+  }
+  .sidebar-item.locked::after {
+    content: '🔒';
+    font-size: 11px;
+    margin-left: 6px;
+    opacity: 0.6;
+  }
+
+  .content {
+    flex: 1;
+    padding: 32px 40px;
+  }
+
+  /* ─── Dashboard header ─── */
+  .page-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 24px;
+  }
+  .page-title {
+    font-size: 24px; font-weight: 700; color: #222;
+  }
+  .page-subtitle {
+    font-size: 13px; color: #777; margin-top: 4px;
+  }
+  .time-filter {
+    display: flex; gap: 4px; border: 1px solid #bbb; border-radius: 6px; overflow: hidden;
+  }
+  .time-filter .tf {
+    padding: 8px 14px; font-size: 13px; background: #fff; cursor: pointer; color: #555;
+  }
+  .time-filter .tf.active { background: #333; color: #fff; }
+
+  /* ─── KPI Cards row ─── */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .kpi-card {
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+  }
+  .kpi-card.priority { border: 2px solid #c0392b; background: #fff5f3; }
+  .kpi-card .kpi-label { font-size: 13px; color: #666; margin-bottom: 8px; }
+  .kpi-card .kpi-value {
+    font-size: 32px; font-weight: 700; color: #222;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .kpi-card .kpi-trend {
+    font-size: 12px; color: #27ae60; font-weight: 600;
+  }
+  .kpi-card .kpi-trend.down { color: #c0392b; }
+  .kpi-card .kpi-sub { font-size: 11px; color: #888; margin-top: 6px; }
+  .kpi-card .progress-bar {
+    height: 6px; background: #e5e5e5; border-radius: 3px; margin-top: 10px; overflow: hidden;
+  }
+  .kpi-card .progress-fill {
+    height: 100%; background: #666; border-radius: 3px;
+  }
+  .priority-badge {
+    position: absolute; top: -10px; right: 12px;
+    background: #c0392b; color: #fff; font-size: 11px;
+    padding: 3px 10px; border-radius: 10px; font-weight: 600;
+  }
+
+  /* ─── Section grid ─── */
+  .grid-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 24px; }
+  .grid-2-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  .grid-full { margin-bottom: 24px; }
+
+  .section-card {
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .section-card.highlight { border: 2px solid #444; }
+  .section-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .section-title { font-size: 16px; font-weight: 600; color: #222; }
+  .section-title .count-badge {
+    display: inline-block;
+    background: #c0392b; color: #fff;
+    font-size: 12px; padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+  }
+  .section-title .count-badge.neutral { background: #666; }
+  .section-action { font-size: 13px; color: #555; cursor: pointer; }
+  .section-action:hover { text-decoration: underline; }
+
+  /* ─── Placeholder data table ─── */
+  table.wf-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.wf-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f0f0f0;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+  }
+  table.wf-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+  table.wf-table tr:hover td { background: #fafafa; }
+  .status-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    border: 1px solid #999;
+    background: #fff;
+    color: #555;
+  }
+  .status-pill.alert { border-color: #c0392b; background: #fceae7; color: #c0392b; }
+  .status-pill.ok { border-color: #27ae60; background: #e9f7ef; color: #1e7e42; }
+  .btn-mini {
+    padding: 4px 12px; font-size: 12px; border: 1px solid #666;
+    background: #fff; border-radius: 4px; cursor: pointer;
+  }
+  .btn-mini.primary { background: #333; color: #fff; border-color: #333; }
+
+  /* ─── Placeholder chart blocks ─── */
+  .chart-placeholder {
+    border: 1px dashed #999;
+    background: repeating-linear-gradient(45deg, #fafafa, #fafafa 8px, #f0f0f0 8px, #f0f0f0 16px);
+    height: 220px;
+    display: flex; align-items: center; justify-content: center;
+    color: #777; font-size: 12px; border-radius: 4px;
+    flex-direction: column; gap: 6px;
+  }
+  .chart-placeholder .ph-title { font-weight: 600; color: #555; font-size: 13px; }
+
+  /* Funnel chart placeholder */
+  .funnel {
+    display: flex; flex-direction: column; gap: 6px; padding: 8px 0;
+  }
+  .funnel-row {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 12px;
+  }
+  .funnel-label { width: 80px; color: #555; }
+  .funnel-bar {
+    flex: 1; height: 28px; background: #ddd;
+    display: flex; align-items: center; padding-left: 12px;
+    color: #333; font-weight: 600; border-radius: 2px;
+    font-size: 12px;
+  }
+  .funnel-count { width: 60px; text-align: right; color: #666; }
+
+  /* Bar list (ranking) */
+  .bar-list { display: flex; flex-direction: column; gap: 10px; }
+  .bar-item {
+    display: grid; grid-template-columns: 80px 1fr 80px; align-items: center; gap: 12px;
+    font-size: 13px;
+  }
+  .bar-name { color: #333; }
+  .bar-track { height: 18px; background: #eee; border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; background: #666; }
+  .bar-value { text-align: right; color: #555; font-size: 12px; }
+
+  /* ─── Todo / activity list ─── */
+  .todo-list { display: flex; flex-direction: column; }
+  .todo-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid #eee;
+    font-size: 13px;
+  }
+  .todo-item:last-child { border-bottom: none; }
+  .todo-checkbox {
+    width: 16px; height: 16px; border: 1.5px solid #999; border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .todo-type {
+    display: inline-block; font-size: 11px;
+    padding: 2px 8px; border: 1px solid #999; border-radius: 3px;
+    color: #555; background: #f5f5f5;
+    flex-shrink: 0;
+  }
+  .todo-type.call { border-color: #2980b9; color: #2980b9; background: #eaf4fa; }
+  .todo-type.visit { border-color: #8e44ad; color: #8e44ad; background: #f4ecfa; }
+  .todo-type.followup { border-color: #e67e22; color: #e67e22; background: #fcf3e8; }
+  .todo-title { flex: 1; color: #333; }
+  .todo-time { font-size: 12px; color: #888; flex-shrink: 0; }
+  .todo-customer { font-size: 12px; color: #555; flex-shrink: 0; }
+
+  /* ─── Annotation callout ─── */
+  .annotation {
+    background: #fffbdc;
+    border: 1px solid #e3c96a;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #6b5500;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .annotation::before {
+    content: '📝';
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .annotation strong { color: #5b4100; }
+
+  /* Inline note tag */
+  .note {
+    display: inline-block;
+    background: #fffbdc;
+    border: 1px solid #e3c96a;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #6b5500;
+    margin-left: 6px;
+  }
+
+  /* Role banner */
+  .role-banner {
+    padding: 12px 40px;
+    font-size: 13px;
+    background: #fff7d1;
+    border-bottom: 1px solid #e3c96a;
+    color: #5b4100;
+  }
+  .role-banner strong { color: #2b2b2b; }
+
+  /* Divider between dashboards when stacked */
+  .wf-footer {
+    padding: 24px 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    background: #e8e8e8;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Wireframe Control Bar (Not part of the system UI) ===== -->
+<div class="wf-controls">
+  <span class="title">CRM Dashboard — Low-fi Wireframe (1920)</span>
+  <span class="label">切換角色檢視：</span>
+  <button class="role-btn active" data-role="manager">經理</button>
+  <button class="role-btn" data-role="ampm">AM / PM</button>
+  <button class="role-btn" data-role="assistant">特助</button>
+</div>
+
+<div class="canvas">
+
+<!-- ========================================================================== -->
+<!-- ============================  經理 Dashboard  ============================ -->
+<!-- ========================================================================== -->
+<div class="dashboard active" data-role="manager">
+
+  <!-- System TopBar -->
+  <div class="topbar">
+    <div class="logo-placeholder">LOGO</div>
+    <div class="nav-items">
+      <div class="nav-item current">Dashboard</div>
+      <div class="nav-item">客戶</div>
+      <div class="nav-item">報價</div>
+      <div class="nav-item">訂單</div>
+      <div class="nav-item">系統設定</div>
+    </div>
+    <div class="topbar-right">
+      <div class="icon-placeholder">🔍</div>
+      <div class="icon-placeholder">🔔<span class="dot"></span></div>
+      <div class="user-chip">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <div class="name">陳經理</div>
+          <div class="role">經理</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Role Banner (wireframe annotation, not real UI) -->
+  <div class="role-banner">
+    <strong>[經理視角]</strong>　最重要動作：<strong>審核報價單</strong>。日常巡檢大額案件、業績達成、各 AM/PM 狀況。
+  </div>
+
+  <div class="main">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-item current">總覽 Dashboard</div>
+      <div class="sidebar-item">客戶管理</div>
+      <div class="sidebar-item">報價管理</div>
+      <div class="sidebar-item">訂單管理</div>
+      <div class="sidebar-item">通知中心</div>
+      <div class="sidebar-item">系統設定</div>
+      <div class="sidebar-item">使用者管理</div>
+      <div class="sidebar-item">操作紀錄</div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <div class="page-header">
+        <div>
+          <div class="page-title">總覽 Dashboard</div>
+          <div class="page-subtitle">2026/04/20 — 週一　｜　早安，陳經理</div>
+        </div>
+        <div class="time-filter">
+          <div class="tf">今日</div>
+          <div class="tf">本週</div>
+          <div class="tf active">本月</div>
+          <div class="tf">本季</div>
+          <div class="tf">本年</div>
+        </div>
+      </div>
+
+      <div class="annotation">
+        <div>
+          <strong>設計重點：</strong>第一屏（不用 scroll）就要看到「待我審核」。整體 KPI 以「經理最關心的決策資訊」為主 ─ 業績達成、案件狀態、團隊績效。
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-row">
+        <div class="kpi-card priority">
+          <div class="priority-badge">最優先</div>
+          <div class="kpi-label">待我審核報價單</div>
+          <div class="kpi-value">5<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">最久已等待 2 天　｜　點擊直接進入審核列表</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">本月成案金額</div>
+          <div class="kpi-value">NT$ 167<span class="kpi-trend">萬</span></div>
+          <div class="kpi-sub">達成率 83.5%（目標 200 萬）</div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 83.5%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Pipeline 總金額</div>
+          <div class="kpi-value">NT$ 892<span class="kpi-trend">萬</span></div>
+          <div class="kpi-sub">議價中 28 件　｜　↑ vs 上月 +12%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">本月新增客戶</div>
+          <div class="kpi-value">24<span class="kpi-trend up">↑</span></div>
+          <div class="kpi-sub">較上月 +3 位</div>
+        </div>
+      </div>
+
+      <!-- Priority: 待審核列表 + 報價單漏斗 -->
+      <div class="grid-2">
+        <div class="section-card highlight">
+          <div class="section-header">
+            <div class="section-title">待我審核的報價單<span class="count-badge">5</span></div>
+            <div class="section-action">全部審核 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr>
+                <th>編號</th><th>客戶</th><th>金額</th><th>負責 AM</th><th>送審時間</th><th>等待</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Q-20260420-003</td><td>XX 科技股份有限公司</td><td>NT$ 450,000</td><td>王美玲</td><td>04/20 10:22</td>
+                <td><span class="status-pill">今日</span></td>
+                <td><button class="btn-mini primary">審核</button></td>
+              </tr>
+              <tr>
+                <td>Q-20260419-007</td><td>OO 生醫有限公司</td><td>NT$ 280,000</td><td>李大華</td><td>04/19 16:40</td>
+                <td><span class="status-pill">1 天</span></td>
+                <td><button class="btn-mini primary">審核</button></td>
+              </tr>
+              <tr>
+                <td>Q-20260418-012</td><td>△△ 物流</td><td>NT$ 1,200,000</td><td>王美玲</td><td>04/18 09:15</td>
+                <td><span class="status-pill alert">2 天</span></td>
+                <td><button class="btn-mini primary">審核</button></td>
+              </tr>
+              <tr>
+                <td>Q-20260419-010</td><td>□□ 光電</td><td>NT$ 75,000</td><td>張小明</td><td>04/19 14:02</td>
+                <td><span class="status-pill">1 天</span></td>
+                <td><button class="btn-mini primary">審核</button></td>
+              </tr>
+              <tr>
+                <td>Q-20260420-001</td><td>XX 科技股份有限公司</td><td>NT$ 95,000</td><td>李大華</td><td>04/20 09:08</td>
+                <td><span class="status-pill">今日</span></td>
+                <td><button class="btn-mini primary">審核</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="annotation" style="margin-top: 16px;">
+            <div><strong>互動：</strong>等待 2 天以上的案件用紅色警示；點「審核」直接跳到報價詳情頁（不跳過濾列表）。</div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">報價單漏斗</div>
+            <div class="section-action">詳細報表 →</div>
+          </div>
+          <div class="funnel">
+            <div class="funnel-row">
+              <div class="funnel-label">草稿</div>
+              <div class="funnel-bar" style="width: 100%">12</div>
+              <div class="funnel-count">NT$ 180 萬</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">待審核</div>
+              <div class="funnel-bar" style="width: 85%">5</div>
+              <div class="funnel-count">NT$ 210 萬</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">已報價</div>
+              <div class="funnel-bar" style="width: 70%">18</div>
+              <div class="funnel-count">NT$ 420 萬</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">議價中</div>
+              <div class="funnel-bar" style="width: 55%">28</div>
+              <div class="funnel-count">NT$ 892 萬</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">已成案</div>
+              <div class="funnel-bar" style="width: 30%; background:#27ae60">17</div>
+              <div class="funnel-count">NT$ 167 萬</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">未成案</div>
+              <div class="funnel-bar" style="width: 15%; background:#aaa">8</div>
+              <div class="funnel-count">NT$ 62 萬</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AM/PM 排行 + 大額案件 -->
+      <div class="grid-2-equal">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">AM / PM 本月業績排行</div>
+            <div class="section-action">完整報表 →</div>
+          </div>
+          <div class="bar-list">
+            <div class="bar-item">
+              <div class="bar-name">王美玲</div>
+              <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+              <div class="bar-value">NT$ 78 萬</div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-name">李大華</div>
+              <div class="bar-track"><div class="bar-fill" style="width: 72%"></div></div>
+              <div class="bar-value">NT$ 56 萬</div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-name">張小明</div>
+              <div class="bar-track"><div class="bar-fill" style="width: 42%"></div></div>
+              <div class="bar-value">NT$ 33 萬</div>
+            </div>
+          </div>
+          <div class="annotation" style="margin-top: 16px;">
+            <div><strong>資訊：</strong>顯示每位 AM/PM 的本月成案金額、成案數、Pipeline 總水位（hover 展開）。</div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">大額議價中案件 Top 5</div>
+            <div class="section-action">全部查看 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr><th>客戶</th><th>金額</th><th>AM</th><th>最近聯絡</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>△△ 物流</td><td>NT$ 320 萬</td><td>王美玲</td><td>04/18</td></tr>
+              <tr><td>◇◇ 製造</td><td>NT$ 180 萬</td><td>李大華</td><td>04/17</td></tr>
+              <tr><td>XX 科技</td><td>NT$ 145 萬</td><td>王美玲</td><td>04/15</td></tr>
+              <tr><td>○○ 電商</td><td>NT$ 98 萬</td><td>張小明</td><td>04/12 <span class="note">8天未聯絡</span></td></tr>
+              <tr><td>▽▽ 貿易</td><td>NT$ 86 萬</td><td>李大華</td><td>04/19</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 客戶集中度警示 -->
+      <div class="grid-full">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">客戶集中度 / 風險警示</div>
+            <div class="section-action">查看完整風險報告 →</div>
+          </div>
+          <div class="chart-placeholder">
+            <div class="ph-title">[ 圓餅圖 ]  客戶佔營收比例</div>
+            <div>單一客戶佔營收 &gt; 30% 的警示　｜　近 90 天無互動的大客戶清單</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================== -->
+<!-- ============================  AM/PM Dashboard  =========================== -->
+<!-- ========================================================================== -->
+<div class="dashboard" data-role="ampm">
+
+  <div class="topbar">
+    <div class="logo-placeholder">LOGO</div>
+    <div class="nav-items">
+      <div class="nav-item current">Dashboard</div>
+      <div class="nav-item">客戶</div>
+      <div class="nav-item">報價</div>
+      <div class="nav-item">訂單</div>
+    </div>
+    <div class="topbar-right">
+      <div class="icon-placeholder">🔍</div>
+      <div class="icon-placeholder">🔔<span class="dot"></span></div>
+      <div class="user-chip">
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <div class="name">王美玲</div>
+          <div class="role">AM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-banner">
+    <strong>[AM/PM 視角]</strong>　最重要動作：<strong>處理今日待辦、追客戶</strong>。可看全公司 Dashboard 資訊，但重點切成「我的」。
+  </div>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-item current">總覽 Dashboard</div>
+      <div class="sidebar-item">客戶管理</div>
+      <div class="sidebar-item">報價管理</div>
+      <div class="sidebar-item">訂單管理</div>
+      <div class="sidebar-item">通知中心</div>
+      <div class="sidebar-item locked">系統設定</div>
+      <div class="sidebar-item locked">使用者管理</div>
+      <div class="sidebar-item locked">操作紀錄</div>
+    </div>
+
+    <div class="content">
+
+      <div class="page-header">
+        <div>
+          <div class="page-title">總覽 Dashboard</div>
+          <div class="page-subtitle">2026/04/20 — 週一　｜　早安，王美玲</div>
+        </div>
+        <div class="time-filter">
+          <div class="tf active">今日</div>
+          <div class="tf">本週</div>
+          <div class="tf">本月</div>
+          <div class="tf">本季</div>
+        </div>
+      </div>
+
+      <div class="annotation">
+        <div>
+          <strong>設計重點：</strong>第一屏放「今日待辦」，因為 AM 每天最重要的就是知道「今天要打誰電話、去拜訪誰、追哪張報價」。右側 KPI 卡片強調個人績效（不跟別人比較）。
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-row">
+        <div class="kpi-card priority">
+          <div class="priority-badge">待辦</div>
+          <div class="kpi-label">我的今日待辦</div>
+          <div class="kpi-value">7<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">3 通話　｜　2 拜訪　｜　2 追蹤</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">我的本月業績</div>
+          <div class="kpi-value">NT$ 78<span class="kpi-trend">萬</span></div>
+          <div class="kpi-sub">達成率 78%（個人目標 100 萬）</div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">我負責的客戶</div>
+          <div class="kpi-value">42<span class="kpi-trend">家</span></div>
+          <div class="kpi-sub">本週新接 2 家　｜　3 家需追蹤</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">我的進行中報價</div>
+          <div class="kpi-value">9<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">草稿 2　｜　待審 1　｜　議價中 6</div>
+        </div>
+      </div>
+
+      <!-- 今日待辦 (核心) -->
+      <div class="grid-2">
+        <div class="section-card highlight">
+          <div class="section-header">
+            <div class="section-title">我的今日待辦<span class="count-badge neutral">7</span></div>
+            <div class="section-action">新增 + ／看全部 →</div>
+          </div>
+          <div class="todo-list">
+            <div class="todo-item">
+              <div class="todo-checkbox"></div>
+              <span class="todo-type call">通話</span>
+              <div class="todo-title">追 Q-20260418-012 報價回覆</div>
+              <div class="todo-customer">△△ 物流 · 林經理</div>
+              <div class="todo-time">10:30</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-checkbox"></div>
+              <span class="todo-type visit">拜訪</span>
+              <div class="todo-title">Q2 新案訪談</div>
+              <div class="todo-customer">XX 科技 · 陳協理</div>
+              <div class="todo-time">14:00</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-checkbox"></div>
+              <span class="todo-type followup">追蹤</span>
+              <div class="todo-title">請特助開報價單</div>
+              <div class="todo-customer">◇◇ 製造 · 新詢價 180 萬</div>
+              <div class="todo-time">15:00</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-checkbox"></div>
+              <span class="todo-type call">通話</span>
+              <div class="todo-title">議價條件回覆</div>
+              <div class="todo-customer">▽▽ 貿易 · 黃總</div>
+              <div class="todo-time">16:30</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-checkbox"></div>
+              <span class="todo-type visit">拜訪</span>
+              <div class="todo-title">合約簽署</div>
+              <div class="todo-customer">OO 生醫 · 張總</div>
+              <div class="todo-time">17:00</div>
+            </div>
+          </div>
+          <div class="annotation" style="margin-top: 16px;">
+            <div><strong>互動：</strong>勾選完成 → 同步到「客戶詳情頁」的聯絡紀錄。點客戶名 → 跳客戶詳情。時間精確到分鐘（對應需求）。</div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">客戶聯絡提醒<span class="count-badge">3</span></div>
+            <div class="section-action">設定條件 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr><th>客戶</th><th>最近聯絡</th><th>操作</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>○○ 電商</td>
+                <td><span class="status-pill alert">12 天前</span></td>
+                <td><button class="btn-mini">登錄聯絡</button></td>
+              </tr>
+              <tr>
+                <td>▲▲ 印刷</td>
+                <td><span class="status-pill alert">18 天前</span></td>
+                <td><button class="btn-mini">登錄聯絡</button></td>
+              </tr>
+              <tr>
+                <td>※※ 顧問</td>
+                <td><span class="status-pill">45 天前</span></td>
+                <td><button class="btn-mini">登錄聯絡</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="annotation" style="margin-top: 12px;">
+            <div><strong>規則：</strong>超過 N 天沒任何聯絡紀錄就跳出來（N 可在個人設定）。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 我的進行中報價 + 我負責客戶最近變動 -->
+      <div class="grid-2-equal">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">我的進行中報價單</div>
+            <div class="section-action">全部 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr><th>編號</th><th>客戶</th><th>金額</th><th>狀態</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Q-20260418-012</td><td>△△ 物流</td><td>NT$ 320 萬</td><td><span class="status-pill">議價中</span></td></tr>
+              <tr><td>Q-20260415-005</td><td>XX 科技</td><td>NT$ 145 萬</td><td><span class="status-pill">議價中</span></td></tr>
+              <tr><td>Q-20260419-010</td><td>□□ 光電</td><td>NT$ 7.5 萬</td><td><span class="status-pill">待審核</span></td></tr>
+              <tr><td>Q-20260417-003</td><td>◇◇ 製造</td><td>NT$ 180 萬</td><td><span class="status-pill ok">已報價</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">我負責客戶的最近變動</div>
+            <div class="section-action">編輯歷程 →</div>
+          </div>
+          <div class="todo-list">
+            <div class="todo-item">
+              <div class="todo-type">編輯</div>
+              <div class="todo-title">張小明 更新了「OO 生醫」的聯絡電話</div>
+              <div class="todo-time">2 小時前</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-type">新增</div>
+              <div class="todo-title">特助 新增了「△△ 物流」的報價 V2</div>
+              <div class="todo-time">4 小時前</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-type">紀錄</div>
+              <div class="todo-title">李大華 新增「XX 科技」的拜訪紀錄</div>
+              <div class="todo-time">昨天 16:40</div>
+            </div>
+          </div>
+          <div class="annotation" style="margin-top: 12px;">
+            <div><strong>來源：</strong>對應「操作紀錄」系統，只過濾「我負責的客戶」。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 進行中訂單 (新增 widget：專案進度狀態追蹤) -->
+      <div class="grid-full">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">我負責客戶的進行中訂單<span class="count-badge neutral">5</span></div>
+            <div class="section-action">訂單管理 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr>
+                <th>訂單編號</th><th>客戶</th><th>金額</th><th>當前狀態</th><th>狀態指標</th><th>預計交付</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>O-20260320-035</td><td>◇◇ 製造</td><td>NT$ 180 萬</td>
+                <td><span class="status-pill" style="border-color:#b7950b; color:#9a7d0a; background:#fcf3cf">驗收中</span></td>
+                <td><span class="status-pill alert">剩 3 天</span></td>
+                <td>2026/04/23</td>
+                <td><button class="btn-mini">查看</button></td>
+              </tr>
+              <tr>
+                <td>O-20260328-038</td><td>▽▽ 貿易</td><td>NT$ 86 萬</td>
+                <td><span class="status-pill" style="border-color:#e67e22; color:#b9600e; background:#fef5e7">已交付</span></td>
+                <td>已交付 7 天 <span class="note">待啟動驗收</span></td>
+                <td>2026/04/13（已交付）</td>
+                <td><button class="btn-mini">查看</button></td>
+              </tr>
+              <tr>
+                <td>O-20260415-045</td><td>XX 科技</td><td>NT$ 45 萬</td>
+                <td><span class="status-pill" style="border-color:#1f618d; color:#1f618d; background:#d6eaf8">交付中 60%</span></td>
+                <td>距交付 25 天</td>
+                <td>2026/05/15</td>
+                <td><button class="btn-mini">查看</button></td>
+              </tr>
+              <tr>
+                <td>O-20260410-042</td><td>△△ 物流</td><td>NT$ 320 萬</td>
+                <td><span class="status-pill" style="border-color:#2980b9; color:#2980b9; background:#eaf4fa">排程中</span></td>
+                <td>距開工 8 天 · 設計師 王○○</td>
+                <td>2026/06/30</td>
+                <td><button class="btn-mini">查看</button></td>
+              </tr>
+              <tr>
+                <td>O-20260418-047</td><td>OO 生醫</td><td>NT$ 28 萬</td>
+                <td><span class="status-pill">待排程</span></td>
+                <td>成案 2 天</td>
+                <td>—</td>
+                <td><button class="btn-mini">查看</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="annotation" style="margin-top: 16px;">
+            <div>
+              <strong>排序規則：</strong>紅/黃警示狀態（驗收快到期、已交付太久未啟動驗收）排最上方。<br>
+              <strong>不含：</strong>已結案、已取消（已結案近 30 天可另闢獨立區塊）。<br>
+              <strong>進度 % 更新：</strong>由特助每週更新一次（手動輸入 0 / 25 / 50 / 75 / 100）。<br>
+              <strong>狀態定義：</strong>待排程 → 排程中 → 交付中 → 已交付 → 驗收中 → 已結案（任一階段可轉「已取消」）。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 本月業績進度 (全寬視覺化) -->
+      <div class="grid-full">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">我的本月業績趨勢</div>
+            <div class="section-action">比較其他月份 →</div>
+          </div>
+          <div class="chart-placeholder">
+            <div class="ph-title">[ 折線圖 / 柱狀圖 ]</div>
+            <div>X 軸：本月每日　｜　Y 軸：成案金額累計　｜　虛線：個人目標</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================== -->
+<!-- ============================  特助 Dashboard  ============================ -->
+<!-- ========================================================================== -->
+<div class="dashboard" data-role="assistant">
+
+  <div class="topbar">
+    <div class="logo-placeholder">LOGO</div>
+    <div class="nav-items">
+      <div class="nav-item current">Dashboard</div>
+      <div class="nav-item">客戶</div>
+      <div class="nav-item">報價</div>
+      <div class="nav-item">訂單</div>
+      <div class="nav-item">系統設定</div>
+    </div>
+    <div class="topbar-right">
+      <div class="icon-placeholder">🔍</div>
+      <div class="icon-placeholder">🔔<span class="dot"></span></div>
+      <div class="user-chip">
+        <div class="avatar">H</div>
+        <div class="user-info">
+          <div class="name">林靜宜</div>
+          <div class="role">特助</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-banner">
+    <strong>[特助視角]</strong>　最重要動作：<strong>開立報價單、寄送給客戶</strong>。流程樞紐 ─ 幾乎所有報價流轉都經過她。
+  </div>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-item current">總覽 Dashboard</div>
+      <div class="sidebar-item">客戶管理</div>
+      <div class="sidebar-item">報價管理</div>
+      <div class="sidebar-item">訂單管理</div>
+      <div class="sidebar-item">通知中心</div>
+      <div class="sidebar-item">系統設定 <span class="note">部分</span></div>
+      <div class="sidebar-item locked">使用者管理</div>
+      <div class="sidebar-item">操作紀錄</div>
+    </div>
+
+    <div class="content">
+
+      <div class="page-header">
+        <div>
+          <div class="page-title">總覽 Dashboard</div>
+          <div class="page-subtitle">2026/04/20 — 週一　｜　早安，林靜宜</div>
+        </div>
+        <div class="time-filter">
+          <div class="tf active">今日</div>
+          <div class="tf">本週</div>
+          <div class="tf">本月</div>
+        </div>
+      </div>
+
+      <div class="annotation">
+        <div>
+          <strong>設計重點：</strong>以「工作佇列」為中心。特助要一眼看出「經理核准了什麼還沒寄」「AM 要我開什麼報價」「哪張報價寄出後客戶沒回」。
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-row">
+        <div class="kpi-card priority">
+          <div class="priority-badge">待寄送</div>
+          <div class="kpi-label">已核准 待寄送給客戶</div>
+          <div class="kpi-value">3<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">經理剛核准　｜　不要讓客戶等太久</div>
+        </div>
+        <div class="kpi-card priority" style="border-color:#e67e22; background:#fef5eb;">
+          <div class="priority-badge" style="background:#e67e22;">待開立</div>
+          <div class="kpi-label">AM 請我開的報價單</div>
+          <div class="kpi-value">2<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">來自待辦追蹤（追蹤類型＝請特助開報價）</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">待客戶回覆報價單</div>
+          <div class="kpi-value">18<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">平均寄送後 4.2 天</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">本月已寄送報價單</div>
+          <div class="kpi-value">42<span class="kpi-trend">件</span></div>
+          <div class="kpi-sub">vs 上月 +6 件</div>
+        </div>
+      </div>
+
+      <!-- 待寄送 (核心) -->
+      <div class="grid-full">
+        <div class="section-card highlight">
+          <div class="section-header">
+            <div class="section-title">已核准 · 待我寄送給客戶<span class="count-badge">3</span></div>
+            <div class="section-action">報價管理 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr>
+                <th>編號</th><th>客戶</th><th>金額</th><th>負責 AM</th><th>核准時間</th><th>聯絡窗口</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Q-20260420-003</td><td>XX 科技股份有限公司</td><td>NT$ 450,000</td><td>王美玲</td><td>04/20 11:05</td>
+                <td>陳協理 · chen@xxtech...</td>
+                <td><button class="btn-mini primary">寄送</button></td>
+              </tr>
+              <tr>
+                <td>Q-20260419-007</td><td>OO 生醫有限公司</td><td>NT$ 280,000</td><td>李大華</td><td>04/20 09:42</td>
+                <td>張總 · chang@oobio...</td>
+                <td><button class="btn-mini primary">寄送</button></td>
+              </tr>
+              <tr>
+                <td>Q-20260419-008</td><td>◎◎ 食品</td><td>NT$ 156,000</td><td>王美玲</td><td>04/19 17:20</td>
+                <td>吳經理 · wu@yyfood...</td>
+                <td><button class="btn-mini primary">寄送</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="annotation" style="margin-top: 16px;">
+            <div><strong>互動：</strong>點「寄送」→ 彈出預覽信件 → 可改主旨/附件 → 寄送後記錄寄送時間、收件人、寄送人（特助帳號）。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 待開立 + 報價狀態總覽 -->
+      <div class="grid-2">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">AM 請我開的報價單<span class="count-badge" style="background:#e67e22;">2</span></div>
+            <div class="section-action">待辦追蹤 →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr>
+                <th>請求時間</th><th>來源 AM</th><th>客戶</th><th>預估金額</th><th>需求摘要</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>今日 09:40</td><td>王美玲</td><td>◇◇ 製造</td><td>~180 萬</td>
+                <td>A 系列 × 3，加年度維護</td>
+                <td><button class="btn-mini primary">開立</button></td>
+              </tr>
+              <tr>
+                <td>昨日 16:22</td><td>李大華</td><td>※※ 顧問</td><td>~35 萬</td>
+                <td>單次導入</td>
+                <td><button class="btn-mini primary">開立</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="annotation" style="margin-top: 12px;">
+            <div><strong>資料來源：</strong>「客戶聯絡紀錄 / 待辦追蹤」中類型＝"請特助開報價"的項目自動帶進來。</div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">報價單狀態總覽（全公司）</div>
+            <div class="section-action">詳細報表 →</div>
+          </div>
+          <div class="funnel">
+            <div class="funnel-row">
+              <div class="funnel-label">草稿</div>
+              <div class="funnel-bar" style="width: 40%">12</div>
+              <div class="funnel-count">我的 8</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">待審核</div>
+              <div class="funnel-bar" style="width: 30%">5</div>
+              <div class="funnel-count">卡在經理</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">已核准</div>
+              <div class="funnel-bar" style="width: 20%; background:#c0392b">3</div>
+              <div class="funnel-count">待我寄</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">已寄出</div>
+              <div class="funnel-bar" style="width: 70%">18</div>
+              <div class="funnel-count">待客戶回</div>
+            </div>
+            <div class="funnel-row">
+              <div class="funnel-label">議價中</div>
+              <div class="funnel-bar" style="width: 85%">28</div>
+              <div class="funnel-count">AM 跟</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 客戶回覆追蹤 + 今日操作紀錄 -->
+      <div class="grid-2-equal">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">寄送後 5 天以上沒回覆</div>
+            <div class="section-action">提醒 AM →</div>
+          </div>
+          <table class="wf-table">
+            <thead>
+              <tr><th>客戶</th><th>編號</th><th>已寄送</th><th>AM</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>△△ 物流</td><td>Q-...-012</td><td><span class="status-pill alert">8 天</span></td><td>王美玲</td></tr>
+              <tr><td>▲▲ 印刷</td><td>Q-...-009</td><td><span class="status-pill alert">6 天</span></td><td>張小明</td></tr>
+              <tr><td>◎◎ 食品</td><td>Q-...-004</td><td><span class="status-pill">5 天</span></td><td>李大華</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">今日我的操作紀錄</div>
+            <div class="section-action">完整操作紀錄 →</div>
+          </div>
+          <div class="todo-list">
+            <div class="todo-item">
+              <div class="todo-type">寄送</div>
+              <div class="todo-title">Q-20260419-006 寄送給 ▽▽ 貿易</div>
+              <div class="todo-time">09:55</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-type">送審</div>
+              <div class="todo-title">Q-20260420-003 送審（陳經理）</div>
+              <div class="todo-time">10:22</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-type">開立</div>
+              <div class="todo-title">建立 Q-20260420-004 草稿</div>
+              <div class="todo-time">11:10</div>
+            </div>
+            <div class="todo-item">
+              <div class="todo-type">編輯</div>
+              <div class="todo-title">編輯 XX 科技 聯絡人資訊</div>
+              <div class="todo-time">11:35</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="wf-footer">
+  Low-fi Wireframe · 1920px Desktop · 三角色共用同一 Dashboard 路由，後端依角色取資料 · 版本 2026/04/20
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.role-btn');
+  const dashboards = document.querySelectorAll('.dashboard');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const role = btn.dataset.role;
+      buttons.forEach(b => b.classList.toggle('active', b === btn));
+      dashboards.forEach(d => d.classList.toggle('active', d.dataset.role === role));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

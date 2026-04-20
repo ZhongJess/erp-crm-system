@@ -1,0 +1,128 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "ERP CRM" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e9]
+        - generic [ref=e13]: ERP CRM
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "客戶概覽" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: 客戶概覽
+          - listitem [ref=e24]:
+            - link "客戶管理" [ref=e25] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e26]
+              - generic [ref=e31]: 客戶管理
+          - listitem [ref=e32]:
+            - link "報價與合約" [ref=e33] [cursor=pointer]:
+              - /url: /quotations
+              - img [ref=e34]
+              - generic [ref=e37]: 報價與合約
+          - listitem [ref=e38]:
+            - link "訂單管理" [ref=e39] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e40]
+              - generic [ref=e44]: 訂單管理
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "通知中心" [ref=e48] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e49]
+              - generic [ref=e52]: 通知中心
+            - generic: "3"
+          - listitem [ref=e53]:
+            - link "系統設定" [ref=e54] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e55]
+              - generic [ref=e58]: 系統設定
+      - button "王 王小明 業務主管" [ref=e60]:
+        - generic [ref=e62]: 王
+        - generic [ref=e63]:
+          - generic [ref=e64]: 王小明
+          - generic [ref=e65]: 業務主管
+        - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - button "Toggle Sidebar" [ref=e71]:
+            - img
+            - generic [ref=e72]: Toggle Sidebar
+          - navigation [ref=e73]:
+            - link "報價與合約" [ref=e75] [cursor=pointer]:
+              - /url: /quotations
+            - generic [ref=e76]:
+              - img [ref=e77]
+              - generic [ref=e79]: 新增報價
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - img [ref=e82]
+              - searchbox "搜尋客戶、報價單..." [ref=e85]
+            - button "新增" [ref=e86]
+            - button "切換深色模式" [ref=e87]:
+              - img
+            - button "2" [ref=e88]:
+              - img
+              - generic [ref=e89]: "2"
+        - main [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - heading "新增報價" [level=1] [ref=e93]
+              - paragraph [ref=e94]: 報價單號與版本將由系統自動產生
+            - generic [ref=e95]:
+              - button "取消" [ref=e96]
+              - button "另存新版" [ref=e97]:
+                - img
+                - text: 另存新版
+              - button "匯出 PDF" [ref=e98]:
+                - img
+                - text: 匯出 PDF
+              - button "儲存草稿" [ref=e99]:
+                - img
+                - text: 儲存草稿
+          - generic [ref=e100]:
+            - generic [ref=e102]: 基本資訊
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]
+                - generic [ref=e110]
+              - generic [ref=e114]:
+                - generic [ref=e115]
+                - generic [ref=e119]
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e129]: 報價明細
+              - alert [ref=e130]:
+                - img [ref=e131]
+                - generic [ref=e133]: 拖拉項目可調整順序
+            - generic [ref=e134]:
+              - table [ref=e137]:
+                - rowgroup [ref=e138]
+                - rowgroup [ref=e149]
+                - rowgroup [ref=e173]
+              - button "新增項目" [ref=e192]:
+                - img
+                - text: 新增項目
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]: 備註
+                - button "罐頭文字" [ref=e197]
+              - textbox "請輸入備註或從罐頭文字帶入常用條款..." [ref=e199]
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - generic [ref=e202]: 付款條件
+                - button "罐頭文字" [ref=e203]
+              - textbox "請輸入付款條件，如：簽約後 30 天內支付 50%，驗收後支付餘款" [ref=e205]
+          - generic [ref=e207] [cursor=pointer]:
+            - generic [ref=e208]:
+              - img [ref=e209]
+              - generic [ref=e213]: 版本歷程
+            - img [ref=e214]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e221] [cursor=pointer]:
+    - img [ref=e222]
+  - alert [ref=e225]
