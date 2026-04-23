@@ -33,7 +33,7 @@ import {
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 
 const mainNavItems = [
-  { title: '客戶概覽',   url: '/dashboard',     icon: LayoutDashboard },
+  { title: '客戶總覽',   url: '/dashboard',     icon: LayoutDashboard },
   { title: '客戶管理',   url: '/customers',     icon: Users },
   { title: '報價與合約', url: '/quotations',    icon: FileText },
   { title: '訂單管理',   url: '/orders',        icon: ShoppingCart },

@@ -5,21 +5,12 @@ export const dynamic = 'force-dynamic'
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-  AlertTriangle,
   ChevronRight,
   Clock,
-  TrendingUp,
   Users,
   FileText,
   Send,
-  Calendar,
-  CheckCircle2,
-  Eye,
-  Package,
   ClipboardList,
-  Phone,
-  MapPin,
-  ArrowUpRight,
   Bell,
 } from 'lucide-react'
 
@@ -37,51 +28,13 @@ import {
   TableRow,
 } from '@/components/ui/table'
 
-import {
-  type ProgressStatus,
-  progressStatusConfig,
-} from '@/lib/order-progress'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
-type Role = 'manager' | 'am' | 'assistant'
+type Role = 'manager' | 'am'
 type TimePeriod = '今日' | '本週' | '本月' | '本季' | '本年'
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
-
-function ProgressStatusBadge({ status }: { status: ProgressStatus }) {
-  const cfg = progressStatusConfig[status]
-  return (
-    <span
-      className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${cfg.className}`}
-    >
-      {cfg.label}
-    </span>
-  )
-}
-
-function IndicatorBadge({
-  text,
-  color,
-}: {
-  text: string
-  color: 'red' | 'orange' | 'none'
-}) {
-  if (color === 'red')
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full border border-red-200 bg-red-50 px-2 py-0.5 text-xs font-medium text-red-600">
-        <AlertTriangle className="h-3 w-3 shrink-0" />
-        {text}
-      </span>
-    )
-  if (color === 'orange')
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full border border-orange-200 bg-orange-50 px-2 py-0.5 text-xs font-medium text-orange-700">
-        {text}
-      </span>
-    )
-  return <span className="text-xs text-muted-foreground">{text}</span>
-}
 
 interface KpiCardProps {
   label: string
@@ -377,89 +330,6 @@ const amQuotes = [
   },
 ]
 
-const recentChanges = [
-  {
-    action: '編輯',
-    desc: '張小明 更新了「宏安生醫」的聯絡電話',
-    time: '2 小時前',
-  },
-  {
-    action: '新增',
-    desc: '特助 新增了「承泰物流」的報價 V2',
-    time: '4 小時前',
-  },
-  {
-    action: '紀錄',
-    desc: '李大華 新增「遠東數位科技」的拜訪紀錄',
-    time: '2026/04/19 16:40',
-  },
-]
-
-// sorted by alert priority: uat<3days → delivered>7days → in_delivery → scheduling → pending_schedule
-const amActiveOrders: {
-  id: string
-  customer: string
-  amount: number
-  progressStatus: ProgressStatus
-  progressPercent?: number
-  indicator: string
-  indicatorColor: 'red' | 'orange' | 'none'
-  deliveryDue: string
-}[] = [
-  {
-    id: 'O-20260320-035',
-    customer: '瑞豐製造有限公司',
-    amount: 1800000,
-    progressStatus: 'uat',
-    indicator: '剩 3 天',
-    indicatorColor: 'red',
-    deliveryDue: '2026/04/23',
-  },
-  {
-    id: 'O-20260328-038',
-    customer: '新創智能開發',
-    amount: 860000,
-    progressStatus: 'delivered',
-    indicator: '已交付 8 天，待啟動驗收',
-    indicatorColor: 'orange',
-    deliveryDue: '2026/04/12（已交付）',
-  },
-  {
-    id: 'O-20260415-045',
-    customer: '遠東數位科技',
-    amount: 450000,
-    progressStatus: 'in_delivery',
-    progressPercent: 60,
-    indicator: '距交付 25 天',
-    indicatorColor: 'none',
-    deliveryDue: '2026/05/15',
-  },
-  {
-    id: 'O-20260410-042',
-    customer: '天成光電股份有限公司',
-    amount: 3200000,
-    progressStatus: 'scheduling',
-    indicator: '距開工 8 天 · 設計師 林○○',
-    indicatorColor: 'none',
-    deliveryDue: '2026/06/30',
-  },
-  {
-    id: 'O-20260418-047',
-    customer: '宏安生醫科技',
-    amount: 280000,
-    progressStatus: 'pending_schedule',
-    indicator: '成案 2 天',
-    indicatorColor: 'none',
-    deliveryDue: '—',
-  },
-]
-
-const amTrendData = {
-  months: ['11月', '12月', '1月', '2月', '3月', '4月'],
-  personal: [52, 63, 58, 66, 71, 78],
-  target: [100, 100, 100, 100, 100, 100],
-}
-
 // ── Mock data: Assistant ──────────────────────────────────────────────────────
 
 const pendingSendQuotes = [
@@ -489,50 +359,6 @@ const pendingSendQuotes = [
   },
 ]
 
-const amRequestQuotes = [
-  {
-    requestedAt: '2026/04/20 09:40',
-    am: '王美玲',
-    customer: '瑞豐製造有限公司',
-    estimateWan: 180,
-    note: 'A 系列 × 3，加年度維護',
-  },
-  {
-    requestedAt: '2026/04/19 16:22',
-    am: '李大華',
-    customer: '慧聯顧問有限公司',
-    estimateWan: 35,
-    note: '單次導入',
-  },
-]
-
-const assistantFunnel = [
-  { stage: '草稿', count: 12, note: '我的 8', pct: 40, color: 'bg-gray-300' },
-  {
-    stage: '待審核',
-    count: 5,
-    note: '卡在經理',
-    pct: 30,
-    color: 'bg-blue-300',
-  },
-  {
-    stage: '已核准',
-    count: 3,
-    note: '待我寄',
-    pct: 20,
-    color: 'bg-red-400',
-    highlight: true,
-  },
-  {
-    stage: '已寄出',
-    count: 18,
-    note: '待客戶回',
-    pct: 70,
-    color: 'bg-blue-400',
-  },
-  { stage: '議價中', count: 28, note: 'AM 跟', pct: 85, color: 'bg-amber-400' },
-]
-
 const noReply = [
   {
     customer: '承泰物流集團',
@@ -557,137 +383,6 @@ const noReply = [
   },
 ]
 
-const todayLogs = [
-  {
-    action: '寄送',
-    desc: 'Q-20260419-006 寄送給 新創智能開發',
-    time: '2026/04/20 09:55',
-  },
-  {
-    action: '送審',
-    desc: 'Q-20260420-003 送審（陳經理）',
-    time: '2026/04/20 10:22',
-  },
-  {
-    action: '開立',
-    desc: '建立 Q-20260420-004 草稿',
-    time: '2026/04/20 11:10',
-  },
-  {
-    action: '編輯',
-    desc: '編輯 遠東數位科技 聯絡人資訊',
-    time: '2026/04/20 11:35',
-  },
-]
-
-// ── Trend Chart (SVG) ─────────────────────────────────────────────────────────
-
-function AmTrendChart() {
-  const { months, personal } = amTrendData
-  const n = months.length
-  const W = 500
-  const H = 180
-  const pad = { top: 16, right: 40, bottom: 32, left: 48 }
-  const cw = W - pad.left - pad.right
-  const ch = H - pad.top - pad.bottom
-  const yMin = 0
-  const yMax = 120
-  const yTicks = [0, 40, 80, 120]
-
-  const toX = (i: number) => pad.left + (i / (n - 1)) * cw
-  const toY = (v: number) =>
-    pad.top + ch - ((v - yMin) / (yMax - yMin)) * ch
-
-  const pts = personal.map((v, i) => `${toX(i)},${toY(v)}`).join(' ')
-  const targetY = toY(100)
-
-  return (
-    <svg
-      viewBox={`0 0 ${W} ${H}`}
-      className="w-full"
-      aria-label="個人本月業績趨勢"
-    >
-      {yTicks.map((tick) => (
-        <g key={tick}>
-          <line
-            x1={pad.left}
-            y1={toY(tick)}
-            x2={pad.left + cw}
-            y2={toY(tick)}
-            stroke="currentColor"
-            strokeOpacity="0.1"
-            strokeWidth="1"
-          />
-          <text
-            x={pad.left - 6}
-            y={toY(tick) + 4}
-            textAnchor="end"
-            fontSize="10"
-            fill="currentColor"
-            opacity="0.5"
-          >
-            {tick}萬
-          </text>
-        </g>
-      ))}
-
-      {months.map((m, i) => (
-        <text
-          key={m}
-          x={toX(i)}
-          y={H - 8}
-          textAnchor="middle"
-          fontSize="10"
-          fill="currentColor"
-          opacity="0.5"
-        >
-          {m}
-        </text>
-      ))}
-
-      {/* Target line */}
-      <line
-        x1={pad.left}
-        y1={targetY}
-        x2={pad.left + cw}
-        y2={targetY}
-        stroke="#6366f1"
-        strokeWidth="1"
-        strokeDasharray="6 3"
-        opacity="0.5"
-      />
-      <text
-        x={pad.left + cw + 4}
-        y={targetY + 4}
-        fontSize="9"
-        fill="#6366f1"
-        opacity="0.7"
-      >
-        目標
-      </text>
-
-      {/* Personal line */}
-      <polyline
-        points={pts}
-        fill="none"
-        stroke="#22c55e"
-        strokeWidth="2.5"
-        strokeLinejoin="round"
-        strokeLinecap="round"
-      />
-
-      {personal.map((v, i) => (
-        <circle
-          key={i}
-          cx={toX(i)}
-          cy={toY(v)}
-          r="3.5"
-          fill="#22c55e"
-        />
-      ))}
-    </svg>
-  )
-}
 
 // ── Manager Dashboard ─────────────────────────────────────────────────────────
 
@@ -1066,16 +761,12 @@ function AmDashboard() {
     setTodoStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)))
 
   const todoTypeCls = (type: string) => {
-    if (type === 'call')
-      return 'border-blue-300 bg-blue-50/70 text-blue-700'
-    if (type === 'visit')
-      return 'border-purple-300 bg-purple-50/70 text-purple-700'
+    if (type === 'call') return 'border-blue-300 bg-blue-50/70 text-blue-700'
+    if (type === 'visit') return 'border-purple-300 bg-purple-50/70 text-purple-700'
     return 'border-orange-300 bg-orange-50/70 text-orange-700'
   }
   const todoTypeLabel = (type: string) =>
     type === 'call' ? '通話' : type === 'visit' ? '拜訪' : '追蹤'
-
-  const monthlyPct = Math.round((78 / 100) * 100)
 
   return (
     <div className="space-y-6">
@@ -1096,42 +787,43 @@ function AmDashboard() {
       {/* KPI Row */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
-          label="我的今日待辦"
-          value="7"
+          label="今日待辦"
+          value={String(amTodos.length)}
           unit="件"
           sub="3 通話 · 2 拜訪 · 2 追蹤"
           priority="red"
           priorityLabel="待辦"
         />
         <KpiCard
-          label="我的本月業績"
-          value="NT$ 78"
-          unit="萬"
-          sub={`達成率 ${monthlyPct}%（個人目標 100 萬）`}
-          progress={monthlyPct}
+          label="經理已審核報價單"
+          value={String(pendingSendQuotes.length)}
+          unit="件"
+          sub="待寄送給客戶"
+          priority="orange"
+          priorityLabel="待寄送"
         />
         <KpiCard
-          label="我負責的客戶"
-          value="42"
-          unit="家"
-          sub="本週新接 2 家 · 3 家需追蹤"
+          label="待客戶回覆報價單"
+          value={String(noReply.length)}
+          unit="件"
+          sub="平均寄送後 4.2 天"
         />
         <KpiCard
-          label="我的進行中報價"
-          value="9"
+          label="進行中的報價單"
+          value={String(amQuotes.length)}
           unit="件"
           sub="草稿 2 · 待審 1 · 議價中 6"
         />
       </div>
 
-      {/* 今日待辦 + 聯絡提醒 */}
+      {/* 今日待辦 + 客戶互動紀錄提醒 */}
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
         {/* 今日待辦 */}
         <Card className="border-2 border-primary/40 xl:col-span-2">
           <CardHeader className="flex flex-row items-center justify-between pb-3">
             <CardTitle className="flex items-center gap-2 text-base">
               <ClipboardList className="h-4 w-4 text-muted-foreground" />
-              我的今日待辦
+              今日待辦
               <span className="rounded-full bg-gray-600 px-2 py-0.5 text-xs font-semibold text-white">
                 {amTodos.length}
               </span>
@@ -1143,48 +835,35 @@ function AmDashboard() {
           <CardContent>
             <div className="divide-y divide-border">
               {amTodos.map((todo, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 py-3 first:pt-0 last:pb-0"
-                >
+                <div key={i} className="flex items-center gap-3 py-3 first:pt-0 last:pb-0">
                   <button
                     onClick={() => toggleTodo(i)}
                     className={`h-4 w-4 shrink-0 rounded border-2 transition-colors ${
-                      todoStates[i]
-                        ? 'border-primary bg-primary'
-                        : 'border-muted-foreground/50'
+                      todoStates[i] ? 'border-primary bg-primary' : 'border-muted-foreground/50'
                     }`}
                   />
-                  <span
-                    className={`shrink-0 rounded border px-2 py-0.5 text-xs font-medium ${todoTypeCls(todo.type)}`}
-                  >
+                  <span className={`shrink-0 rounded border px-2 py-0.5 text-xs font-medium ${todoTypeCls(todo.type)}`}>
                     {todoTypeLabel(todo.type)}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p
-                      className={`text-sm font-medium ${todoStates[i] ? 'line-through text-muted-foreground' : ''}`}
-                    >
+                    <p className={`text-sm font-medium ${todoStates[i] ? 'line-through text-muted-foreground' : ''}`}>
                       {todo.title}
                     </p>
-                    <p className="text-xs text-muted-foreground truncate">
-                      {todo.customer}
-                    </p>
+                    <p className="text-xs text-muted-foreground truncate">{todo.customer}</p>
                   </div>
-                  <span className="shrink-0 text-xs font-medium text-muted-foreground">
-                    {todo.time}
-                  </span>
+                  <span className="shrink-0 text-xs font-medium text-muted-foreground">{todo.time}</span>
                 </div>
               ))}
             </div>
           </CardContent>
         </Card>
 
-        {/* 客戶聯絡提醒 */}
+        {/* 客戶互動紀錄提醒 */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-3">
             <CardTitle className="flex items-center gap-2 text-base">
               <Bell className="h-4 w-4 text-muted-foreground" />
-              客戶聯絡提醒
+              客戶互動紀錄提醒
               <span className="rounded-full bg-red-500 px-2 py-0.5 text-xs font-semibold text-white">
                 {contactReminders.filter((r) => r.alert).length}
               </span>
@@ -1193,19 +872,12 @@ function AmDashboard() {
           <CardContent>
             <div className="divide-y divide-border">
               {contactReminders.map((r) => (
-                <div
-                  key={r.customer}
-                  className="flex items-center justify-between gap-2 py-3 first:pt-0 last:pb-0"
-                >
+                <div key={r.customer} className="flex items-center justify-between gap-2 py-3 first:pt-0 last:pb-0">
                   <div className="min-w-0">
                     <p className="text-sm font-medium truncate">{r.customer}</p>
-                    <span
-                      className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
-                        r.alert
-                          ? 'border-red-200 bg-red-50 text-red-600'
-                          : 'border-gray-200 bg-gray-100 text-gray-600'
-                      }`}
-                    >
+                    <span className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
+                      r.alert ? 'border-red-200 bg-red-50 text-red-600' : 'border-gray-200 bg-gray-100 text-gray-600'
+                    }`}>
                       {r.daysAgo} 天前
                     </span>
                   </div>
@@ -1219,353 +891,17 @@ function AmDashboard() {
         </Card>
       </div>
 
-      {/* 進行中報價 + 最近變動 */}
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-        {/* 進行中報價 */}
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between pb-3">
-            <CardTitle className="flex items-center gap-2 text-base">
-              <FileText className="h-4 w-4 text-muted-foreground" />
-              我的進行中報價單
-            </CardTitle>
-            <Link
-              href="/quotations"
-              className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-            >
-              全部
-              <ChevronRight className="h-4 w-4" />
-            </Link>
-          </CardHeader>
-          <CardContent>
-            {/* Mobile */}
-            <div className="space-y-2 sm:hidden">
-              {amQuotes.map((q) => (
-                <div
-                  key={q.id}
-                  className="flex items-center justify-between rounded-lg border border-border p-2.5 text-sm"
-                >
-                  <div className="min-w-0">
-                    <p className="font-mono text-xs text-primary">{q.id}</p>
-                    <p className="font-medium truncate">{q.customer}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-semibold">NT$ {q.amountWan} 萬</p>
-                    <span
-                      className={`text-xs font-medium ${q.statusOk ? 'text-green-600' : 'text-muted-foreground'}`}
-                    >
-                      {q.status}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Desktop */}
-            <div className="hidden overflow-x-auto sm:block">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>編號</TableHead>
-                    <TableHead>客戶</TableHead>
-                    <TableHead className="text-right">金額</TableHead>
-                    <TableHead>狀態</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {amQuotes.map((q) => (
-                    <TableRow key={q.id}>
-                      <TableCell className="font-mono text-xs text-primary">
-                        {q.id}
-                      </TableCell>
-                      <TableCell className="font-medium">{q.customer}</TableCell>
-                      <TableCell className="text-right">
-                        NT$ {q.amountWan} 萬
-                      </TableCell>
-                      <TableCell>
-                        <span
-                          className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
-                            q.statusOk
-                              ? 'border-green-200 bg-green-50 text-green-700'
-                              : 'border-gray-200 bg-gray-100 text-gray-600'
-                          }`}
-                        >
-                          {q.status}
-                        </span>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* 最近變動 */}
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between pb-3">
-            <CardTitle className="text-base">我負責客戶的最近變動</CardTitle>
-            <Link
-              href="/settings/logs"
-              className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-            >
-              編輯歷程
-              <ChevronRight className="h-4 w-4" />
-            </Link>
-          </CardHeader>
-          <CardContent>
-            <div className="divide-y divide-border">
-              {recentChanges.map((item, i) => (
-                <div key={i} className="flex items-center gap-3 py-3 first:pt-0 last:pb-0">
-                  <span className="shrink-0 rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">
-                    {item.action}
-                  </span>
-                  <p className="flex-1 text-sm text-foreground">{item.desc}</p>
-                  <span className="shrink-0 text-xs text-muted-foreground">
-                    {item.time}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* 進行中訂單 (全寬) */}
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between pb-3">
-          <CardTitle className="flex items-center gap-2 text-base">
-            <Package className="h-4 w-4 text-muted-foreground" />
-            我負責客戶的進行中訂單
-            <span className="rounded-full bg-gray-600 px-2 py-0.5 text-xs font-semibold text-white">
-              {amActiveOrders.length}
-            </span>
-          </CardTitle>
-          <Link
-            href="/orders"
-            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-          >
-            訂單管理
-            <ChevronRight className="h-4 w-4" />
-          </Link>
-        </CardHeader>
-        <CardContent>
-          {/* Mobile cards */}
-          <div className="space-y-3 sm:hidden">
-            {amActiveOrders.map((order) => (
-              <div
-                key={order.id}
-                className={`rounded-lg border p-3 ${
-                  order.indicatorColor === 'red'
-                    ? 'border-red-300 bg-red-50/30'
-                    : order.indicatorColor === 'orange'
-                      ? 'border-orange-300 bg-orange-50/30'
-                      : 'border-border'
-                }`}
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <div className="min-w-0">
-                    <p className="font-mono text-xs text-primary">{order.id}</p>
-                    <p className="mt-0.5 text-sm font-medium truncate">
-                      {order.customer}
-                    </p>
-                  </div>
-                  <ProgressStatusBadge status={order.progressStatus} />
-                </div>
-                <div className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-                  <span className="text-muted-foreground">金額</span>
-                  <span>NT$ {order.amount.toLocaleString()}</span>
-                  {order.progressPercent !== undefined && (
-                    <>
-                      <span className="text-muted-foreground">進度</span>
-                      <span>{order.progressPercent}%</span>
-                    </>
-                  )}
-                  <span className="text-muted-foreground">預計交付</span>
-                  <span>{order.deliveryDue}</span>
-                  <span className="text-muted-foreground">狀態指標</span>
-                  <span>
-                    <IndicatorBadge
-                      text={order.indicator}
-                      color={order.indicatorColor}
-                    />
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop table */}
-          <div className="hidden overflow-x-auto sm:block">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>訂單編號</TableHead>
-                  <TableHead>客戶</TableHead>
-                  <TableHead className="text-right">金額</TableHead>
-                  <TableHead>當前狀態</TableHead>
-                  <TableHead>狀態指標</TableHead>
-                  <TableHead>預計交付</TableHead>
-                  <TableHead className="w-16" />
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {amActiveOrders.map((order) => (
-                  <TableRow
-                    key={order.id}
-                    className={
-                      order.indicatorColor === 'red'
-                        ? 'bg-red-50/30'
-                        : order.indicatorColor === 'orange'
-                          ? 'bg-orange-50/30'
-                          : ''
-                    }
-                  >
-                    <TableCell className="font-mono text-xs text-primary">
-                      {order.id}
-                    </TableCell>
-                    <TableCell className="font-medium">
-                      {order.customer}
-                    </TableCell>
-                    <TableCell className="text-right">
-                      NT$ {order.amount.toLocaleString()}
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-2">
-                        <ProgressStatusBadge status={order.progressStatus} />
-                        {order.progressPercent !== undefined && (
-                          <span className="text-xs text-muted-foreground">
-                            {order.progressPercent}%
-                          </span>
-                        )}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <IndicatorBadge
-                        text={order.indicator}
-                        color={order.indicatorColor}
-                      />
-                    </TableCell>
-                    <TableCell className="text-sm">
-                      {order.deliveryDue}
-                    </TableCell>
-                    <TableCell>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="h-7 text-xs"
-                        asChild
-                      >
-                        <Link href={`/orders/${order.id}`}>查看</Link>
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
-
-          <p className="mt-3 text-xs text-muted-foreground">
-            ✦ 紅色 = 驗收剩 &lt; 3 天；橘色 = 已交付超過 7 天未啟動驗收。不含已結案、已取消。
-          </p>
-        </CardContent>
-      </Card>
-
-      {/* 本月業績趨勢 */}
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between pb-3">
-          <CardTitle className="flex items-center gap-2 text-base">
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-            我的本月業績趨勢
-          </CardTitle>
-          <span className="text-sm text-muted-foreground">
-            個人目標 100 萬
-          </span>
-        </CardHeader>
-        <CardContent>
-          <AmTrendChart />
-          <div className="mt-2 flex items-center gap-4 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <span className="inline-block h-1 w-4 rounded-full bg-green-500" />
-              個人成案
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="inline-block h-0.5 w-4 rounded-full bg-indigo-400 opacity-60" style={{ borderTop: '1px dashed' }} />
-              個人目標
-            </span>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-
-// ── Assistant Dashboard ───────────────────────────────────────────────────────
-
-function AssistantDashboard() {
-  const [period, setPeriod] = useState<TimePeriod>('今日')
-
-  return (
-    <div className="space-y-6">
-      {/* Page header */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="text-sm text-muted-foreground">
-            早安，林靜宜 — 最重要動作：
-            <strong>開立報價單、寄送給客戶</strong>
-          </p>
-        </div>
-        <TimeFilter
-          options={['今日', '本週', '本月']}
-          active={period}
-          onSelect={setPeriod}
-        />
-      </div>
-
-      {/* KPI Row */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <KpiCard
-          label="已核准 待寄送給客戶"
-          value="3"
-          unit="件"
-          sub="經理剛核准 · 不要讓客戶等太久"
-          priority="red"
-          priorityLabel="待寄送"
-        />
-        <KpiCard
-          label="AM 請我開的報價單"
-          value="2"
-          unit="件"
-          sub="來自待辦追蹤（請特助開報價）"
-          priority="orange"
-          priorityLabel="待開立"
-        />
-        <KpiCard
-          label="待客戶回覆報價單"
-          value="18"
-          unit="件"
-          sub="平均寄送後 4.2 天"
-        />
-        <KpiCard
-          label="本月已寄送報價單"
-          value="42"
-          unit="件"
-          sub="vs 上月 +6 件"
-        />
-      </div>
-
-      {/* 待寄送 (全寬，高亮) */}
+      {/* 經理已審核報價單 (全寬，高亮) */}
       <Card className="border-2 border-primary/40">
         <CardHeader className="flex flex-row items-center justify-between pb-3">
           <CardTitle className="flex items-center gap-2 text-base">
             <Send className="h-4 w-4 text-muted-foreground" />
-            已核准 · 待我寄送給客戶
+            經理已審核報價單 · 待寄送給客戶
             <span className="rounded-full bg-red-500 px-2 py-0.5 text-xs font-semibold text-white">
-              3
+              {pendingSendQuotes.length}
             </span>
           </CardTitle>
-          <Link
-            href="/quotations"
-            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-          >
+          <Link href="/quotations" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
             報價管理
             <ChevronRight className="h-4 w-4" />
           </Link>
@@ -1574,20 +910,13 @@ function AssistantDashboard() {
           {/* Mobile */}
           <div className="space-y-3 sm:hidden">
             {pendingSendQuotes.map((q) => (
-              <div
-                key={q.id}
-                className="rounded-lg border border-border p-3"
-              >
+              <div key={q.id} className="rounded-lg border border-border p-3">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <p className="font-mono text-xs text-primary">{q.id}</p>
-                    <p className="mt-0.5 text-sm font-medium truncate">
-                      {q.customer}
-                    </p>
+                    <p className="mt-0.5 text-sm font-medium truncate">{q.customer}</p>
                   </div>
-                  <Button size="sm" className="h-7 shrink-0 text-xs">
-                    寄送
-                  </Button>
+                  <Button size="sm" className="h-7 shrink-0 text-xs">寄送</Button>
                 </div>
                 <div className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
                   <span className="text-muted-foreground">金額</span>
@@ -1619,22 +948,14 @@ function AssistantDashboard() {
               <TableBody>
                 {pendingSendQuotes.map((q) => (
                   <TableRow key={q.id}>
-                    <TableCell className="font-mono text-xs text-primary">
-                      {q.id}
-                    </TableCell>
-                    <TableCell className="max-w-[200px] truncate font-medium">
-                      {q.customer}
-                    </TableCell>
-                    <TableCell className="text-right">
-                      NT$ {q.amount.toLocaleString()}
-                    </TableCell>
+                    <TableCell className="font-mono text-xs text-primary">{q.id}</TableCell>
+                    <TableCell className="max-w-[200px] truncate font-medium">{q.customer}</TableCell>
+                    <TableCell className="text-right">NT$ {q.amount.toLocaleString()}</TableCell>
                     <TableCell>{q.am}</TableCell>
                     <TableCell className="text-sm">{q.approvedAt}</TableCell>
                     <TableCell className="text-sm">{q.contact}</TableCell>
                     <TableCell>
-                      <Button size="sm" className="h-7 text-xs">
-                        寄送
-                      </Button>
+                      <Button size="sm" className="h-7 text-xs">寄送</Button>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -1644,131 +965,14 @@ function AssistantDashboard() {
         </CardContent>
       </Card>
 
-      {/* AM 請我開 + 報價總覽漏斗 */}
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-        {/* AM 請我開 */}
-        <Card className="xl:col-span-2">
-          <CardHeader className="flex flex-row items-center justify-between pb-3">
-            <CardTitle className="flex items-center gap-2 text-base">
-              AM 請我開的報價單
-              <span className="rounded-full bg-orange-500 px-2 py-0.5 text-xs font-semibold text-white">
-                2
-              </span>
-            </CardTitle>
-            <Link
-              href="/quotations/new"
-              className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-            >
-              待辦追蹤
-              <ChevronRight className="h-4 w-4" />
-            </Link>
-          </CardHeader>
-          <CardContent>
-            {/* Mobile */}
-            <div className="space-y-3 sm:hidden">
-              {amRequestQuotes.map((req, i) => (
-                <div
-                  key={i}
-                  className="rounded-lg border border-border p-3"
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium">{req.customer}</p>
-                      <p className="text-xs text-muted-foreground">
-                        AM {req.am} · {req.requestedAt}
-                      </p>
-                    </div>
-                    <Button size="sm" className="h-7 shrink-0 text-xs">
-                      開立
-                    </Button>
-                  </div>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    ~{req.estimateWan} 萬 · {req.note}
-                  </p>
-                </div>
-              ))}
-            </div>
-            {/* Desktop */}
-            <div className="hidden overflow-x-auto sm:block">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>請求時間</TableHead>
-                    <TableHead>來源 AM</TableHead>
-                    <TableHead>客戶</TableHead>
-                    <TableHead className="text-right">預估金額</TableHead>
-                    <TableHead>需求摘要</TableHead>
-                    <TableHead className="w-16" />
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {amRequestQuotes.map((req, i) => (
-                    <TableRow key={i}>
-                      <TableCell className="text-sm">{req.requestedAt}</TableCell>
-                      <TableCell>{req.am}</TableCell>
-                      <TableCell className="font-medium">{req.customer}</TableCell>
-                      <TableCell className="text-right">
-                        ~{req.estimateWan} 萬
-                      </TableCell>
-                      <TableCell className="text-sm text-muted-foreground">
-                        {req.note}
-                      </TableCell>
-                      <TableCell>
-                        <Button size="sm" className="h-7 text-xs">
-                          開立
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* 報價總覽漏斗 */}
-        <Card>
-          <CardHeader className="pb-3">
-            <CardTitle className="text-base">報價單狀態總覽（全公司）</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {assistantFunnel.map((item) => (
-              <div key={item.stage} className="space-y-1">
-                <div className="flex items-center justify-between text-sm">
-                  <span
-                    className={
-                      item.highlight ? 'font-semibold text-red-600' : 'text-foreground'
-                    }
-                  >
-                    {item.stage}
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span className="font-medium">{item.count}</span>
-                    <span className="text-xs text-muted-foreground">
-                      {item.note}
-                    </span>
-                  </div>
-                </div>
-                <div className="h-5 overflow-hidden rounded-sm bg-muted">
-                  <div
-                    className={`h-full rounded-sm ${item.color} transition-all`}
-                    style={{ width: `${item.pct}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* 沒回覆 + 今日操作記錄 */}
+      {/* 待客戶回覆 + 進行中報價 */}
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-        {/* 寄送後 5 天以上沒回覆 */}
+        {/* 待客戶回覆報價單 */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-3">
             <CardTitle className="flex items-center gap-2 text-base">
               <Clock className="h-4 w-4 text-muted-foreground" />
-              寄送後 5 天以上沒回覆
+              待客戶回覆報價單
             </CardTitle>
             <Button variant="outline" size="sm" className="h-7 text-xs">
               提醒 AM
@@ -1778,23 +982,14 @@ function AssistantDashboard() {
             {/* Mobile */}
             <div className="space-y-2 sm:hidden">
               {noReply.map((item) => (
-                <div
-                  key={item.customer}
-                  className="flex items-center justify-between rounded-lg border border-border p-2.5 text-sm"
-                >
+                <div key={item.customer} className="flex items-center justify-between rounded-lg border border-border p-2.5 text-sm">
                   <div>
                     <p className="font-medium">{item.customer}</p>
-                    <p className="text-xs text-muted-foreground">
-                      AM {item.am}
-                    </p>
+                    <p className="text-xs text-muted-foreground">AM {item.am}</p>
                   </div>
-                  <span
-                    className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
-                      item.alert
-                        ? 'border-red-200 bg-red-50 text-red-600'
-                        : 'border-gray-200 bg-gray-100 text-gray-600'
-                    }`}
-                  >
+                  <span className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
+                    item.alert ? 'border-red-200 bg-red-50 text-red-600' : 'border-gray-200 bg-gray-100 text-gray-600'
+                  }`}>
                     {item.days} 天
                   </span>
                 </div>
@@ -1814,20 +1009,12 @@ function AssistantDashboard() {
                 <TableBody>
                   {noReply.map((item) => (
                     <TableRow key={item.customer}>
-                      <TableCell className="font-medium">
-                        {item.customer}
-                      </TableCell>
-                      <TableCell className="font-mono text-xs">
-                        {item.quoteId}
-                      </TableCell>
+                      <TableCell className="font-medium">{item.customer}</TableCell>
+                      <TableCell className="font-mono text-xs">{item.quoteId}</TableCell>
                       <TableCell>
-                        <span
-                          className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
-                            item.alert
-                              ? 'border-red-200 bg-red-50 text-red-600'
-                              : 'border-gray-200 bg-gray-100 text-gray-600'
-                          }`}
-                        >
+                        <span className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
+                          item.alert ? 'border-red-200 bg-red-50 text-red-600' : 'border-gray-200 bg-gray-100 text-gray-600'
+                        }`}>
                           {item.days} 天
                         </span>
                       </TableCell>
@@ -1840,34 +1027,64 @@ function AssistantDashboard() {
           </CardContent>
         </Card>
 
-        {/* 今日我的操作記錄 */}
+        {/* 進行中的報價單 */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-3">
-            <CardTitle className="text-base">今日我的操作紀錄</CardTitle>
-            <Link
-              href="/settings/logs"
-              className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-            >
-              完整操作紀錄
+            <CardTitle className="flex items-center gap-2 text-base">
+              <FileText className="h-4 w-4 text-muted-foreground" />
+              進行中的報價單
+            </CardTitle>
+            <Link href="/quotations" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+              全部
               <ChevronRight className="h-4 w-4" />
             </Link>
           </CardHeader>
           <CardContent>
-            <div className="divide-y divide-border">
-              {todayLogs.map((log, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 py-3 first:pt-0 last:pb-0"
-                >
-                  <span className="shrink-0 rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">
-                    {log.action}
-                  </span>
-                  <p className="flex-1 text-sm">{log.desc}</p>
-                  <span className="shrink-0 text-xs text-muted-foreground">
-                    {log.time.split(' ')[1]}
-                  </span>
+            {/* Mobile */}
+            <div className="space-y-2 sm:hidden">
+              {amQuotes.map((q) => (
+                <div key={q.id} className="flex items-center justify-between rounded-lg border border-border p-2.5 text-sm">
+                  <div className="min-w-0">
+                    <p className="font-mono text-xs text-primary">{q.id}</p>
+                    <p className="font-medium truncate">{q.customer}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-semibold">NT$ {q.amountWan} 萬</p>
+                    <span className={`text-xs font-medium ${q.statusOk ? 'text-green-600' : 'text-muted-foreground'}`}>
+                      {q.status}
+                    </span>
+                  </div>
                 </div>
               ))}
+            </div>
+            {/* Desktop */}
+            <div className="hidden overflow-x-auto sm:block">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>編號</TableHead>
+                    <TableHead>客戶</TableHead>
+                    <TableHead className="text-right">金額</TableHead>
+                    <TableHead>狀態</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {amQuotes.map((q) => (
+                    <TableRow key={q.id}>
+                      <TableCell className="font-mono text-xs text-primary">{q.id}</TableCell>
+                      <TableCell className="font-medium">{q.customer}</TableCell>
+                      <TableCell className="text-right">NT$ {q.amountWan} 萬</TableCell>
+                      <TableCell>
+                        <span className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
+                          q.statusOk ? 'border-green-200 bg-green-50 text-green-700' : 'border-gray-200 bg-gray-100 text-gray-600'
+                        }`}>
+                          {q.status}
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </div>
           </CardContent>
         </Card>
@@ -1883,13 +1100,13 @@ export default function DashboardPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <TopBar breadcrumbs={[{ label: '總覽 Dashboard' }]} />
+      <TopBar breadcrumbs={[{ label: '客戶總覽' }]} />
 
       <main className="flex-1 p-4 md:p-6 xl:p-8 space-y-6">
         {/* Role switcher (mock / dev) */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-xl font-bold sm:text-2xl">總覽 Dashboard</h1>
+            <h1 className="text-xl font-bold sm:text-2xl">客戶總覽</h1>
             <p className="text-sm text-muted-foreground">2026/04/20 — 週一</p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -1902,8 +1119,7 @@ export default function DashboardPage() {
             >
               <TabsList>
                 <TabsTrigger value="manager">經理</TabsTrigger>
-                <TabsTrigger value="am">AM · PM</TabsTrigger>
-                <TabsTrigger value="assistant">特助</TabsTrigger>
+                <TabsTrigger value="am">AM · PM · 特助</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
@@ -1911,7 +1127,6 @@ export default function DashboardPage() {
 
         {role === 'manager' && <ManagerDashboard />}
         {role === 'am' && <AmDashboard />}
-        {role === 'assistant' && <AssistantDashboard />}
       </main>
     </div>
   )
